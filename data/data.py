@@ -33,7 +33,17 @@ class Team: # Team Class, contains the name of the team, and a list of Swimmer o
             if "&ndash;" in x.split("</td>")[4]: # if they havent scored points, ignore
                 break
             self.team_f.append(Swimmer("https://www.swimcloud.com"+x.split("</td>")[1].split("href=\"")[1].split("\">")[0]))
-
+    def __str__(self):
+        f = ''
+        f += f"{self.name}\n{self.url}\n\nMen:\n"
+        for x in self.team_m:
+            f += str(x)
+            f += '\n'
+        f += "\n\nWomen:\n"
+        for x in self.team_f:
+            f += str(x)
+            f += '\n'
+        return f
     
     
     
@@ -44,11 +54,18 @@ class Swimmer:
         self.name = html.split('</span>')[0]
         self.times = {}
         table = html.split("<tbody>")[2].split("</tbody>")[0].split("</tr>")
-        print(table)
+        table.pop(-1)
         for x in table:
+            
             td = x.split("</td>")
-            self.times[td[0].split('<td class="u-text-truncate">')[1].split('class="js-event-link">')[1].split("</")[0]] = string_to_time(td[1].split("</a>")[0].split('">')[2])
-
+            self.times[td[0].split('<td class="u-text-truncate">')[1].split('class="js-event-link">')[1].split("</")[0]] = [string_to_time(td[1].split("</a>")[0].split('">')[2]),td[1].split("</a>")[0].split('">')[2]]
+    def __str__(self):
+        f = ''
+        f += f'{self.name}\n{self.url}\n'
+        for x in self.times:
+            f += str(x)+':  ' + self.times[x][1]
+            f +='\n'
+        return f
                  
         
 hough = Team('https://www.swimcloud.com/team/10001012/')

@@ -14,7 +14,8 @@
 - Contains `times` dictionary
     - the `times` diction has two values in each set, `event`, and `time`
     - `event`, String in the format of `<length> <course> <stroke(shorthand)>`. Ex `50 Y Free`, `100 L Breast`
-    - `time`, Float point corresponding to the fraction of a day. 1.0 = 1 day, or 86400 seconds
+    - `time`, Float point corresponding to the fraction of a day. 1.0 = 1 day, or 86400 seconds\
+    - EDIT: `time` is a now a list, `time[0]` is a float, `time[1]` is a string of the time(for humans)
     - Conversion formula: `(<Minutes>*60+<Seconds>) / 86400`
 
 ![Data Structure explanation in a picture](./Data-Structure.png)
