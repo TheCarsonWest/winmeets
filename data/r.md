@@ -1,0 +1,1 @@
+this is stuff i have already made for another project, and i will be re-using some of the code so that I have good data structures
