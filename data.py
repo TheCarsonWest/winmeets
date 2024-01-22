@@ -121,7 +121,3 @@ class Swimmer:
         return f
     
 
-lc = Team("./lc.json",'j')
-
-print(lc)
-
