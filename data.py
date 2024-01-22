@@ -1,8 +1,7 @@
 """ 
 In the future:
-- Make an overloading to manually put in the values instead of grabbing them from web
 - Make methods to add people and times
-
+- Make Team read and writable(done) from a file
 """
 import requests
 def string_to_time(str):
@@ -19,6 +18,7 @@ def string_to_time(str):
 
 class Team: # Team Class, contains the name of the team, and a list of Swimmer objects who are on the team. Usage: team = Team("<url of home page>")
     def __init__(self, url):
+        
         self.url = url # for safekeeping the future
         
         self.html_m = requests.get(url+"roster/?page=1&gender=M&season_id=27&sort=perf").text.split("<tbody>")[1].split("</tbody>")[0].split("<tr \n          >\n") # Cuts down the HTML page to just the roster
@@ -35,10 +35,13 @@ class Team: # Team Class, contains the name of the team, and a list of Swimmer o
             if "&ndash;" in x.split("</td>")[4]: # if they havent scored points, ignore
                 break
             self.team_m.append(Swimmer("https://www.swimcloud.com"+x.split("</td>")[1].split("href=\"")[1].split("\">")[0]))
+            print(f"Added {self.team_m[-1].name}")
         for x in self.html_f:
             if "&ndash;" in x.split("</td>")[4]: # if they havent scored points, ignore
                 break
             self.team_f.append(Swimmer("https://www.swimcloud.com"+x.split("</td>")[1].split("href=\"")[1].split("\">")[0]))
+            print(f"Added {self.team_f[-1].name}")
+
     def __str__(self):
         f = ''
         f += f"{self.name}\n{self.url}\n\nMen:\n"
@@ -50,6 +53,20 @@ class Team: # Team Class, contains the name of the team, and a list of Swimmer o
             f += str(x)
             f += '\n'
         return f
+    def save(self):
+        f = f'[ [\n"{self.name}",\n"{self.url}"\n],\n\t[\n'
+        for x in self.team_m:
+            f += x.save()
+        f = f[0:len(f)-2]
+        f += '\n\t],\n\t['
+        for x in self.team_f:
+            f += x.save()
+        f = f[0:len(f)-2] # Gets rid of the last comma
+        f += '\n\t]\n]'
+        file = open(f"{self.name}.txt",'w')
+        
+        file.write(f)
+
     
     
     
@@ -72,8 +89,12 @@ class Swimmer:
             f += str(x)+':  ' + self.times[x][1]
             f +='\n'
         return f
-                 
-        
-hough = Team('https://www.swimcloud.com/team/10001012/')
+    def save(self):
+        f = f'\t\t[\n\t\t\t"{self.name}", "{self.url}",\n\t\t\t'+'{'
+        for x in self.times:             
+            f += f'\n\t\t\t\t"{str(x)}" : {self.times[x]},'
+        f += '\n\t\t\t}\n\t\t],\n'
+        return f
+    
 
-print(hough)
+
