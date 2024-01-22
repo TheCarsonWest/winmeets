@@ -10,9 +10,9 @@ team[2] = Womens Team
 
 team[x][x] = Swimmer object
 
-team[x][x][0][0] = Swimmer Name
-team[x][x][0][1] = Url to Swimmers Swimcloud
-team[x][x][1] = Dictionary of Swimmers times
-team[x][x][1]["<event>"][0] = Day fraction of time
-team[x][x][1]["<event>"][1] = Human usable time(MM:SS.00)
+team[x][x][0] = Swimmer Name
+team[x][x][1] = Url to Swimmers Swimcloud
+team[x][x][2] = Dictionary of Swimmers times
+team[x][x][2]["<event>"][0] = Day fraction of time
+team[x][x][2]["<event>"][1] = Human usable time(MM:SS.00)
 ```

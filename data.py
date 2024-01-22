@@ -1,7 +1,6 @@
 """ 
 In the future:
 - Make methods to add people and times
-- Make Team read and writable(done) from a file
 """
 import json
 import requests
@@ -32,7 +31,9 @@ class Team: # Team Class, contains the name of the team, and a list of Swimmer o
             self.team_m = []
             self.team_f = []
             for x in t[1]:
-                self.team_m.append(Swimmer(x))
+                self.team_m.append(Swimmer(x,"l"))
+            for x in t[2]:
+                self.team_f.append(Swimmer(x,"l"))
 
         else:
             print('Url detected, finding data')
@@ -88,7 +89,10 @@ class Team: # Team Class, contains the name of the team, and a list of Swimmer o
 class Swimmer:
     def __init__(self, url, u = "u"):
         if u == "l":
-            self.name = url[]
+            
+            self.name = url[0]
+            self.url = url[1]
+            self.times = url[2]
 
         else:
             self.url = url
@@ -117,7 +121,7 @@ class Swimmer:
         return f
     
 
+lc = Team("./lc.json",'j')
 
-team = Team("./lc.json",'j')
-
+print(lc)
 
