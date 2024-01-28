@@ -3,7 +3,7 @@ import random
 
 # Algorithm Variables
 pop_size = 1000 # how many individuals are in each generation. More = longer
-gens = 100 # how many reproduction cycles the algorithm goes through
+gens = 1 # how many reproduction cycles the algorithm goes through
 
 # Mutation Variables
 mut_rate = .1 # how often mutation occurs
@@ -87,51 +87,10 @@ def fitness(r):
             relay_times.append(i[1])
     return sum(relay_times)
     
-    
-    
-def crossover(p1, p2): # allows all sorts of duplicates through right now
+def crossover(p1, p2):
     child = []
     r = []
-    for i in range(0,4):
-        check_1 = False
-        for x in r: # checks if p1 dupes
-            if p1[0][i][0] == x[0]:
-                check = True
-        check_2 = False
-        for x in r: # checks if p2 dupes
-            if p2[0][i][0] == x[0]:
-                check = True
-        if p1[0][i] == p2[0][i]:
-            r.append(p1[0][i])
-        elif check_1: # if p1 dupes, use p2
-            r.append(p2[0][i][0])
-        elif check_2: # if p2 dupes, use p1
-            r.append(p1[0][i][0])
-        else:
-            if random.random() > .5: # if no conflicts, coinflip
-                r.append(p1[0][i])
-            else:
-                r.append(p2[0][i])
         
-        
-    child.append(r)
-    for x in range(1,3):
-        r = []
-        for i in range(0,4):
-            if p1[x][i] == p2[x][i]: # if the same person is in the same spot in the same relay, just append it
-                r.append(p1[x][i])
-            else: # fundemental flaw: items towards the end will be changed less
-                if p1[x][i] in r: # if the first parent doesnt pass the duplicate rules, use the second parent, vice versa
-                    r.append(p2[x][i])
-                elif p2[x][i] in r: # if the first parent doesnt pass the duplicate rules, use the second parent, vice versa
-                    r.append(p1[x][i])
-                else:
-                    if random.random() > .5: # if no conflicts, coinflip
-                        r.append(p1[x][i])
-                    else:
-                        r.append(p2[x][i])
-        child.append(r)
-    return child
 
 
 def mutate(relay, r): # Will only error if the list sent into it is incomplete
