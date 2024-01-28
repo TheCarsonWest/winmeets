@@ -2,6 +2,7 @@
 In the future:
 - Make methods to add people and times
 """
+
 import json
 import requests
 def string_to_time(str):
@@ -16,8 +17,17 @@ def string_to_time(str):
             f+= int(str.split(".")[1])/100
       return f/86400
 
+def time_to_string(fraction_of_day):
+    # Convert fraction_of_day to total seconds
+    total_seconds = fraction_of_day * 86400
 
+    # Calculate minutes and seconds
+    minutes, seconds = divmod(total_seconds, 60)
 
+    # Format the result as mm:ss.00
+    result = f"{int(minutes):02}:{int(seconds):02}.{int((seconds % 1) * 100):02}"
+    
+    return result
 
 class Team: # Team Class, contains the name of the team, and a list of Swimmer objects who are on the team. Usage: team = Team("<url of home page>")
     def __init__(self, url,u = "l"):

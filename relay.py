@@ -1,136 +1,162 @@
-from . import data
+from data import *
 import random
-import copy
 
-def getRanks(team, event, num, s = True): 
+# Algorithm Variables
+pop_size = 1000 # how many individuals are in each generation. More = longer
+gens = 100 # how many reproduction cycles the algorithm goes through
+
+# Mutation Variables
+mut_rate = 0.1 # how often mutation occurs
+replace_num = (1,3) # when mutation occurs, how many people will be changed? random range. Hypothetically larger numbers will make more variation
+
+
+def check_two_times(m, r1, r2, r3): # crimes against computer science here
+    f1, f2, f3 = r1, r2, r3
+    n_seen = []
+    for x in m:
+        for i in x:
+            if i in n_seen:
+                if i in f1:
+                    f1.remove(i)
+                if i in f2:
+                    f2.remove(i)
+                for k in f3:
+                    if i in k:
+                        k.remove(i)
+            else:
+                n_seen.append(i)
+    return f1, f2, f3
+    
+def getRanks(team, event, num, s = True): # Returns the *num* fastest times in [name, time] format
     t = []
+    f = []
     if s:
         for x in team.team_m:
-            t.append([x.name,x.times[event]])
+            if event in x.times:
+                t.append([x.name,x.times[event][0]])
+            
+        t = sorted(t, key=lambda x: x[1])
+        for x in range(num):
+            f.append(t[x])
+        return f
         
     else: # Shot myself in the foot with these data structures, only way i know of doing this   
-        for x in team.team_f: 
-            print('s')
+        for x in team.team_f:
+            if event in x.times:
+                t.append([x.name,x.times[event][0]])
+            
+        t = sorted(t, key=lambda x: x[1])
+        for x in range(num):
+            f.append(t[x])
+        return f
 
 
-t = data.Team('https://www.swimcloud.com/team/10001012/')
-t.save()
-# Everything below is ai generated, no clue if it works
+t = Team('./William_Amos_Hough_High_School.json','j')
 
+backstroke_list = getRanks(t, '100 Y Back', 5)
+breaststroke_list = getRanks(t, '100 Y Breast', 5)
+butterfly_list = getRanks(t, '100 Y Fly', 5)
+freestyle_list = getRanks(t, '100 Y Free', 12)
 
+def create_individual(): # Funamental flaw: the first generation has no repeats across the free relays. Enough generations will smooth this out.
+    fr = random.sample(freestyle_list,8)
+    fr_4 = fr[0:3]
+    fr_2 = fr[4:7]
+    medley = [
+        random.choice(backstroke_list),
+        random.choice(breaststroke_list),
+        random.choice(butterfly_list),
+        random.choice(freestyle_list)
+    ]
+    return [medley,fr_2,fr_4]
 
-
-# Function to perform crossover and mutation
-def crossover_and_mutate(selected_parents):
-    new_generation = []
-
-    while len(new_generation) < population_size:
-        # Select two parents for crossover
-        parent1, parent2 = random.sample(selected_parents, 2)
-
-        # Perform crossover (you can choose different crossover methods)
-        crossover_point = random.randint(1, min(len(parent1), len(parent2)) - 1)
-        child1 = parent1[:crossover_point] + parent2[crossover_point:]
-        child2 = parent2[:crossover_point] + parent1[crossover_point:]
-
-        # Perform mutation (you can choose different mutation methods)
-        mutate_child(child1)
-        mutate_child(child2)
-
-        # Add children to the new generation
-        new_generation.append(child1)
-        new_generation.append(child2)
-
-    return new_generation
-
-# Function to perform mutation on an individual
-def mutate_child(child):
-    # Define mutation rate (adjust as needed)
-    mutation_rate = 0.1
-
-    for relay, pairs in child.items():
-        for i in range(len(pairs)):
-            # Apply mutation with a certain probability
-            if random.random() < mutation_rate:
-                # Replace a pair with a new random one from the corresponding table
-                if relay == "200_medley_relay":
-                    # For medley relay, select from the corresponding table
-                    if i == 0:
-                        child[relay][i] = random.choice(backstroke_table)
-                    elif i == 1:
-                        child[relay][i] = random.choice(breaststroke_table)
-                    elif i == 2:
-                        child[relay][i] = random.choice(butterfly_table)
-                    elif i == 3:
-                        child[relay][i] = random.choice(freestyle_table)
+def fitness(r):
+    relay_times = []
+    for x in r:
+        for i in x:
+            relay_times.append(i[1])
+    return sum(relay_times)
+    
+    
+    
+def crossover(p1, p2):
+    child = []
+    for x in range(0,2):
+        r = []
+        for i in range(0,3):
+            if p1[x][i] == p2[x][i]: # if the same person is in the same spot in the same relay, just append it
+                r.append(p1[x][i])
+            else: # fundemental flaw: items towards the end will be changed less
+                if p1[x][i] in r: # if the first parent doesnt pass the duplicate rules, use the second parent, vice versa
+                    r.append(p2[x][i])
+                elif p2[x][i] in r: # if the first parent doesnt pass the duplicate rules, use the second parent, vice versa
+                    r.append(p1[x][i])
                 else:
-                    # For freestyle relays, select from the freestyle table
-                    child[relay][i] = random.choice(freestyle_table)
+                    if random.random() > .5: # if no conflicts, coinflip
+                        r.append(p1[x][i])
+                    else:
+                        r.append(p2[x][i])
+        child.append(r)
+    return child
 
-# Input tables, should have just enough information for the theoretical perfect relay
-backstroke_table = getRanks(t, "100 Y Back",5, True)  # List of 5 name-time pairs for 100 Backstroke
-breaststroke_table = getRanks(t, "100 Y Breast",5, True)  # List of 5 name-time pairs for 100 Breaststroke
-butterfly_table = getRanks(t, "100 Y Fly",5, True)  # List of 5 name-time pairs for 100 Butterfly
-freestyle_table = getRanks(t, "100 Y Free",8)  # List of 8 name-time pairs for 100 Freestyle
 
-# Define relay lengths
-relay_lengths = {
-    "200_freestyle_relay": 4,
-    "400_freestyle_relay": 4,
-    "200_medley_relay": 4
-}
+def mutate(relay, r):
+    m = relay
+    if random.random() < r:
 
-# Define the number of generations and population size
-num_generations = 100
-population_size = 50
+        
+        for x in range(random.randint(replace_num)):
+            r_1 = random.randint(0,2)
+            r_2 = random.randint(0,3)
+            m[r_1][r_2] = "Placeholder"
 
-# Function to generate a random individual
-def generate_individual():
-    # Randomly select name-time pairs for each relay from the tables
-    individual = {
-        "200_freestyle_relay": random.sample(freestyle_table, relay_lengths["200_freestyle_relay"]),
-        "400_freestyle_relay": random.sample(freestyle_table, relay_lengths["400_freestyle_relay"]),
-        "200_medley_relay": [
-            random.choice(backstroke_table),
-            random.choice(breaststroke_table),
-            random.choice(butterfly_table),
-            random.choice(freestyle_table)
-        ]
-    }
-    return individual
+        available_f_2 = [entry for entry in freestyle_list if entry not in relay[1]] # every person not currrently in the 2 free relay
+        available_f_4 = [entry for entry in freestyle_list if entry not in relay[2]] # every person not currrently in the 4 free relay
+        available_medley = [] # every person not currrently in the 2 medley, 
+        for x in [backstroke_list, breaststroke_list, butterfly_list, freestyle_list]:
+            available_medley.append([entry for entry in x if entry not in relay[0]])
+            
+        # getting rid of everyone already in two relays    
+        available_f_2, available_f_4, available_medley = check_two_times(m, available_f_2, available_f_4, available_medley)
+            
+        for x in m[1]: # 2fr, Replaces removed individuals with availabe ones, removes the one used
+            if x == "Placeholder":
+                s = random.choice(available_f_2)
+                x = s
+                available_f_2.remove(s)
+        available_f_2, available_f_4, available_medley = check_two_times(m, available_f_2, available_f_4, available_medley)
+        for x in m[2]: # 4fr, Replaces removed individuals with availabe ones, removes the one used
+            if x == "Placeholder":
+                s = random.choice(available_f_4)
+                x = s
+                available_f_4.remove(s)
+        available_f_2, available_f_4, available_medley = check_two_times(m, available_f_2, available_f_4, available_medley)
+        
+        for x in [[available_medley[0],m[0][0]], [available_medley[1],m[0][1]], [available_medley[2],m[0][2]], [available_medley[3],m[0][3]]]:
+            if x[1] == "Placeholder":
+                s = random.choice(x[0])
+                x[1] = s
+            
+    return m
+    
 
-# Function to calculate fitness (sum of relay times)
-def calculate_fitness(individual):
-    return sum([sum(pair[1] for pair in relay) for relay in individual.values()])
+def genetic_algorithm(population_size, generations, mutation_rate):
+    population = [create_individual() for _ in range(population_size)] # inidividuals are a 3d list with 3 relays, 4 people on each relay, and a name and time with that person
+    for i in range(generations):
+        parents = population[:len(population)//2]
+        offspring = []
+        for x in parents:
+            parent_1, parent_2 = random.sample(parents, 2)
+            child = crossover(parent_1, parent_2)
+            child = mutate(child, mutation_rate)
+            offspring.append(child)
+        population = parents + offspring
+    return sorted(population, key=fitness)[0]
 
-# Genetic algorithm
-def genetic_algorithm():
-    population = [generate_individual() for _ in range(population_size)]
 
-    for generation in range(num_generations):
-        # Evaluate fitness for each individual
-        fitness_scores = [(calculate_fitness(ind), ind) for ind in population]
 
-        # Sort population by fitness
-        population = [ind for _, ind in sorted(fitness_scores)]
 
-        # Select the top individuals for reproduction (you can implement various selection methods)
-        selected_parents = population[:population_size // 2]
 
-        # Generate new individuals through crossover and mutation (you need to implement these)
-        new_generation = crossover_and_mutate(selected_parents)
-
-        # Replace the old generation with the new one
-        population = new_generation
-
-    # Get the best individual from the final generation
-    best_individual = min([(calculate_fitness(ind), ind) for ind in population], key=lambda x: x[0])[1]
-
-    return best_individual
-
-# You need to implement the crossover_and_mutate function according to your requirements
-
-# Example usage
-best_solution = genetic_algorithm()
-print("Best solution:", best_solution)
-print("Fitness:", calculate_fitness(best_solution))
+best_individual = genetic_algorithm(pop_size, gens, mut_rate)
+print("Best Relay Arrangement:", best_individual)
+print("Total Relay Time:", time_to_string(fitness(best_individual)))
