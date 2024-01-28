@@ -3,11 +3,11 @@ import random
 
 # Algorithm Variables
 pop_size = 1000 # how many individuals are in each generation. More = longer
-gens = 100 # how many reproduction cycles the algorithm goes through
+gens = 1 # how many reproduction cycles the algorithm goes through
 
 # Mutation Variables
-mut_rate = 0.1 # how often mutation occurs
-replace_num = (1,3) # when mutation occurs, how many people will be changed? random range. Hypothetically larger numbers will make more variation
+mut_rate = 1 # how often mutation occurs
+replace_num = [1,3] # when mutation occurs, how many people will be changed? random range. Hypothetically larger numbers will make more variation
 
 
 def check_two_times(m, r1, r2, r3): # crimes against computer science here
@@ -60,8 +60,8 @@ freestyle_list = getRanks(t, '100 Y Free', 12)
 
 def create_individual(): # Funamental flaw: the first generation has no repeats across the free relays. Enough generations will smooth this out.
     fr = random.sample(freestyle_list,8)
-    fr_4 = fr[0:3]
-    fr_2 = fr[4:7]
+    fr_4 = fr[0:4]
+    fr_2 = fr[4:8]
     medley = [
         random.choice(backstroke_list),
         random.choice(breaststroke_list),
@@ -101,14 +101,14 @@ def crossover(p1, p2):
 
 
 def mutate(relay, r):
+    
     m = relay
-    if random.random() < r:
-
-        
-        for x in range(random.randint(replace_num)):
+    print(m)
+    if random.random() < r:        
+        for x in range(random.randint(replace_num[0],replace_num[1])):
             r_1 = random.randint(0,2)
             r_2 = random.randint(0,3)
-            m[r_1][r_2] = "Placeholder"
+            m[r_1][r_2] = True
 
         available_f_2 = [entry for entry in freestyle_list if entry not in relay[1]] # every person not currrently in the 2 free relay
         available_f_4 = [entry for entry in freestyle_list if entry not in relay[2]] # every person not currrently in the 4 free relay
@@ -119,38 +119,42 @@ def mutate(relay, r):
         # getting rid of everyone already in two relays    
         available_f_2, available_f_4, available_medley = check_two_times(m, available_f_2, available_f_4, available_medley)
             
-        for x in m[1]: # 2fr, Replaces removed individuals with availabe ones, removes the one used
-            if x == "Placeholder":
+        for x in m[1]: # 2fr, Replaces removed individuals with availabe ones, removes the one used            
+            if x == True:
+                print(x)
                 s = random.choice(available_f_2)
                 x = s
                 available_f_2.remove(s)
+                print(x)
         available_f_2, available_f_4, available_medley = check_two_times(m, available_f_2, available_f_4, available_medley)
         for x in m[2]: # 4fr, Replaces removed individuals with availabe ones, removes the one used
-            if x == "Placeholder":
+            if x == True:
                 s = random.choice(available_f_4)
                 x = s
                 available_f_4.remove(s)
         available_f_2, available_f_4, available_medley = check_two_times(m, available_f_2, available_f_4, available_medley)
         
         for x in [[available_medley[0],m[0][0]], [available_medley[1],m[0][1]], [available_medley[2],m[0][2]], [available_medley[3],m[0][3]]]:
-            if x[1] == "Placeholder":
+            if x[1] == True:
                 s = random.choice(x[0])
                 x[1] = s
             
+    print(m)
     return m
     
 
 def genetic_algorithm(population_size, generations, mutation_rate):
     population = [create_individual() for _ in range(population_size)] # inidividuals are a 3d list with 3 relays, 4 people on each relay, and a name and time with that person
     for i in range(generations):
-        parents = population[:len(population)//2]
-        offspring = []
+        parents = sorted(population, key=fitness)[:len(population)//2] 
+        mutate(random.choice(parents),mutation_rate)
+        """offspring = []
         for x in parents:
             parent_1, parent_2 = random.sample(parents, 2)
             child = crossover(parent_1, parent_2)
             child = mutate(child, mutation_rate)
             offspring.append(child)
-        population = parents + offspring
+        population = parents + offspring"""
     return sorted(population, key=fitness)[0]
 
 
