@@ -1,21 +1,50 @@
-# Data Structures
+# SwimCloud Team and Swimmer Data Structures
 
-## Team(url)
-- Has the team `Name`, self explanatory. Special Characters may be converted into their unicode reference( `'` becomes `#x27;` )
-- The `url` is the [Swimcloud](https://swimcloud.com) home page of the team ([Example](https://www.swimcloud.com/team/44/))
-- Comprised of `Swimmer` objects
-- These Swimmer objects are sorted into `team_m` and `team_f`, the male and female team of the team
+## Team Class
 
-# Swimmer(url)
-- **\*\*VERY IMPORTANT NOTE:** If a swimmer does not have their Swimcloud profiles merged, not all of their times will show up. This is a large problem for high school teams, where you have a high school profile with slow high school times, and a club profile with all of your fast times. [To fix this problem, read this guide](https://support.swimcloud.com/hc/en-us/articles/115004776054-I-have-duplicate-profiles)
+### `Team(url, u="l")`
+- Represents a swim team on SwimCloud.
+- Parameters:
+  - `url`: The URL of the SwimCloud home page for the team.
+  - `u`: Optional parameter, default is "l". If "l", the class will fetch data from the provided URL; if "j", it will import data from a JSON file.
+- Attributes:
+  - `name`: The name of the team.
+  - `url`: The URL of the SwimCloud home page for the team.
+  - `team_m`: A list of male swimmers (Swimmer objects) on the team.
+  - `team_f`: A list of female swimmers (Swimmer objects) on the team.
 
-- Contains `Name`, which is their name on Swimcloud. Once again, special characters may be converted into unicode references.
-- Contains `url`, which is the url of their swimcloud page. once again, look at the note above
-- Contains `times` dictionary
-    - the `times` diction has two values in each set, `event`, and `time`
-    - `event`, String in the format of `<length> <course> <stroke(shorthand)>`. Ex `50 Y Free`, `100 L Breast`
-    - `time`, Float point corresponding to the fraction of a day. 1.0 = 1 day, or 86400 seconds\
-    - EDIT: `time` is a now a list, `time[0]` is a float, `time[1]` is a string of the time(for humans)
-    - Conversion formula: `(<Minutes>*60+<Seconds>) / 86400`
+### `__str__()`
+- Returns a string representation of the team, including the team name, URL, and a list of male and female swimmers.
 
-![Data Structure explanation in a picture](./Data-Structure.png)
+### `save()`
+- Saves the team data in a JSON format. The saved file will have the team name as the filename.
+
+## Swimmer Class
+
+### `Swimmer(url, u="u")`
+- Represents an individual swimmer on SwimCloud.
+- Parameters:
+  - `url`: The URL of the SwimCloud profile page for the swimmer.
+  - `u`: Optional parameter, default is "u". If "u", the class will fetch data from the provided URL; if "l", it will import data from a JSON file.
+- Attributes:
+  - `name`: The name of the swimmer.
+  - `url`: The URL of the SwimCloud profile page for the swimmer.
+  - `times`: A dictionary containing event names as keys and corresponding swim times as values. The swim times are represented as a list containing a float and a string (for human-readable time).
+
+### `__str__()`
+- Returns a string representation of the swimmer, including the swimmer's name, URL, and a list of swim times for various events.
+
+### `save()`
+- Saves the swimmer data in a format suitable for JSON. The saved data includes the swimmer's name, URL, and swim times.
+- This will typically just be used to send up to the Team() `save()` function
+## Important Note
+- If a swimmer does not have their SwimCloud profiles merged, not all of their times may be displayed. This issue is significant for high school teams, where swimmers may have separate profiles for high school and club events. A guide on resolving this issue is available [here](https://support.swimcloud.com/hc/en-us/articles/115004776054-I-have-duplicate-profiles).
+
+## Conversion Formula for Swim Times
+- The swim times are represented as a float corresponding to the fraction of a day. The formula for conversion is: `(<Minutes>*60 + <Seconds>) / 86400`.
+
+---
+
+**Note**: I made this with chatgpt because I have better uses for my time than writing docuemntation to code nobody else is going to use.
+
+Last update 1/28/24
