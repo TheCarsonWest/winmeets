@@ -2,14 +2,14 @@ from data import *
 import random
 import time
 
-log = open(f'./{time.time()}','w')
+
 
 # Algorithm Variables
-pop_size = 50 # how many individuals are in each generation. More = longer
-gens = 32 # how many reproduction cycles the algorithm goes through
+pop_size = 500 # how many individuals are in each generation. More = longer
+gens = 500 # how many reproduction cycles the algorithm goes through
 
 # Mutation Variables
-mut_rate = .1 # how often mutation occurs
+mut_rate = 0.1 # how often mutation occurs
 replace_num = [1,3] # when mutation occurs, how many people will be changed? random range. Hypothetically larger numbers will make more variation
 
 
@@ -90,34 +90,42 @@ def fitness(r):
         for i in x:
             relay_times.append(i[1])
     return sum(relay_times)
-    
-def crossover(p1, p2): # Big problem: Occasionally there will be no possible way to not duplicate, meaning it has to be force mutated
+
+def crossover(p1, p2): # this works about half the time 
     child = []
     seen = [[], []]
     for x in range(0, len(p1)):
-          # Reset seen list for each relay
+        # Reset seen list for each relay
         r = []
         n = []
         for i in range(4):
-            
             if p1[x][i][0] == p2[x][i][0]:  # if they are the same, just copy
-                log.write('Copied equal value\n')
                 r.append(p1[x][i])
             elif p1[x][i][0] in n:  # if one is a duplicate in the relay, use the other value
-                log.write(f"prevented p1 {p1[x][i]} from duplicating with p2 {p2[x][i]}\n")
                 r.append(p2[x][i])
             elif p2[x][i][0] in n:  # if one is a duplicate in the relay, use the other value
-                log.write(f"prevented p2 {p2[x][i]} from duplicating with p1 {p1[x][i]}\n")
                 r.append(p1[x][i])
-                
-            elif p1[x][i][0] in seen[1]:  # if name is already used in this relay, don't use it
-                log.write(f'prevented triple {p1[x][i]} with {p2[x][i]} \n')
-                r.append(p2[x][i])
+            elif p1[x][i][0] in seen[1]:  # This is where problems occur
+                if p2[x][i][0] in seen[1]:  # if both will cause a triple, then force mutate
+                    # Make a force mutation here
+                    available_medley = []
+                    for relay_type in [backstroke_list, breaststroke_list, butterfly_list, freestyle_list]:
+                        available_medley.append([entry for entry in relay_type if entry not in r])
+                    
+                    r = [random.choice(available_medley[i]) for i in range(4)]
+                else:
+                    r.append(p2[x][i])
             elif p2[x][i][0] in seen[1]:
-                log.write(f'prevented triple\n')
-                r.append(p1[x][i])
+                if p1[x][i][0] in seen[1]:  # if both will cause a triple, then force mutate
+                    # Make a force mutation here
+                    available_medley = []
+                    for relay_type in [backstroke_list, breaststroke_list, butterfly_list, freestyle_list]:
+                        available_medley.append([entry for entry in relay_type if entry not in r])
+                    
+                    r = [random.choice(available_medley[i]) for i in range(4)]
+                else:
+                    r.append(p1[x][i])
             else:  # If none of these scenarios occur, coinflip
-                log.write('coinflipped\n')
                 if random.random() > 0.5:
                     r.append(p1[x][i])
                 else:
@@ -128,11 +136,23 @@ def crossover(p1, p2): # Big problem: Occasionally there will be no possible way
             else:
                 seen[0].append(r[-1][0])
 
-
         child.append(r)
 
-    return child
+    # Check if any name appears more than twice in the entire child
+    names = [item[0] for sublist in child for item in sublist]
+    for name in set(names):
+        if names.count(name) > 2:
+            # Make a force mutation here
+            available_medley = []
+            for relay_type in [backstroke_list, breaststroke_list, butterfly_list, freestyle_list]:
+                available_medley.append([entry for entry in relay_type if entry not in names])
+            
+            for i in range(len(child)):
+                for j in range(4):
+                    if child[i][j][0] == name:
+                        child[i][j] = random.choice(available_medley[i])
 
+    return child
 
 
 
@@ -180,7 +200,6 @@ def mutate(relay, r): # Will only error if the list sent into it is incomplete
 def genetic_algorithm(population_size, generations, mutation_rate):
     population = [create_individual() for _ in range(population_size)] # inidividuals are a 3d list with 3 relays, 4 people on each relay, and a name and time with that person
     for i in range(generations):
-        log.write(f"\n\tGeneration {i}\n\n")
         parents = sorted(population, key=fitness)[:len(population)//2] 
         offspring = []
         for x in parents:
