@@ -6,7 +6,7 @@ log = open(f'./{time.time()}','w')
 
 # Algorithm Variables
 pop_size = 50 # how many individuals are in each generation. More = longer
-gens = 50 # how many reproduction cycles the algorithm goes through
+gens = 32 # how many reproduction cycles the algorithm goes through
 
 # Mutation Variables
 mut_rate = .1 # how often mutation occurs
@@ -91,27 +91,29 @@ def fitness(r):
             relay_times.append(i[1])
     return sum(relay_times)
     
-def crossover(p1, p2):
+def crossover(p1, p2): # Big problem: Occasionally there will be no possible way to not duplicate, meaning it has to be force mutated
     child = []
-
+    seen = [[], []]
     for x in range(0, len(p1)):
-        seen = [[], []]  # Reset seen list for each relay
+          # Reset seen list for each relay
         r = []
+        n = []
         for i in range(4):
+            
             if p1[x][i][0] == p2[x][i][0]:  # if they are the same, just copy
                 log.write('Copied equal value\n')
                 r.append(p1[x][i])
-            elif p1[x][i] in [item[0] for item in r]:  # if one is a duplicate in the relay, use the other value
+            elif p1[x][i][0] in n:  # if one is a duplicate in the relay, use the other value
                 log.write(f"prevented p1 {p1[x][i]} from duplicating with p2 {p2[x][i]}\n")
                 r.append(p2[x][i])
-            elif p2[x][i] in [item[0] for item in r]:  # if one is a duplicate in the relay, use the other value
+            elif p2[x][i][0] in n:  # if one is a duplicate in the relay, use the other value
                 log.write(f"prevented p2 {p2[x][i]} from duplicating with p1 {p1[x][i]}\n")
                 r.append(p1[x][i])
                 
-            elif p1[x][i][0] in seen[0]:  # if name is already used in this relay, don't use it
+            elif p1[x][i][0] in seen[1]:  # if name is already used in this relay, don't use it
                 log.write(f'prevented triple {p1[x][i]} with {p2[x][i]} \n')
                 r.append(p2[x][i])
-            elif p2[x][i][0] in seen[0]:
+            elif p2[x][i][0] in seen[1]:
                 log.write(f'prevented triple\n')
                 r.append(p1[x][i])
             else:  # If none of these scenarios occur, coinflip
@@ -120,12 +122,18 @@ def crossover(p1, p2):
                     r.append(p1[x][i])
                 else:
                     r.append(p2[x][i])
+            n.append(r[-1][0])
+            if r[-1][0] in seen[0] and r[-1][0] not in seen[1]:
+                seen[1].append(r[-1][0])
+            else:
+                seen[0].append(r[-1][0])
 
-            seen[0].append(r[-1][0])  # Update the seen list for this relay
 
         child.append(r)
 
     return child
+
+
 
 
 def mutate(relay, r): # Will only error if the list sent into it is incomplete
@@ -188,6 +196,6 @@ def genetic_algorithm(population_size, generations, mutation_rate):
 
 
 best_individual = genetic_algorithm(pop_size, gens, mut_rate)
-print("Best Relay Arrangement:", best_individual)
+print(f"Best Relay Arrangement:\n{best_individual[0]}\n{best_individual[1]}\n{best_individual[2]}")
 print("Total Relay Time:", time_to_string(fitness(best_individual)))
 
