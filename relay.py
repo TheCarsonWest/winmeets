@@ -1,9 +1,12 @@
 from data import *
 import random
+import time
+
+log = open(f'./{time.time()}','w')
 
 # Algorithm Variables
-pop_size = 1000 # how many individuals are in each generation. More = longer
-gens = 1 # how many reproduction cycles the algorithm goes through
+pop_size = 50 # how many individuals are in each generation. More = longer
+gens = 50 # how many reproduction cycles the algorithm goes through
 
 # Mutation Variables
 mut_rate = .1 # how often mutation occurs
@@ -58,6 +61,7 @@ breaststroke_list = getRanks(t, '100 Y Breast', 5)
 butterfly_list = getRanks(t, '100 Y Fly', 5)
 freestyle_list = getRanks(t, '100 Y Free', 12)
 
+
 def create_individual(): # Funamental flaw: the first generation has no repeats across the free relays. Enough generations will smooth this out.
     fr = random.sample(freestyle_list,8)
     fr_4 = fr[0:4]
@@ -89,13 +93,43 @@ def fitness(r):
     
 def crossover(p1, p2):
     child = []
-    r = []
-        
+
+    for x in range(0, len(p1)):
+        seen = [[], []]  # Reset seen list for each relay
+        r = []
+        for i in range(4):
+            if p1[x][i][0] == p2[x][i][0]:  # if they are the same, just copy
+                log.write('Copied equal value\n')
+                r.append(p1[x][i])
+            elif p1[x][i] in [item[0] for item in r]:  # if one is a duplicate in the relay, use the other value
+                log.write(f"prevented p1 {p1[x][i]} from duplicating with p2 {p2[x][i]}\n")
+                r.append(p2[x][i])
+            elif p2[x][i] in [item[0] for item in r]:  # if one is a duplicate in the relay, use the other value
+                log.write(f"prevented p2 {p2[x][i]} from duplicating with p1 {p1[x][i]}\n")
+                r.append(p1[x][i])
+                
+            elif p1[x][i][0] in seen[0]:  # if name is already used in this relay, don't use it
+                log.write(f'prevented triple {p1[x][i]} with {p2[x][i]} \n')
+                r.append(p2[x][i])
+            elif p2[x][i][0] in seen[0]:
+                log.write(f'prevented triple\n')
+                r.append(p1[x][i])
+            else:  # If none of these scenarios occur, coinflip
+                log.write('coinflipped\n')
+                if random.random() > 0.5:
+                    r.append(p1[x][i])
+                else:
+                    r.append(p2[x][i])
+
+            seen[0].append(r[-1][0])  # Update the seen list for this relay
+
+        child.append(r)
+
+    return child
 
 
 def mutate(relay, r): # Will only error if the list sent into it is incomplete
     m = relay
-    
     if random.random() < r:
         for i in range(random.randint(replace_num[0], replace_num[1])):
             r_1 = random.randint(0, 2)
@@ -138,12 +172,13 @@ def mutate(relay, r): # Will only error if the list sent into it is incomplete
 def genetic_algorithm(population_size, generations, mutation_rate):
     population = [create_individual() for _ in range(population_size)] # inidividuals are a 3d list with 3 relays, 4 people on each relay, and a name and time with that person
     for i in range(generations):
+        log.write(f"\n\tGeneration {i}\n\n")
         parents = sorted(population, key=fitness)[:len(population)//2] 
         offspring = []
         for x in parents:
             parent_1, parent_2 = random.sample(parents, 2)
             child = crossover(parent_1, parent_2)
-            child = mutate(child, mutation_rate)
+            #child = mutate(child, mutation_rate)
             offspring.append(child)
         population = parents + offspring
     return sorted(population, key=fitness)[0]
@@ -155,3 +190,4 @@ def genetic_algorithm(population_size, generations, mutation_rate):
 best_individual = genetic_algorithm(pop_size, gens, mut_rate)
 print("Best Relay Arrangement:", best_individual)
 print("Total Relay Time:", time_to_string(fitness(best_individual)))
+
