@@ -2,7 +2,7 @@ from data import *
 import random
 import time
 
-
+t = Team('./William_Amos_Hough_high_School.json','j')
 
 # Algorithm Variables
 pop_size = 500 # how many individuals are in each generation. More = longer
@@ -54,7 +54,6 @@ def getRanks(team, event, num, s = True): # Returns the *num* fastest times in [
         return f
 
 
-t = Team('./William_Amos_Hough_High_School.json','j')
 
 backstroke_list = getRanks(t, '100 Y Back', 5)
 breaststroke_list = getRanks(t, '100 Y Breast', 5)
@@ -211,10 +210,8 @@ def genetic_algorithm(population_size, generations, mutation_rate):
     return sorted(population, key=fitness)[0]
 
 
-
-
-
 best_individual = genetic_algorithm(pop_size, gens, mut_rate)
 print(f"Best Relay Arrangement:\n{best_individual[0]}\n{best_individual[1]}\n{best_individual[2]}")
 print("Total Relay Time:", time_to_string(fitness(best_individual)))
+
 
