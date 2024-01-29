@@ -1,12 +1,14 @@
 from data import *
 import random
-import time
 
-t = Team('./William_Amos_Hough_high_School.json','j')
+backstroke_list = []
+breaststroke_list = []
+butterfly_list = []
+freestyle_list = []
 
 # Algorithm Variables
 pop_size = 500 # how many individuals are in each generation. More = longer
-gens = 500 # how many reproduction cycles the algorithm goes through
+gens = 100 # how many reproduction cycles the algorithm goes through
 
 # Mutation Variables
 mut_rate = 0.1 # how often mutation occurs
@@ -54,11 +56,6 @@ def getRanks(team, event, num, s = True): # Returns the *num* fastest times in [
         return f
 
 
-
-backstroke_list = getRanks(t, '100 Y Back', 5)
-breaststroke_list = getRanks(t, '100 Y Breast', 5)
-butterfly_list = getRanks(t, '100 Y Fly', 5)
-freestyle_list = getRanks(t, '100 Y Free', 12)
 
 
 def create_individual(): # Funamental flaw: the first generation has no repeats across the free relays. Enough generations will smooth this out.
@@ -155,7 +152,7 @@ def crossover(p1, p2): # this works about half the time
 
 
 
-def mutate(relay, r): # Will only error if the list sent into it is incomplete
+def mutate(relay, r): # Lets duplicates through right now
     m = relay
     if random.random() < r:
         for i in range(random.randint(replace_num[0], replace_num[1])):
@@ -196,7 +193,12 @@ def mutate(relay, r): # Will only error if the list sent into it is incomplete
 
     
 
-def genetic_algorithm(population_size, generations, mutation_rate):
+def genetic_algorithm(t, population_size, generations, mutation_rate):
+    global backstroke_list, breaststroke_list, butterfly_list, freestyle_list
+    backstroke_list = getRanks(t, '100 Y Back', 5)
+    breaststroke_list = getRanks(t, '100 Y Breast', 5)
+    butterfly_list = getRanks(t, '100 Y Fly', 5)
+    freestyle_list = getRanks(t, '100 Y Free', 12)
     population = [create_individual() for _ in range(population_size)] # inidividuals are a 3d list with 3 relays, 4 people on each relay, and a name and time with that person
     for i in range(generations):
         parents = sorted(population, key=fitness)[:len(population)//2] 
@@ -204,14 +206,12 @@ def genetic_algorithm(population_size, generations, mutation_rate):
         for x in parents:
             parent_1, parent_2 = random.sample(parents, 2)
             child = crossover(parent_1, parent_2)
-            #child = mutate(child, mutation_rate)
+            child = mutate(child, mutation_rate)
             offspring.append(child)
         population = parents + offspring
     return sorted(population, key=fitness)[0]
 
-
-best_individual = genetic_algorithm(pop_size, gens, mut_rate)
+team = Team('./William_Amos_Hough_high_School.json','j')
+best_individual = genetic_algorithm(team ,pop_size, gens, mut_rate)
 print(f"Best Relay Arrangement:\n{best_individual[0]}\n{best_individual[1]}\n{best_individual[2]}")
 print("Total Relay Time:", time_to_string(fitness(best_individual)))
-
-
