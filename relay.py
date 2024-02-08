@@ -8,11 +8,11 @@ freestyle_list = []
 
 # Algorithm Variables
 pop_size = 500 # how many individuals are in each generation. More = longer
-gens = 100 # how many reproduction cycles the algorithm goes through
+gens = 50 # how many reproduction cycles the algorithm goes through
 
 # Mutation Variables
-mut_rate = 0.1 # how often mutation occurs
-replace_num = [1,3] # when mutation occurs, how many people will be changed? random range. Hypothetically larger numbers will make more variation
+mut_rate = 0 # how often mutation occurs
+replace_num = [1,1] # when mutation occurs, how many people will be changed? random range. Hypothetically larger numbers will make more variation
 
 
 def check_two_times(m, r1, r2, r3): # crimes against computer science here
@@ -211,7 +211,7 @@ def genetic_algorithm(t, population_size, generations, mutation_rate):
         population = parents + offspring
     return sorted(population, key=fitness)[0]
 
-team = Team('./William_Amos_Hough_high_School.json','j')
+team = Team('./3a/North_Lincoln_High_School.json','j')
 best_individual = genetic_algorithm(team ,pop_size, gens, mut_rate)
 print(f"Best Relay Arrangement:\n{best_individual[0]}\n{best_individual[1]}\n{best_individual[2]}")
 print("Total Relay Time:", time_to_string(fitness(best_individual)))

@@ -9,10 +9,10 @@ hs_events = ["50 Y Free","100 Y Free","200 Y Free","500 Y Free","100 Y Back","10
 names_list_m = []
 names_list_f = []
 
+teams_list = []
 
-
-directory = './jsons'
-csv_filename = 'final'
+directory = './3a'
+csv_filename = '3a'
 
 
 for filename in os.listdir(directory):
@@ -23,6 +23,7 @@ for filename in os.listdir(directory):
 l = 0
 for j in files:
     t = Team(j,'j')
+    teams_list.append(t.name)
     for x in t.team_m:
         names_list_m.append([x.name,t.name])
 
@@ -60,6 +61,7 @@ print("Time Sheet Created)")
   
 sheet_m = template_wb['Boys']
 sheet_f = template_wb['Girls']
+points = template_wb['POINTS']
 i = 2
 for n in names_list_m:
     sheet_m[f"A{i}"] = n[0]
@@ -70,7 +72,10 @@ for n in names_list_f:
     sheet_f[f"A{i}"] = n[0]
     sheet_f[f"B{i}"] = n[1]
     i+=1
-
+i = 2
+for t in teams_list:
+    points[f'A{i}'] = t
+    i+=1
 
 print('names put in the sheet')
 template_wb.save(csv_filename+'.xlsx')
