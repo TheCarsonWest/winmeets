@@ -106,7 +106,7 @@ def crossover(p1, p2): # this works about half the time
                     # Make a force mutation here
                     available_medley = []
                     for relay_type in [backstroke_list, breaststroke_list, butterfly_list, freestyle_list]:
-                        available_medley.append([entry for entry in relay_type if entry not in r])
+                        available_medley.append([entry for entry in relay_type if entry not in r]) # this is a prblem???
                     
                     r = [random.choice(available_medley[i]) for i in range(4)]
                 else:
@@ -191,14 +191,25 @@ def mutate(relay, r): # Lets duplicates through right now
 
     return m
 
-    
+def print_results(l):
+        f = ''
+        i = 0
+        for x in ['200 Medley Relay','200 Free Relay','400 Free Relay']:
+            f += f'{x}:\n'
+            for y in l[i]:
+                f += f"{y[0]}: {time_to_string(y[1])}\n"
+            f +='\n'
+            i +=1
+
+        return f
+        
 
 def genetic_algorithm(t, population_size, generations, mutation_rate):
     global backstroke_list, breaststroke_list, butterfly_list, freestyle_list
     backstroke_list = getRanks(t, '100 Y Back', 5)
     breaststroke_list = getRanks(t, '100 Y Breast', 5)
     butterfly_list = getRanks(t, '100 Y Fly', 5)
-    freestyle_list = getRanks(t, '100 Y Free', 12)
+    freestyle_list = getRanks(t, '100 Y Free', 8)
     population = [create_individual() for _ in range(population_size)] # inidividuals are a 3d list with 3 relays, 4 people on each relay, and a name and time with that person
     for i in range(generations):
         parents = sorted(population, key=fitness)[:len(population)//2] 
@@ -211,7 +222,5 @@ def genetic_algorithm(t, population_size, generations, mutation_rate):
         population = parents + offspring
     return sorted(population, key=fitness)[0]
 
-team = Team('./3a/North_Lincoln_High_School.json','j')
-best_individual = genetic_algorithm(team ,pop_size, gens, mut_rate)
-print(f"Best Relay Arrangement:\n{best_individual[0]}\n{best_individual[1]}\n{best_individual[2]}")
-print("Total Relay Time:", time_to_string(fitness(best_individual)))
+
+

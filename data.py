@@ -32,8 +32,6 @@ def time_to_string(fraction_of_day):
 class Team: # Team Class, contains the name of the team, and a list of Swimmer objects who are on the team. Usage: team = Team("<url of home page>")
     def __init__(self, url,u = "l"):
         if u == 'j':
-            print('importing list to object') # doesnt work yet
-
             t = json.loads(open(url,"r").read())
             self.name = t[0][0]
             self.url = t[0][1]

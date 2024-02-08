@@ -1,19 +1,19 @@
 from data import *
+from relay import *
+import os
+directory = './jsons'
 
-urls = ['https://www.swimcloud.com/team/9441/',
-'https://www.swimcloud.com/team/4321/',
-'https://www.swimcloud.com/team/4441/',
-'https://www.swimcloud.com/team/4457/',
-'https://www.swimcloud.com/team/7474/',
-'https://www.swimcloud.com/team/4380/',
-'https://www.swimcloud.com/team/4499/',
-'https://www.swimcloud.com/team/4357/',
-'https://www.swimcloud.com/team/4429/',
-'https://www.swimcloud.com/team/10015143/',
-'https://www.swimcloud.com/team/4446/',
-'https://www.swimcloud.com/team/4360/']
+files = []
 
 
-for x in urls:
-    t = Team(x)
-    t.save()
+for filename in os.listdir(directory):
+    f = os.path.join(directory, filename)
+    # checking if it is a file
+    if os.path.isfile(f):
+        files.append(f)
+
+for f in files:
+    t = Team(f,'j')
+    best_individual = genetic_algorithm(t ,500, 50, 0)
+    print(f"Best Relay Arrangement for {t.name}:\n\n{print_results(best_individual)}")
+    print("Total Relay Time:", time_to_string(fitness(best_individual)))
