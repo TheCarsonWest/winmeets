@@ -3,7 +3,8 @@ import os
 from data import *
 
 files = []
-importer = [["Name","Event","Time","Qualification","Meet","Date","Fixed Time","Sex","RQAL"]]
+importer = [["Name","Event","Time","Qualification","Meet","Date","Fixed Time","Sex","RQAL",'team']]
+hs_events = ["50 Y Free","100 Y Free","200 Y Free","500 Y Free","100 Y Back","100 Y Breast","100 Y Fly","200 Y IM"]
 
 names_list_m = []
 names_list_f = []
@@ -19,6 +20,27 @@ for filename in os.listdir(directory):
     # checking if it is a file
     if os.path.isfile(f):
         files.append(f)
+l = 0
+for j in files:
+    t = Team(j,'j')
+    for x in t.team_m:
+        names_list_m.append([x.name,t.name])
+
+        for e in hs_events:
+            if e in x.times:
+
+                importer.append([x.name,e,x.times[e][1],"","","",x.times[e][0],True,"",t.name])
+                l += 1
+    for x in t.team_f:
+        names_list_f.append([x.name,t.name])
+        for e in hs_events:
+            if e in x.times:
+                importer.append([x.name,e,x.times[e][1],"","","",x.times[e][0],False,"",t.name])
+                l += 1
+
+print(importer[1])
+
+
 
 # This is copied from a previous version
 
@@ -40,12 +62,15 @@ sheet_m = template_wb['Boys']
 sheet_f = template_wb['Girls']
 i = 2
 for n in names_list_m:
-    sheet_m[f"A{i}"] = n 
+    sheet_m[f"A{i}"] = n[0]
+    sheet_m[f"B{i}"] = n[1]
     i+=1
 i = 2
 for n in names_list_f:
-    sheet_f[f"A{i}"] = n
+    sheet_f[f"A{i}"] = n[0]
+    sheet_f[f"B{i}"] = n[1]
     i+=1
+
 
 print('names put in the sheet')
 template_wb.save(csv_filename+'.xlsx')
