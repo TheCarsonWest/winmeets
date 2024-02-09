@@ -196,8 +196,11 @@ def print_results(l):
         i = 0
         for x in ['200 Medley Relay','200 Free Relay','400 Free Relay']:
             f += f'{x}:\n'
+            t = 0
             for y in l[i]:
+                t += y[1]
                 f += f"{y[0]}: {time_to_string(y[1])}\n"
+            f += f'Time: {time_to_string(t)}\n'
             f +='\n'
             i +=1
 
@@ -206,10 +209,10 @@ def print_results(l):
 
 def genetic_algorithm(t, population_size, generations, mutation_rate):
     global backstroke_list, breaststroke_list, butterfly_list, freestyle_list
-    backstroke_list = getRanks(t, '100 Y Back', 5)
-    breaststroke_list = getRanks(t, '100 Y Breast', 5)
-    butterfly_list = getRanks(t, '100 Y Fly', 5)
-    freestyle_list = getRanks(t, '100 Y Free', 8)
+    backstroke_list = getRanks(t, '100 Y Back', 5, False)
+    breaststroke_list = getRanks(t, '100 Y Breast', 5, False)
+    butterfly_list = getRanks(t, '100 Y Fly', 5, False)
+    freestyle_list = getRanks(t, '100 Y Free', 8, False)
     population = [create_individual() for _ in range(population_size)] # inidividuals are a 3d list with 3 relays, 4 people on each relay, and a name and time with that person
     for i in range(generations):
         parents = sorted(population, key=fitness)[:len(population)//2] 

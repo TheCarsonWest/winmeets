@@ -1,7 +1,7 @@
 from data import *
 from relay import *
 import os
-directory = './jsons'
+directory = './cb'
 
 files = []
 
