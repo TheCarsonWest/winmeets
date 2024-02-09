@@ -207,12 +207,12 @@ def print_results(l):
         return f
         
 
-def genetic_algorithm(t, population_size, generations, mutation_rate):
+def genetic_algorithm(t, population_size, generations, mutation_rate, g = True):
     global backstroke_list, breaststroke_list, butterfly_list, freestyle_list
-    backstroke_list = getRanks(t, '100 Y Back', 5, False)
-    breaststroke_list = getRanks(t, '100 Y Breast', 5, False)
-    butterfly_list = getRanks(t, '100 Y Fly', 5, False)
-    freestyle_list = getRanks(t, '100 Y Free', 8, False)
+    backstroke_list = getRanks(t, '100 Y Back', 5, g)
+    breaststroke_list = getRanks(t, '100 Y Breast', 5, g)
+    butterfly_list = getRanks(t, '100 Y Fly', 5, g)
+    freestyle_list = getRanks(t, '100 Y Free', 8, g)
     population = [create_individual() for _ in range(population_size)] # inidividuals are a 3d list with 3 relays, 4 people on each relay, and a name and time with that person
     for i in range(generations):
         parents = sorted(population, key=fitness)[:len(population)//2] 
