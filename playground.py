@@ -14,6 +14,6 @@ for filename in os.listdir(directory):
 
 for f in files:
     t = Team(f,'j')
-    best_individual = genetic_algorithm(t ,500, 50, 0)
-    print(f"Best Relay Arrangement for {t.name}:\n\n{print_results(best_individual)}")
-    print("Total Relay Time:", time_to_string(fitness(best_individual)))
+    best_individual = genetic_algorithm(t ,50000, 0, 0)
+
+    print(f"Total Relay Time for {t.name}:", time_to_string(fitness(best_individual)))

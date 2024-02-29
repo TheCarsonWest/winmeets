@@ -1,6 +1,8 @@
 from data import *
 import random
 
+
+
 backstroke_list = []
 breaststroke_list = []
 butterfly_list = []
@@ -59,7 +61,8 @@ def getRanks(team, event, num, s = True): # Returns the *num* fastest times in [
 
 
 def create_individual(): # Funamental flaw: the first generation has no repeats across the free relays. Enough generations will smooth this out.
-    fr = random.sample(freestyle_list,8)
+    fr = freestyle_list
+    random.shuffle(fr)
     fr_4 = fr[0:4]
     fr_2 = fr[4:8]
     medley = [ # currently lets duplicates through
@@ -67,14 +70,15 @@ def create_individual(): # Funamental flaw: the first generation has no repeats 
         random.choice(backstroke_list),
         random.choice(breaststroke_list),
         random.choice(butterfly_list),
-        random.choice(freestyle_list)
+        fr[8]
     ]
     while len(set(item[0] for item in medley)) < len(medley):
+
         medley = [
             random.choice(backstroke_list),
             random.choice(breaststroke_list),
             random.choice(butterfly_list),
-            random.choice(freestyle_list)
+            fr[8]
         ]
 
 
@@ -87,68 +91,34 @@ def fitness(r):
             relay_times.append(i[1])
     return sum(relay_times)
 
-def crossover(p1, p2): # this works about half the time 
+def crossover(p1, p2):
     child = []
-    seen = [[], []]
-    for x in range(0, len(p1)):
-        # Reset seen list for each relay
-        r = []
-        n = []
-        for i in range(4):
-            if p1[x][i][0] == p2[x][i][0]:  # if they are the same, just copy
-                r.append(p1[x][i])
-            elif p1[x][i][0] in n:  # if one is a duplicate in the relay, use the other value
-                r.append(p2[x][i])
-            elif p2[x][i][0] in n:  # if one is a duplicate in the relay, use the other value
-                r.append(p1[x][i])
-            elif p1[x][i][0] in seen[1]:  # This is where problems occur
-                if p2[x][i][0] in seen[1]:  # if both will cause a triple, then force mutate
-                    # Make a force mutation here
-                    available_medley = []
-                    for relay_type in [backstroke_list, breaststroke_list, butterfly_list, freestyle_list]:
-                        available_medley.append([entry for entry in relay_type if entry not in r]) # this is a prblem???
-                    
-                    r = [random.choice(available_medley[i]) for i in range(4)]
-                else:
-                    r.append(p2[x][i])
-            elif p2[x][i][0] in seen[1]:
-                if p1[x][i][0] in seen[1]:  # if both will cause a triple, then force mutate
-                    # Make a force mutation here
-                    available_medley = []
-                    for relay_type in [backstroke_list, breaststroke_list, butterfly_list, freestyle_list]:
-                        available_medley.append([entry for entry in relay_type if entry not in r])
-                    
-                    r = [random.choice(available_medley[i]) for i in range(4)]
-                else:
-                    r.append(p1[x][i])
-            else:  # If none of these scenarios occur, coinflip
-                if random.random() > 0.5:
-                    r.append(p1[x][i])
-                else:
-                    r.append(p2[x][i])
-            n.append(r[-1][0])
-            if r[-1][0] in seen[0] and r[-1][0] not in seen[1]:
-                seen[1].append(r[-1][0])
+    for relay_index in range(len(p1)):
+        child_relay = []
+        used_swimmers = set()  # Keep track of swimmers already added to the relay
+        for swimmer_index in range(len(p1[relay_index])):
+            # Randomly select a parent's swimmer for the current position
+            selected_parent = random.choice([p1, p2])
+            attempts = 0
+            while attempts < 10:
+                selected_swimmer = selected_parent[relay_index][swimmer_index]
+                if selected_swimmer[0] not in used_swimmers:
+                    # Check if the selected swimmer is not already in the other two relays
+                    in_other_relays = any(selected_swimmer in other_relay for other_relay in (p1[i] if i != relay_index else p2[i] for i in range(len(p1))))
+                    if not in_other_relays:
+                        child_relay.append(selected_swimmer)
+                        used_swimmers.add(selected_swimmer[0])
+                        break
+                # Retry with a different parent if conditions are not met
+                selected_parent = p2 if selected_parent == p1 else p1
+                attempts += 1
             else:
-                seen[0].append(r[-1][0])
-
-        child.append(r)
-
-    # Check if any name appears more than twice in the entire child
-    names = [item[0] for sublist in child for item in sublist]
-    for name in set(names):
-        if names.count(name) > 2:
-            # Make a force mutation here
-            available_medley = []
-            for relay_type in [backstroke_list, breaststroke_list, butterfly_list, freestyle_list]:
-                available_medley.append([entry for entry in relay_type if entry not in names])
-            
-            for i in range(len(child)):
-                for j in range(4):
-                    if child[i][j][0] == name:
-                        child[i][j] = random.choice(available_medley[i])
-
+                # If unable to find a valid swimmer after multiple attempts, force mutate
+                child_relay.append(random.choice(freestyle_list))  # Select a random swimmer from the list
+        child.append(child_relay)
     return child
+
+
 
 
 
@@ -191,6 +161,7 @@ def mutate(relay, r): # Lets duplicates through right now
 
     return m
 
+
 def print_results(l):
         f = ''
         i = 0
@@ -212,7 +183,7 @@ def genetic_algorithm(t, population_size, generations, mutation_rate, g = True):
     backstroke_list = getRanks(t, '100 Y Back', 5, g)
     breaststroke_list = getRanks(t, '100 Y Breast', 5, g)
     butterfly_list = getRanks(t, '100 Y Fly', 5, g)
-    freestyle_list = getRanks(t, '100 Y Free', 8, g)
+    freestyle_list = getRanks(t, '100 Y Free', 12, g)
     population = [create_individual() for _ in range(population_size)] # inidividuals are a 3d list with 3 relays, 4 people on each relay, and a name and time with that person
     for i in range(generations):
         parents = sorted(population, key=fitness)[:len(population)//2] 
@@ -221,7 +192,9 @@ def genetic_algorithm(t, population_size, generations, mutation_rate, g = True):
             parent_1, parent_2 = random.sample(parents, 2)
             child = crossover(parent_1, parent_2)
             child = mutate(child, mutation_rate)
+
             offspring.append(child)
+            
         population = parents + offspring
     return sorted(population, key=fitness)[0]
 
