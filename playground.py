@@ -1,19 +1,26 @@
 from data import *
 from relay import *
-import os
-directory = './cb'
+"""
+team = ["https://www.swimcloud.com/swimmer/2297622/",
+"https://www.swimcloud.com/swimmer/2731807/",
+"https://www.swimcloud.com/swimmer/911875/",
+"https://www.swimcloud.com/swimmer/2074030/",
+"https://www.swimcloud.com/swimmer/2603790/",
+"https://www.swimcloud.com/swimmer/1347618/",
+"https://www.swimcloud.com/swimmer/1256363/",
+"https://www.swimcloud.com/swimmer/659494/",
+]
 
-files = []
+hough_24 = Team()
+hough_24.name = "Hough 2024-2025"
+for x in team:
+    hough_24.add(Swimmer(x),'m')
 
+hough_24.save()
+"""
 
-for filename in os.listdir(directory):
-    f = os.path.join(directory, filename)
-    # checking if it is a file
-    if os.path.isfile(f):
-        files.append(f)
-
-for f in files:
-    t = Team(f,'j')
-    best_individual = genetic_algorithm(t ,50000, 0, 0)
-
-    print(f"Total Relay Time for {t.name}:", time_to_string(fitness(best_individual)))
+best = genetic_algorithm(Team("./Hough_2024-2025.json","j"),100000,0,0)
+print("2024-2025 Best Relay(Without Nikita)")
+print(print_results(best))
+print("2023-2024 Best Relay Combination")
+print(print_results(genetic_algorithm(Team("./cb/William_Amos_Hough_High_School.json","j"),100000,0,0)))

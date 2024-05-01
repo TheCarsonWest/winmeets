@@ -61,7 +61,7 @@ def getRanks(team, event, num, s = True): # Returns the *num* fastest times in [
 
 
 def create_individual(): # Funamental flaw: the first generation has no repeats across the free relays. Enough generations will smooth this out.
-    fr = freestyle_list
+    fr = freestyle_list.copy()
     random.shuffle(fr)
     fr_4 = fr[0:4]
     fr_2 = fr[4:8]
@@ -70,7 +70,7 @@ def create_individual(): # Funamental flaw: the first generation has no repeats 
         random.choice(backstroke_list),
         random.choice(breaststroke_list),
         random.choice(butterfly_list),
-        fr[8]
+        fr[7]
     ]
     while len(set(item[0] for item in medley)) < len(medley):
 
@@ -78,7 +78,7 @@ def create_individual(): # Funamental flaw: the first generation has no repeats 
             random.choice(backstroke_list),
             random.choice(breaststroke_list),
             random.choice(butterfly_list),
-            fr[8]
+            fr[7]
         ]
 
 
@@ -183,7 +183,7 @@ def genetic_algorithm(t, population_size, generations, mutation_rate, g = True):
     backstroke_list = getRanks(t, '100 Y Back', 5, g)
     breaststroke_list = getRanks(t, '100 Y Breast', 5, g)
     butterfly_list = getRanks(t, '100 Y Fly', 5, g)
-    freestyle_list = getRanks(t, '100 Y Free', 12, g)
+    freestyle_list = getRanks(t, '100 Y Free', 8, g)
     population = [create_individual() for _ in range(population_size)] # inidividuals are a 3d list with 3 relays, 4 people on each relay, and a name and time with that person
     for i in range(generations):
         parents = sorted(population, key=fitness)[:len(population)//2] 

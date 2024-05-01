@@ -1,7 +1,4 @@
-""" 
-In the future:
-- Make methods to add people and times
-"""
+
 
 import json
 import requests
@@ -30,8 +27,8 @@ def time_to_string(fraction_of_day):
     return result
 
 class Team: # Team Class, contains the name of the team, and a list of Swimmer objects who are on the team. Usage: team = Team("<url of home page>")
-    def __init__(self, url,u = "l"):
-        if u == 'j':
+    def __init__(self, url = "b",u = "l"):
+        if u == 'j': # Json team loader
             t = json.loads(open(url,"r").read())
             self.name = t[0][0]
             self.url = t[0][1]
@@ -42,7 +39,11 @@ class Team: # Team Class, contains the name of the team, and a list of Swimmer o
                 self.team_m.append(Swimmer(x,"l"))
             for x in t[2]:
                 self.team_f.append(Swimmer(x,"l"))
-
+        elif url == "b": # Blank team loader
+            self.team_m = []
+            self.team_f = []
+            self.url = "Blank"
+            self.name = "Unnamed"
         else:
             print('Url detected, finding data')
             self.url = url # for safekeeping the future
@@ -92,6 +93,19 @@ class Team: # Team Class, contains the name of the team, and a list of Swimmer o
         file = open(f"{self.name.replace(' ','_')}.json",'w')
         
         file.write(f)
+    def add(self,player,gender):
+        if gender=="m":
+            self.team_m.append(player)
+        if gender=="f":
+            self.team_f.append(player)
+    def remove(self,player):
+        for t in [self.team_m,self.team_f]:
+            for p in range(len(t)):
+                if t[p].name == player:
+                    print("removed "+ t.pop(p))
+                    
+
+
 
     
 class Swimmer:
