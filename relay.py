@@ -34,31 +34,6 @@ def check_two_times(m, r1, r2, r3): # crimes against computer science here
                 n_seen.append(i)
     return f1, f2, f3
     
-def getRanks(team, event, num, s = True): # Returns the *num* fastest times in [name, time] format
-    t = []
-    f = []
-    if s:
-        for x in team.team_m:
-            if event in x.times:
-                t.append([x.name,x.times[event][0]])
-            
-        t = sorted(t, key=lambda x: x[1])
-        for x in range(num):
-            f.append(t[x])
-        return f
-        
-    else: # Shot myself in the foot with these data structures, only way i know of doing this   
-        for x in team.team_f:
-            if event in x.times:
-                t.append([x.name,x.times[event][0]])
-            
-        t = sorted(t, key=lambda x: x[1])
-        for x in range(num):
-            f.append(t[x])
-        return f
-
-
-
 
 def create_individual(): # Funamental flaw: the first generation has no repeats across the free relays. Enough generations will smooth this out.
     fr = freestyle_list.copy()

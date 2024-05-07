@@ -2,7 +2,7 @@
 
 import json
 import requests
-def string_to_time(str):
+def string_to_time(str): # mm:ss.ss -> Float point in fractions of a day
     
       f = 0
       if ":" in str:
@@ -14,7 +14,7 @@ def string_to_time(str):
             f+= int(str.split(".")[1])/100
       return f/86400
 
-def time_to_string(fraction_of_day):
+def time_to_string(fraction_of_day): # Day Fraction float point -> mm:ss.ss
     # Convert fraction_of_day to total seconds
     total_seconds = fraction_of_day * 86400
 
@@ -44,7 +44,7 @@ class Team: # Team Class, contains the name of the team, and a list of Swimmer o
             self.team_f = []
             self.url = "Blank"
             self.name = "Unnamed"
-        else:
+        else: # url loader
             print('Url detected, finding data')
             self.url = url # for safekeeping the future
             
@@ -69,7 +69,7 @@ class Team: # Team Class, contains the name of the team, and a list of Swimmer o
                 self.team_f.append(Swimmer("https://www.swimcloud.com"+x.split("</td>")[1].split("href=\"")[1].split("\">")[0]))
                 print(f"Added {self.team_f[-1].name}")
 
-    def __str__(self):
+    def __str__(self): # to string(very long)
         f = ''
         f += f"{self.name}\n{self.url}\n\nMen:\n"
         for x in self.team_m:
@@ -80,7 +80,7 @@ class Team: # Team Class, contains the name of the team, and a list of Swimmer o
             f += str(x)
             f += '\n'
         return f
-    def save(self):
+    def save(self): # Saves file to json
         f = f'[ [\n"{self.name}",\n"{self.url}"\n],\n\t[\n'
         for x in self.team_m:
             f += x.save()
@@ -93,16 +93,21 @@ class Team: # Team Class, contains the name of the team, and a list of Swimmer o
         file = open(f"{self.name.replace(' ','_')}.json",'w')
         
         file.write(f)
-    def add(self,player,gender):
+    def add(self,player,gender): # Adds Swimmer() to team_m or team_f
         if gender=="m":
             self.team_m.append(player)
         if gender=="f":
             self.team_f.append(player)
-    def remove(self,player):
+    def remove(self,player): # removes player by name
         for t in [self.team_m,self.team_f]:
             for p in range(len(t)):
                 if t[p].name == player:
                     print("removed "+ t.pop(p))
+    def refresh(self,person = -1):
+        if person == -1:
+            self = Team(self.url)
+
+
                     
 
 
@@ -110,31 +115,31 @@ class Team: # Team Class, contains the name of the team, and a list of Swimmer o
     
 class Swimmer:
     def __init__(self, url, u = "u"):
-        if u == "l":
+        if u == "l": # Loads from list(what a json load will do)
             
             self.name = url[0]
             self.url = url[1]
             self.times = url[2]
 
-        else:
+        else: # otherwise loads from url
             self.url = url
             html = requests.get(url).text.split("<body")[1].split('<span class="u-mr-">')[1]
-            self.name = html.split('</span>')[0]
+            self.name = html.split('</span>')[0] # Scraping name from top of page
             self.times = {}
             table = html.split("<tbody>")[2].split("</tbody>")[0].split("</tr>")
             table.pop(-1)
             for x in table:
                 
-                td = x.split("</td>")
+                td = x.split("</td>") # Scraping the times table
                 self.times[td[0].split('<td class="u-text-truncate">')[1].split('class="js-event-link">')[1].split("</")[0]] = [string_to_time(td[1].split("</a>")[0].split('">')[2]),td[1].split("</a>")[0].split('">')[2]]
     def __str__(self):
-        f = ''
+        f = '' # Prints name an times
         f += f'{self.name}\n{self.url}\n'
         for x in self.times:
             f += str(x)+':  ' + self.times[x][1]
             f +='\n'
         return f
-    def save(self):
+    def save(self): # formats to conform with Team() json
         f = f'\t\t[\n\t\t\t"{self.name}", "{self.url}",\n\t\t\t'+'{'
         for x in self.times:             
             f += f'\n\t\t\t\t"{str(x)}" : {self.times[x]},'.replace("'",'"')
@@ -143,3 +148,25 @@ class Swimmer:
         return f
     
 
+def getRanks(team, event, num, s = True): # Returns the *num* fastest times in [name, time] format
+    t = []
+    f = []
+    if s:
+        for x in team.team_m:
+            if event in x.times:
+                t.append([x.name,x.times[event][0]])
+            
+        t = sorted(t, key=lambda x: x[1])
+        for x in range(num):
+            f.append(t[x])
+        return f
+        
+    else: # Shot myself in the foot with these data structures, only way i know of doing this   
+        for x in team.team_f:
+            if event in x.times:
+                t.append([x.name,x.times[event][0]])
+            
+        t = sorted(t, key=lambda x: x[1])
+        for x in range(num):
+            f.append(t[x])
+        return f
