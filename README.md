@@ -8,7 +8,7 @@ This Python script is designed for managing swim teams, including the creation o
 - `json`
 - `requests`
 - `random`
-- `relay` (Assumed to be a custom module)
+- `relay` (Custom module)
 - `openpyxl`
 
 ### Functions
