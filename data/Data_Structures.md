@@ -1,5 +1,5 @@
 # SwimCloud Team and Swimmer Data Structures
-
+# This is probably out of date
 ## Team Class
 
 ### `Team(url, u="l")`
