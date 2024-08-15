@@ -2,7 +2,9 @@
 
 ### Documentation for Winmeets
 
-This Python script is designed for managing swim teams, including the creation of swimmer objects, team objects, and handling their data. The script can fetch data from URLs, save data to JSON files, and export data to Excel files. Additionally, it includes functionalities for calculating times and rankings for swimmers.
+
+
+# `master.py`
 
 #### Dependencies
 - `json`
@@ -134,4 +136,17 @@ Generates entries using a genetic algorithm (Work in Progress).
 
 ---
 
-this was gpt-ed btw
+# `recruit_numbers.py`
+This can take in a swimcloud team page and output the class rank of each of their recruits. Used to make a bar chart like the one below
+![Box and whisker plot of the power index class ranks of incoming freshmen at various NCAA universities](ranks.png)
+
+---
+
+# `relay.py`
+Has functions that can be used to get the theorietical best relay through a genetic algorithm
+
+Except the genetic algorithm breaks, so just use 1 generation and a high population, and get the highest fitness individual
+
+---
+
+A lot of stuff doesnt work tho so yeah
