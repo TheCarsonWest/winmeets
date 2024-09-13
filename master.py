@@ -39,7 +39,7 @@ def remove_last_word(sentence):
 
 
 class Team: # Team Class, contains the name of the team, and a list of Swimmer objects who are on the team. Usage: team = Team("<url of home page>")
-    def __init__(self, url = "b",u = "l"):
+    def __init__(self, url = "b",u = "l",s = False):
         if u == 'j': # Json team loader
             t = json.loads(open(url,"r").read())
             self.name = t[0][0]
@@ -78,13 +78,15 @@ class Team: # Team Class, contains the name of the team, and a list of Swimmer o
                         break
                     self.team_m.append(Swimmer("https://www.swimcloud.com" + x.split("</td>")[1].split("href=\"")[1].split("\">")[0]))
                     print(f"Added {self.team_m[-1].name}")
-                    self.save()
+                    if s:
+                        self.save()
                 for x in html_f:
                     if 'href' not in x.split('            <td class="u-text-end">')[1]: ###
                         break
                     self.team_f.append(Swimmer("https://www.swimcloud.com" + x.split("</td>")[1].split("href=\"")[1].split("\">")[0]))
                     print(f"Added {self.team_f[-1].name}")
-                    self.save()
+                    if s:
+                        self.save()
 
     def __str__(self): # to string(very long)
         f = ''
@@ -110,7 +112,7 @@ class Team: # Team Class, contains the name of the team, and a list of Swimmer o
         file = open(f"{self.name.replace(' ','_')}.json",'w')
         
         file.write(f)
-    def add(self,player,gender): # Adds Swimmer() to team_m or team_f
+    def add(self,player,gender="m"): # Adds Swimmer() to team_m or team_f
         if gender=="m":
             self.team_m.append(player)
         if gender=="f":
