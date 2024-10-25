@@ -6,8 +6,20 @@
 import requests
 import time
 records = {}
+def string_to_time(str): # mm:ss.ss -> Float point in fractions of a day
+    
+      f = 0
+      if ":" in str:
+        f += int(str.split(":")[0])*60
+        f += int(str.split(":")[1].split(".")[0])
+        f += int(str.split(".")[1])/100
+      else:
+            f+= int(str.split(".")[0])
+            f+= int(str.split(".")[1])/100
+      return f/86400
 
-team_id = "10001012"
+f = []
+team_id = "9441"
 for s in ["M","F"]:
     for e in ['150','1100','1200','1500','2100','3100','4100','5200','6200','6400','7200']:
         """
@@ -22,7 +34,10 @@ for s in ["M","F"]:
             if "Data is not available at this time" not in html:
                 html = html.split("<tbody>")[1].split("</tbody>")[0]
                 html = html.split("</tr>")[0]
-                bests.append([html.split('<a ')[1].split('\n              \n            </a>')[0].split('">\n              ')[1],"https://www.swimcloud.com/"+(html.split('<td class="u-text-semi u-text-end">')[1].split('">')[0].split('<a href=')[1])[1:],html.split('<td class="u-text-semi u-text-end">')[1].split('">')[1].split('</a>')[0],f"{s}{e}"])
+                bests.append([html.split('<a ')[1].split('\n              \n            </a>')[0].split('">\n              ')[1],"https://www.swimcloud.com"+(html.split('<td class="u-text-semi u-text-end">')[1].split('">')[0].split('<a href=')[1])[1:],html.split('<td class="u-text-semi u-text-end">')[1].split('">')[1].split('</a>')[0],f"{s}{e}"])
 
-        bests = sorted(bests,key=lambda x: x[2])
-        print(str(bests[0]))
+        bests = sorted(bests,key=lambda x: string_to_time(x[2]))
+        print(bests[0])
+        f.append(bests[0])
+
+open(f"{f[8][0]}.txt","w").write(str(f).replace("],","],\n"))
