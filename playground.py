@@ -1,5 +1,5 @@
 from master import *
-"""
+
 
 mens = ["https://www.swimcloud.com/swimmer/1715032/",
 "https://www.swimcloud.com/swimmer/2297622/",
@@ -81,7 +81,7 @@ for x in womens:
 
 
 senior_north.save()
-senior_north.save_to_workbook("./templateClub.xlsx")"""
+senior_north.save_to_workbook("./templateClub.xlsx")
 
 senior_north = Team("b","l",False)
 senior_north.name = "carter"
