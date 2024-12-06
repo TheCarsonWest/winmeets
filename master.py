@@ -5,6 +5,8 @@ import requests
 import random
 from relay import *
 from openpyxl import load_workbook
+import csv
+
 
 def string_to_time(str): # mm:ss.ss -> Float point in fractions of a day
     
@@ -38,8 +40,20 @@ def remove_last_word(sentence):
         return ''
 
 
-class Team: # Team Class, contains the name of the team, and a list of Swimmer objects who are on the team. Usage: team = Team("<url of home page>")
+class Team: 
+    """Team Class, contains:
+    the name of the team:
+    a list of Swimmer objects who are on the team. 
+    Usage: team = Team("<url of home page>")"""
     def __init__(self, url = "b",u = "l",s = False):
+        """
+        Args:
+            url (str, optional): The load mode. Defaults to "b".
+            u (str, optional): _description_. Defaults to "l".
+                - "j": Load from json file, just make the arg a file path
+                - "u": Load from swimcloud url
+            s (bool, optional): Whether or not to save after running. Defaults to False.
+        """
         if u == 'j': # Json team loader
             t = json.loads(open(url,"r").read())
             self.name = t[0][0]
@@ -102,6 +116,7 @@ class Team: # Team Class, contains the name of the team, and a list of Swimmer o
     def save(self): # Saves file to json
         f = f'[ [\n"{self.name}",\n"{self.url}"\n],\n\t[\n'
         for x in self.team_m:
+            print(x)
             f += x.save()
         f = f[0:len(f)-2]
         f += '\n\t],\n\t['
@@ -122,7 +137,7 @@ class Team: # Team Class, contains the name of the team, and a list of Swimmer o
             for p in range(len(t)):
                 if t[p].name == player:
                     print("removed "+ t.pop(p))
-    def refresh(self,person = -1):
+    def refresh(self,person = -1):  
         if person == -1:
             self = Team(self.url)
 
@@ -349,3 +364,57 @@ def genetic_entries(team): # Genetic algorithms entries WIP
 
 
 
+
+
+def generate_relay_combinations(data, relay_type):
+    """Generates relay combinations based on relay type."""
+    combinations = []
+    n = len(data)
+    for x in range(n):
+        for y in range(n):
+            for z in range(n):
+                for a in range(n):
+                    if len({x, y, z, a}) == 4:
+                        if relay_type == "medley":
+                            combination = [
+                                (data[x].name, data[x].times.get('100 Y Back', [float('inf'), ''])[0] / 2),  # Use get with default for missing events
+                                (data[y].name, data[y].times.get('100 Y Breast', [float('inf'), ''])[0] / 2),
+                                (data[z].name, data[z].times.get('100 Y Fly', [float('inf'), ''])[0] / 2),
+                                (data[a].name, data[a].times.get('100 Y Free', [float('inf'), ''])[0] / 2)
+                            ]
+                        elif relay_type == "free":
+                            combination = [
+                                (data[x].name, data[x].times.get('100 Y Free', [float('inf'), ''])[0] / 2),
+                                (data[y].name, data[y].times.get('100 Y Free', [float('inf'), ''])[0] / 2),
+                                (data[z].name, data[z].times.get('100 Y Free', [float('inf'), ''])[0] / 2),
+                                (data[a].name, data[a].times.get('100 Y Free', [float('inf'), ''])[0] / 2)
+                            ]
+                        else:
+                            raise ValueError("Invalid relay_type. Must be 'medley' or 'free'.")
+
+
+                        if any(time == float('inf') for _, time in combination):
+                            continue  # Skip combinations with missing times
+
+                        total_time = sum(time for _, time in combination)
+                        combinations.append((combination, total_time))
+
+    combinations.sort(key=lambda x: x[1])
+    return combinations
+
+
+def write_relay_combinations_to_csv(combinations, csv_filename):
+    """Writes relay combinations to a CSV file."""
+    with open(csv_filename, 'w', newline='') as csvfile:
+        csv_writer = csv.writer(csvfile)
+        csv_writer.writerow(['Total Time', 'Position 1 Name', 'Position 2 Name', 'Position 3 Name', 'Position 4 Name',
+                             'Position 1 Time', 'Position 2 Time', 'Position 3 Time', 'Position 4 Time'])
+        for index, (combination, total_time) in enumerate(combinations, start=1):
+            row = [
+                total_time,
+                combination[0][0], combination[1][0], combination[2][0], combination[3][0],
+                combination[0][1], combination[1][1], combination[2][1], combination[3][1]
+            ]
+            csv_writer.writerow(row)
+
+    print(f"Successfully written relay combinations to {csv_filename}")
