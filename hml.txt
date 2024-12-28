@@ -1,0 +1,3957 @@
+
+
+<!DOCTYPE html>
+<html class="js-html" lang="en">
+  <head>
+    
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V8NLDKPXH3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-V8NLDKPXH3', {
+      'user_id': ''
+    });
+
+    
+  </script>
+
+
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, width=device-width">
+    <meta name="robots" content="Index, Follow">
+    <title>
+  USA Swimming - Teams
+</title>
+    <link rel="canonical" href="https://www.swimcloud.com/country/usa/club/teams/" />
+    <meta name="description" content="USA Swimming - Teams"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/media/css/main.1734426659.css" media="all">
+    
+      <link rel="shortcut icon" href="/media/img/swimcloud/favicons/favicon.ico">
+      <link rel="icon" type="image/png" sizes="32x32" href="/media/img/swimcloud/favicons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/media/img/swimcloud/favicons/favicon-16x16.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/media/img/swimcloud/favicons/apple-touch-icon.png">
+    
+
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime();</script>
+    
+
+    
+  <link rel="stylesheet" href="/media/webpack/rankings/index.1707824349.css">
+
+  </head>
+
+  <body class="yui3-skin-sam ">
+    
+      
+
+<div class="c-header">
+  <div class="c-header__start">
+    <button
+  class="c-header__toggle-btn c-header__toggle-btn--desktop js-sc-drawer-desktop-toggle"
+  type="button"
+  aria-label="Main menu">
+  <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+  </svg>
+</button>
+
+    <button
+  class="c-header__toggle-btn c-header__toggle-btn--mobile js-sc-drawer-mobile-toggle"
+  type="button"
+  aria-label="Main menu">
+  <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+  </svg>
+</button>
+
+
+    <a class="c-header__home" href="/">
+      <img
+        class="c-header__logo hidden-xs"
+        src="/media/img/swimcloud/logos/swimcloud-christmas.png"
+        alt="Swimcloud logo">
+
+      <img
+        class="c-header__logo visible-xs"
+        src="/media/img/swimcloud/logos/swimcloud-christmas-simple.png"
+        height="20"
+        alt="Swimcloud logo compact version">
+    </a>
+  </div>
+
+
+  
+
+<link href="/media/webpack/globalSearch/index.1707824349.css" rel="stylesheet">
+<script defer src="/media/webpack/globalSearch/index.1733839586.js"></script>
+
+<div
+  id="global-search"
+  class="c-header__search"
+  data-global-search-items="[]"
+>
+  <!-- REACT APP -->
+</div>
+
+
+
+  <div class="c-header__end">
+    
+      <nav class="c-nav c-nav--inline c-nav--global">
+        <a class="c-nav__item u-text-upcase hidden-xs" href="/login">Login</a>
+        <a class="c-nav__item u-text-upcase hidden-xs" href="/register">Register</a>
+        <div class="visible-xs dropdown">
+          <button
+            class="c-nav__item dropdown-toggle"
+            data-toggle="dropdown"
+            type="button"
+            aria-label="Login or Register dropdown">
+            
+  
+    <i class="fas fa-user-circle fa-2x" aria-hidden="true"></i>
+  
+
+
+          </button>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+  </div>
+</div>
+
+    
+
+    
+      <div class="c-layout">
+        
+          
+
+
+<div class="c-sc-drawer  c-sc-drawer--desktop js-sc-drawer-desktop ">
+  
+
+  <nav class="c-nav c-nav--compact">
+    <a
+      class="c-nav__item "
+      href="/">
+      <i class="c-nav__icon far fa-home-alt" aria-hidden="true"></i>
+        Home
+    </a>
+
+    <a
+      class="c-nav__item "
+      data-test-id="drawer-meets-link"
+      href="/results/">
+      <i class="c-nav__icon far fa-list-alt" aria-hidden="true"></i>
+      Meets
+    </a>
+
+    
+    
+      
+    
+    
+
+    
+
+    <a
+      class="c-nav__item "
+      href="/times/">
+      <i class="c-nav__icon far fa-stopwatch" aria-hidden="true"></i>
+      Top Times
+    </a>
+
+    <a
+      class="c-nav__item "
+      href="/team/rankings/">
+      <i class="c-nav__icon far fa-tshirt" aria-hidden="true"></i>
+      Team Rankings
+    </a>
+
+    <a
+      class="c-nav__item "
+      href="/recruiting/">
+      <i class="c-nav__icon far fa-graduation-cap" aria-hidden="true"></i>
+      Recruiting
+    </a>
+
+    
+    
+      
+          <a
+            class="c-nav__item "
+            href="/videos/">
+            <i class="c-nav__icon far fa-video" aria-hidden="true"></i>
+            Videos
+          </a>
+      
+    
+
+    
+    
+
+    <a
+      class="c-nav__item "
+      href="/meetsimulator/">
+      <i class="c-nav__icon far fa-wand-magic-sparkles" aria-hidden="true"></i>
+      Meet Simulator
+    </a>
+
+    
+
+
+
+
+    
+
+
+
+
+    <div class="c-nav__group">
+      <a class="c-nav__item" href="/help">
+        <i class="c-nav__icon far fa-question-circle" aria-hidden="true"></i>
+        Help
+      </a>
+    </div>
+  </nav>
+
+  <footer class="c-footer">
+  <nav class="c-footer__nav">
+    <a class="c-footer__link" href="/privacy">Privacy</a>
+    <a class="c-footer__link" href="/terms">Terms</a>
+  </nav>
+    
+</footer>
+
+</div>
+
+
+
+          
+
+
+<div class="c-sc-drawer  c-sc-drawer--mobile js-sc-drawer-mobile">
+  
+  <header class="c-sc-drawer__header-mobile">
+    <a class="u-block" href="/">
+      <img src="/media/img/swimcloud/logos/swimcloud.svg" alt="Swimcloud">
+    </a>
+    <button
+      class="btn btn-icon btn-icon-plain js-sc-drawer-mobile-close"
+      type="button">
+      <i class="far fa-chevron-left"></i>
+      <span class="u-is-hidden-visually">Close</span>
+    </button>
+  </header>
+
+
+  <nav class="c-nav c-nav--compact">
+    <a
+      class="c-nav__item "
+      href="/">
+      <i class="c-nav__icon far fa-home-alt" aria-hidden="true"></i>
+        Home
+    </a>
+
+    <a
+      class="c-nav__item "
+      data-test-id="drawer-meets-link"
+      href="/results/">
+      <i class="c-nav__icon far fa-list-alt" aria-hidden="true"></i>
+      Meets
+    </a>
+
+    
+    
+      
+    
+    
+
+    
+
+    <a
+      class="c-nav__item "
+      href="/times/">
+      <i class="c-nav__icon far fa-stopwatch" aria-hidden="true"></i>
+      Top Times
+    </a>
+
+    <a
+      class="c-nav__item "
+      href="/team/rankings/">
+      <i class="c-nav__icon far fa-tshirt" aria-hidden="true"></i>
+      Team Rankings
+    </a>
+
+    <a
+      class="c-nav__item "
+      href="/recruiting/">
+      <i class="c-nav__icon far fa-graduation-cap" aria-hidden="true"></i>
+      Recruiting
+    </a>
+
+    
+    
+      
+          <a
+            class="c-nav__item "
+            href="/videos/">
+            <i class="c-nav__icon far fa-video" aria-hidden="true"></i>
+            Videos
+          </a>
+      
+    
+
+    
+    
+
+    <a
+      class="c-nav__item "
+      href="/meetsimulator/">
+      <i class="c-nav__icon far fa-wand-magic-sparkles" aria-hidden="true"></i>
+      Meet Simulator
+    </a>
+
+    
+
+
+
+
+    
+
+
+
+
+    <div class="c-nav__group">
+      <a class="c-nav__item" href="/help">
+        <i class="c-nav__icon far fa-question-circle" aria-hidden="true"></i>
+        Help
+      </a>
+    </div>
+  </nav>
+
+  <footer class="c-footer">
+  <nav class="c-footer__nav">
+    <a class="c-footer__link" href="/privacy">Privacy</a>
+    <a class="c-footer__link" href="/terms">Terms</a>
+  </nav>
+    
+</footer>
+
+</div>
+
+
+  <div class="c-sc-drawer__backdrop-mobile js-sc-drawer-mobile-backdrop"></div>
+
+
+        
+
+        <div id="layout-main" class="c-layout__main js-alerts-container">
+          
+  
+
+
+
+          
+
+
+
+
+
+
+          
+  <div class="container">
+    <div class="c-toolbar c-toolbar--fluid">
+      <ol class="c-toolbar__breadcrumb hidden-print">
+        <li>
+          <a href="/">
+            <i class="far fa-home" aria-hidden="true"></i>
+          </a>
+        </li>
+
+        
+          
+            <li class="dropdown">
+              <button
+                class="btn-link dropdown-toggle"
+                type="button"
+                data-toggle="dropdown">
+                United States <span class="caret u-color-hint"></span>
+              </button>
+              <ul class="dropdown-menu">
+                
+                  <li class="dropdown-subheader">International</li>
+                  
+                    <li >
+                      <a href="/international/cccan/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/international_regions/174901f4-ea01-4c85-aa2a-5a3ff1f6cfed.jpg.220x220_q95.jpg"
+                          alt="CCCAN"
+                          loading="lazy">
+                        CCCAN
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/international/isl/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/international_regions/ISL.png.220x220_q95.png"
+                          alt="ISL"
+                          loading="lazy">
+                        ISL
+                      </a>
+                    </li>
+                  
+
+                  
+                    <li role="separator" class="divider"></li>
+                  
+                
+                  <li class="dropdown-subheader">Country</li>
+                  
+                    <li class="active" >
+                      <a href="/country/usa/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/us.png.220x220_q95.png"
+                          alt="USA"
+                          loading="lazy">
+                        United States
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/afg/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/af.png.220x220_q95.png"
+                          alt="AFG"
+                          loading="lazy">
+                        Afghanistan
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/alb/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/al.png.220x220_q95.png"
+                          alt="ALB"
+                          loading="lazy">
+                        Albania
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/alg/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/dz.png.220x220_q95.png"
+                          alt="ALG"
+                          loading="lazy">
+                        Algeria
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/asa/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/as.png.220x220_q95.png"
+                          alt="ASA"
+                          loading="lazy">
+                        American Samoa
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/and/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ad.png.220x220_q95.png"
+                          alt="AND"
+                          loading="lazy">
+                        Andorra
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ang/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ao.png.220x220_q95.png"
+                          alt="ANG"
+                          loading="lazy">
+                        Angola
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ant/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ag.png.220x220_q95.png"
+                          alt="ANT"
+                          loading="lazy">
+                        Antigua &amp; Barbuda
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/arg/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ar.png.220x220_q95.png"
+                          alt="ARG"
+                          loading="lazy">
+                        Argentina
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/arm/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/am.png.220x220_q95.png"
+                          alt="ARM"
+                          loading="lazy">
+                        Armenia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/aru/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/aw.png.220x220_q95.png"
+                          alt="ABW"
+                          loading="lazy">
+                        Aruba
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/aus/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/au.png.220x220_q95.png"
+                          alt="AUS"
+                          loading="lazy">
+                        Australia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/aut/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/at.png.220x220_q95.png"
+                          alt="AUT"
+                          loading="lazy">
+                        Austria
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/aze/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/az.png.220x220_q95.png"
+                          alt="AZE"
+                          loading="lazy">
+                        Azerbaijan
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/bah/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/bs.png.220x220_q95.png"
+                          alt="BAH"
+                          loading="lazy">
+                        Bahamas
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/brn/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/bh.png.220x220_q95.png"
+                          alt="BRN"
+                          loading="lazy">
+                        Bahrain
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ban/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/bd.png.220x220_q95.png"
+                          alt="BAN"
+                          loading="lazy">
+                        Bangladesh
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/bar/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/bb.png.220x220_q95.png"
+                          alt="BAR"
+                          loading="lazy">
+                        Barbados
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/blr/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/by.png.220x220_q95.png"
+                          alt="BLR"
+                          loading="lazy">
+                        Belarus
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/bel/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/be.png.220x220_q95.png"
+                          alt="BEL"
+                          loading="lazy">
+                        Belgium
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/biz/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/bz.png.220x220_q95.png"
+                          alt="BIZ"
+                          loading="lazy">
+                        Belize
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ben/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/bj.png.220x220_q95.png"
+                          alt="BEN"
+                          loading="lazy">
+                        Benin
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ber/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/bm.png.220x220_q95.png"
+                          alt="BER"
+                          loading="lazy">
+                        Bermuda
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/bhu/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/bt.png.220x220_q95.png"
+                          alt="BHU"
+                          loading="lazy">
+                        Bhutan
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/boh/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/cz.png.220x220_q95.png"
+                          alt="BOH"
+                          loading="lazy">
+                        Bohemia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/bol/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/bo.png.220x220_q95.png"
+                          alt="BOL"
+                          loading="lazy">
+                        Bolivia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/bih/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ba.png.220x220_q95.png"
+                          alt="BIH"
+                          loading="lazy">
+                        Bosnia-Herzegovina
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/bot/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/bw.png.220x220_q95.png"
+                          alt="BOT"
+                          loading="lazy">
+                        Botswana
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/bra/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/br.png.220x220_q95.png"
+                          alt="BRA"
+                          loading="lazy">
+                        Brazil
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ivb/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/vg.png.220x220_q95.png"
+                          alt="IVB"
+                          loading="lazy">
+                        British Virgin Islands
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/bru/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/bn.png.220x220_q95.png"
+                          alt="BRU"
+                          loading="lazy">
+                        Brunei
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/bul/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/bg.png.220x220_q95.png"
+                          alt="BUL"
+                          loading="lazy">
+                        Bulgaria
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/bur/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/bf.png.220x220_q95.png"
+                          alt="BUR"
+                          loading="lazy">
+                        Burkina Faso
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/bir/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/mm.png.220x220_q95.png"
+                          alt="BIR"
+                          loading="lazy">
+                        Burma
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/bdi/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/bi.png.220x220_q95.png"
+                          alt="BDI"
+                          loading="lazy">
+                        Burundi
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/cam/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/kh.png.220x220_q95.png"
+                          alt="CAM"
+                          loading="lazy">
+                        Cambodia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/cmr/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/cm.png.220x220_q95.png"
+                          alt="CMR"
+                          loading="lazy">
+                        Cameroon
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/can/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ca.png.220x220_q95.png"
+                          alt="CAN"
+                          loading="lazy">
+                        Canada
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/cpv/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/cv.png.220x220_q95.png"
+                          alt="CPV"
+                          loading="lazy">
+                        Cape Verde
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/CAY/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ky.png.68x68_q85.png.68x68_q85.png.220x220_q95.png"
+                          alt="CAY"
+                          loading="lazy">
+                        Cayman Islands
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/caf/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/cf.png.220x220_q95.png"
+                          alt="CAF"
+                          loading="lazy">
+                        Central African Republic
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/cey/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/lk.png.220x220_q95.png"
+                          alt="CEY"
+                          loading="lazy">
+                        Ceylon
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/cha/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/td.png.220x220_q95.png"
+                          alt="CHA"
+                          loading="lazy">
+                        Chad
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/chi/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/cl.png.220x220_q95.png"
+                          alt="CHI"
+                          loading="lazy">
+                        Chile
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/chn/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/cn.png.220x220_q95.png"
+                          alt="CHN"
+                          loading="lazy">
+                        China
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/tpe/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/tw.png.220x220_q95.png"
+                          alt="TPE"
+                          loading="lazy">
+                        Chinese Taipei
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/col/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/co.png.220x220_q95.png"
+                          alt="COL"
+                          loading="lazy">
+                        Colombia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/com/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/km.png.220x220_q95.png"
+                          alt="COM"
+                          loading="lazy">
+                        Comoros Islands
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/cgo/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/cg.png.220x220_q95.png"
+                          alt="CGO"
+                          loading="lazy">
+                        Congo
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/cok/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ck.png.220x220_q95.png"
+                          alt="COK"
+                          loading="lazy">
+                        Cook Islands
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/crc/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/cr.png.220x220_q95.png"
+                          alt="CRC"
+                          loading="lazy">
+                        Costa Rica
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/cro/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/hr.png.220x220_q95.png"
+                          alt="CRO"
+                          loading="lazy">
+                        Croatia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/cub/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/cu.png.220x220_q95.png"
+                          alt="CUB"
+                          loading="lazy">
+                        Cuba
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/cur/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/2560px-Flag_of_Curacao.svg.png.220x220_q95.jpg"
+                          alt="CUR"
+                          loading="lazy">
+                        Curaçao
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/cyp/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/cy.png.220x220_q95.png"
+                          alt="CYP"
+                          loading="lazy">
+                        Cyprus
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/cze/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/cz.png.220x220_q95.png"
+                          alt="CZE"
+                          loading="lazy">
+                        Czech Republic
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/den/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/dk.png.220x220_q95.png"
+                          alt="DEN"
+                          loading="lazy">
+                        Denmark
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/dji/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/dj.png.220x220_q95.png"
+                          alt="DJI"
+                          loading="lazy">
+                        Djibouti
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/dma/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/dm.png.220x220_q95.png"
+                          alt="DMA"
+                          loading="lazy">
+                        Dominica
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/dom/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/do.png.220x220_q95.png"
+                          alt="DOM"
+                          loading="lazy">
+                        Dominican Republic
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ecu/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ec.png.220x220_q95.png"
+                          alt="ECU"
+                          loading="lazy">
+                        Ecuador
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/egy/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/eg.png.220x220_q95.png"
+                          alt="EGY"
+                          loading="lazy">
+                        Egypt
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/esa/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/sv.png.220x220_q95.png"
+                          alt="ESA"
+                          loading="lazy">
+                        El Salvador
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/eng/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/gb.png.220x220_q95.png"
+                          alt="ENG"
+                          loading="lazy">
+                        England
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/geq/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/gq.png.220x220_q95.png"
+                          alt="GEQ"
+                          loading="lazy">
+                        Equatorial Guinea
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/eri/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/er.png.220x220_q95.png"
+                          alt="ERI"
+                          loading="lazy">
+                        Eritrea
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/est/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ee.png.220x220_q95.png"
+                          alt="EST"
+                          loading="lazy">
+                        Estonia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/eth/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/et.png.220x220_q95.png"
+                          alt="ETH"
+                          loading="lazy">
+                        Ethiopia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/far/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/fo.png.220x220_q95.png"
+                          alt="FAR"
+                          loading="lazy">
+                        Faroe Islands
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/fij/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/fj.png.220x220_q95.png"
+                          alt="FIJ"
+                          loading="lazy">
+                        Fiji
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/fin/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/fi.png.220x220_q95.png"
+                          alt="FIN"
+                          loading="lazy">
+                        Finland
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/for/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/tw.png.220x220_q95.png"
+                          alt="FOR"
+                          loading="lazy">
+                        Formosa
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/fra/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/fr.png.220x220_q95.png"
+                          alt="FRA"
+                          loading="lazy">
+                        France
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/gab/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ga.png.220x220_q95.png"
+                          alt="GAB"
+                          loading="lazy">
+                        Gabon
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/gam/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/gm.png.220x220_q95.png"
+                          alt="GAM"
+                          loading="lazy">
+                        Gambia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/geo/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ge.png.220x220_q95.png"
+                          alt="GEO"
+                          loading="lazy">
+                        Georgia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ger/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/73e56c46-7238-48f5-aef9-94644cff9a24.jpg.220x220_q95.jpg"
+                          alt="GER"
+                          loading="lazy">
+                        Germany
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/gha/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/gh.png.220x220_q95.png"
+                          alt="GHA"
+                          loading="lazy">
+                        Ghana
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/gib/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/gi.png.220x220_q95.png"
+                          alt="GIB"
+                          loading="lazy">
+                        Gibraltar
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/gbr/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/gb.png.220x220_q95.png"
+                          alt="GBR"
+                          loading="lazy">
+                        Great Britain
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/gre/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/gr.png.220x220_q95.png"
+                          alt="GRE"
+                          loading="lazy">
+                        Greece
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/grn/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/gd.png.220x220_q95.png"
+                          alt="GRN"
+                          loading="lazy">
+                        Grenada
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/gum/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/gu.png.220x220_q95.png"
+                          alt="GUM"
+                          loading="lazy">
+                        Guam
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/gua/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/gt.png.220x220_q95.png"
+                          alt="GUA"
+                          loading="lazy">
+                        Guatemala
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/gui/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/gn.png.220x220_q95.png"
+                          alt="GUI"
+                          loading="lazy">
+                        Guinea
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/gbs/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/gw.png.220x220_q95.png"
+                          alt="GBS"
+                          loading="lazy">
+                        Guinea-Bissau
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/guy/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/gy.png.220x220_q95.png"
+                          alt="GUY"
+                          loading="lazy">
+                        Guyana
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/hai/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ht.png.220x220_q95.png"
+                          alt="HAI"
+                          loading="lazy">
+                        Haiti
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/haw/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/us.png.220x220_q95.png"
+                          alt="HAW"
+                          loading="lazy">
+                        Hawaii
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/hon/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/hn.png.220x220_q95.png"
+                          alt="HON"
+                          loading="lazy">
+                        Honduras
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/hkg/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/hk.png.220x220_q95.png"
+                          alt="HKG"
+                          loading="lazy">
+                        Hong Kong
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/hun/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/hu.png.220x220_q95.png"
+                          alt="HUN"
+                          loading="lazy">
+                        Hungary
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/isl/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/is.png.220x220_q95.png"
+                          alt="ISL"
+                          loading="lazy">
+                        Iceland
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ind/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/in.png.220x220_q95.png"
+                          alt="IND"
+                          loading="lazy">
+                        India
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ina/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/id.png.220x220_q95.png"
+                          alt="INA"
+                          loading="lazy">
+                        Indonesia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/iri/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ir.png.220x220_q95.png"
+                          alt="IRI"
+                          loading="lazy">
+                        Iran
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/irq/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/iq.png.220x220_q95.png"
+                          alt="IRQ"
+                          loading="lazy">
+                        Iraq
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/irl/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ie.png.220x220_q95.png"
+                          alt="IRL"
+                          loading="lazy">
+                        Ireland
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/isr/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/il.png.220x220_q95.png"
+                          alt="ISR"
+                          loading="lazy">
+                        Israel
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ita/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/it.png.220x220_q95.png"
+                          alt="ITA"
+                          loading="lazy">
+                        Italy
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/civ/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ci.png.220x220_q95.png"
+                          alt="CIV"
+                          loading="lazy">
+                        Ivory Coast
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/jam/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/jm.png.220x220_q95.png"
+                          alt="JAM"
+                          loading="lazy">
+                        Jamaica
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/jpn/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/jp.png.220x220_q95.png"
+                          alt="JPN"
+                          loading="lazy">
+                        Japan
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/jor/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/jo.png.220x220_q95.png"
+                          alt="JOR"
+                          loading="lazy">
+                        Jordan
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/kaz/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/kz.png.220x220_q95.png"
+                          alt="KAZ"
+                          loading="lazy">
+                        Kazakhstan
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ken/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ke.png.220x220_q95.png"
+                          alt="KEN"
+                          loading="lazy">
+                        Kenya
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/kir/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ki.png.220x220_q95.png"
+                          alt="KIR"
+                          loading="lazy">
+                        Kiribati
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/kor/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/korean_flag.png.220x220_q95.png"
+                          alt="KOR"
+                          loading="lazy">
+                        Korea (South)
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/kos/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="/media/img/icon-fa-institution.png"
+                          alt="KOS"
+                          loading="lazy">
+                        Kosovo
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/kuw/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/kw.png.220x220_q95.png"
+                          alt="KUW"
+                          loading="lazy">
+                        Kuwait
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/kgz/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/9ad73186-46a1-4629-9f1b-5ff4de8b3a42.jpg.220x220_q95.jpg"
+                          alt="KGZ"
+                          loading="lazy">
+                        Kyrgyzstan
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/lao/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/la.png.220x220_q95.png"
+                          alt="LAO"
+                          loading="lazy">
+                        Laos
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/lat/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/lv.png.220x220_q95.png"
+                          alt="LAT"
+                          loading="lazy">
+                        Latvia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/lib/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/lb.png.220x220_q95.png"
+                          alt="LIB"
+                          loading="lazy">
+                        Lebanon
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/les/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ls.png.220x220_q95.png"
+                          alt="LES"
+                          loading="lazy">
+                        Lesotho
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/lbr/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/lr.png.220x220_q95.png"
+                          alt="LBR"
+                          loading="lazy">
+                        Liberia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/lba/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ly.png.220x220_q95.png"
+                          alt="LBA"
+                          loading="lazy">
+                        Libya
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/lie/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/li.png.220x220_q95.png"
+                          alt="LIE"
+                          loading="lazy">
+                        Liechtenstein
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ltu/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/lt.png.220x220_q95.png"
+                          alt="LTU"
+                          loading="lazy">
+                        Lithuania
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/lux/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/lu.png.220x220_q95.png"
+                          alt="LUX"
+                          loading="lazy">
+                        Luxembourg
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/mac/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/mo.png.220x220_q95.png"
+                          alt="MAC"
+                          loading="lazy">
+                        Macau
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/mad/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/mg.png.220x220_q95.png"
+                          alt="MAD"
+                          loading="lazy">
+                        Madagascar
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/maw/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/mw.png.220x220_q95.png"
+                          alt="MAW"
+                          loading="lazy">
+                        Malawi
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/mas/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/my.png.220x220_q95.png"
+                          alt="MAS"
+                          loading="lazy">
+                        Malaysia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/mdv/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/mv.png.220x220_q95.png"
+                          alt="MDV"
+                          loading="lazy">
+                        Maldives
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/mli/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ml.png.220x220_q95.png"
+                          alt="MLI"
+                          loading="lazy">
+                        Mali
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/mlt/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/mt.png.220x220_q95.png"
+                          alt="MLT"
+                          loading="lazy">
+                        Malta
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/nma/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/mp.png.220x220_q95.png"
+                          alt="NMA"
+                          loading="lazy">
+                        Mariannes Islands
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/mil/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/mh.png.220x220_q95.png"
+                          alt="MIL"
+                          loading="lazy">
+                        Marshall Islands
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/mtn/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/mr.png.220x220_q95.png"
+                          alt="MTN"
+                          loading="lazy">
+                        Mauritania
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/mri/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/mu.png.220x220_q95.png"
+                          alt="MRI"
+                          loading="lazy">
+                        Mauritius
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/mex/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/mx.png.220x220_q95.png"
+                          alt="MEX"
+                          loading="lazy">
+                        Mexico
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/fsm/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/fm.png.220x220_q95.png"
+                          alt="FSM"
+                          loading="lazy">
+                        Micronesia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/mda/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/md.png.220x220_q95.png"
+                          alt="MDA"
+                          loading="lazy">
+                        Moldova
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/mon/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/mc.png.220x220_q95.png"
+                          alt="MON"
+                          loading="lazy">
+                        Monaco
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/mgl/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/mn.png.220x220_q95.png"
+                          alt="MGL"
+                          loading="lazy">
+                        Mongolia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/mne/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/me.png.220x220_q95.png"
+                          alt="MNE"
+                          loading="lazy">
+                        Montenegro
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/mar/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ma.png.220x220_q95.png"
+                          alt="MAR"
+                          loading="lazy">
+                        Morocco
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/moz/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/mz.png.220x220_q95.png"
+                          alt="MOZ"
+                          loading="lazy">
+                        Mozambique
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/mya/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/mm.png.220x220_q95.png"
+                          alt="MYA"
+                          loading="lazy">
+                        Myanmar
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/nam/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/na.png.220x220_q95.png"
+                          alt="NAM"
+                          loading="lazy">
+                        Namibia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/nru/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/nr.png.220x220_q95.png"
+                          alt="NRU"
+                          loading="lazy">
+                        Nauru
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/nep/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/np.png.220x220_q95.png"
+                          alt="NEP"
+                          loading="lazy">
+                        Nepal
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ned/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/nl.png.220x220_q95.png"
+                          alt="NED"
+                          loading="lazy">
+                        Netherlands
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/nzl/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/nz.png.220x220_q95.png"
+                          alt="NZL"
+                          loading="lazy">
+                        New Zealand
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/nca/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ni.png.220x220_q95.png"
+                          alt="NCA"
+                          loading="lazy">
+                        Nicaragua
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/nig/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ne.png.220x220_q95.png"
+                          alt="NIG"
+                          loading="lazy">
+                        Niger
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ngr/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ng.png.220x220_q95.png"
+                          alt="NGR"
+                          loading="lazy">
+                        Nigeria
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/mkd/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/mk.png.220x220_q95.png"
+                          alt="MKD"
+                          loading="lazy">
+                        North Macedonia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/nir/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/gb.png.220x220_q95.png"
+                          alt="NIR"
+                          loading="lazy">
+                        Northern Ireland
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/nor/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/no.png.220x220_q95.png"
+                          alt="NOR"
+                          loading="lazy">
+                        Norway
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/oma/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/om.png.220x220_q95.png"
+                          alt="OMA"
+                          loading="lazy">
+                        Oman
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/pak/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/pk.png.220x220_q95.png"
+                          alt="PAK"
+                          loading="lazy">
+                        Pakistan
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/plw/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/pw.png.220x220_q95.png"
+                          alt="PLW"
+                          loading="lazy">
+                        Palau
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ple/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ps.png.220x220_q95.png"
+                          alt="PLE"
+                          loading="lazy">
+                        Palestine
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/pan/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/pa.png.68x68_q85.png.68x68_q85.png.68x68_q85.png.68x68_q85.png.220x220_q95.png"
+                          alt="PAN"
+                          loading="lazy">
+                        Panama
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/png/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/pg.png.220x220_q95.png"
+                          alt="PNG"
+                          loading="lazy">
+                        Papua New Guinea
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/par/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/py.png.220x220_q95.png"
+                          alt="PAR"
+                          loading="lazy">
+                        Paraguay
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/per/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/pe.png.220x220_q95.png"
+                          alt="PER"
+                          loading="lazy">
+                        Peru
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/phi/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ph.png.220x220_q95.png"
+                          alt="PHI"
+                          loading="lazy">
+                        Philippines
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/pol/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/515af48b-0ff0-4c4b-a7f6-72f9611a3d40.jpg.220x220_q95.jpg"
+                          alt="POL"
+                          loading="lazy">
+                        Poland
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/por/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/pt.png.220x220_q95.png"
+                          alt="POR"
+                          loading="lazy">
+                        Portugal
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/pur/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/pr.png.220x220_q95.png"
+                          alt="PUR"
+                          loading="lazy">
+                        Puerto Rico
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/qat/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/qa.png.220x220_q95.png"
+                          alt="QAT"
+                          loading="lazy">
+                        Qatar
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/rho/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/zw.png.220x220_q95.png"
+                          alt="RHO"
+                          loading="lazy">
+                        Rhodesia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/rou/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ro.png.220x220_q95.png"
+                          alt="ROU"
+                          loading="lazy">
+                        Romania
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/rus/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ru.png.220x220_q95.png"
+                          alt="RUS"
+                          loading="lazy">
+                        Russia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/rwa/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/rw.png.220x220_q95.png"
+                          alt="RWA"
+                          loading="lazy">
+                        Rwanda
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/lca/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/lc.png.220x220_q95.png"
+                          alt="LCA"
+                          loading="lazy">
+                        Saint Lucia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/sam/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ws.png.220x220_q95.png"
+                          alt="SAM"
+                          loading="lazy">
+                        Samoa
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/smr/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/sm.png.220x220_q95.png"
+                          alt="SMR"
+                          loading="lazy">
+                        San Marino
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/stp/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/st.png.220x220_q95.png"
+                          alt="STP"
+                          loading="lazy">
+                        Sao Tome &amp; Principe
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ksa/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/sa.png.220x220_q95.png"
+                          alt="KSA"
+                          loading="lazy">
+                        Saudi Arabia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/sco/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/d937b387-e3e8-4f2a-9518-712548cd2d12.jpg.220x220_q95.jpg"
+                          alt="SCO"
+                          loading="lazy">
+                        Scotland
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/sen/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/sn.png.220x220_q95.png"
+                          alt="SEN"
+                          loading="lazy">
+                        Senegal
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/srb/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/rs.png.220x220_q95.png"
+                          alt="SRB"
+                          loading="lazy">
+                        Serbia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/scg/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/rs.png.220x220_q95.png"
+                          alt="SCG"
+                          loading="lazy">
+                        Serbia &amp; Montenegro
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/sey/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/sc.png.220x220_q95.png"
+                          alt="SEY"
+                          loading="lazy">
+                        Seychelles
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/sle/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/sl.png.220x220_q95.png"
+                          alt="SLE"
+                          loading="lazy">
+                        Sierra Leone
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/sin/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/sg.png.220x220_q95.png"
+                          alt="SIN"
+                          loading="lazy">
+                        Singapore
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/svk/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/sk.png.220x220_q95.png"
+                          alt="SVK"
+                          loading="lazy">
+                        Slovakia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/slo/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/si.png.220x220_q95.png"
+                          alt="SLO"
+                          loading="lazy">
+                        Slovenia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/sol/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/sb.png.220x220_q95.png"
+                          alt="SOL"
+                          loading="lazy">
+                        Solomon Islands
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/som/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/so.png.220x220_q95.png"
+                          alt="SOM"
+                          loading="lazy">
+                        Somalia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/rsa/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/za.png.220x220_q95.png"
+                          alt="RSA"
+                          loading="lazy">
+                        South Africa
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/esp/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/es.png.220x220_q95.png"
+                          alt="ESP"
+                          loading="lazy">
+                        Spain
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/sri/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/lk.png.220x220_q95.png"
+                          alt="SRI"
+                          loading="lazy">
+                        Sri Lanka
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/skn/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/kn.png.220x220_q95.png"
+                          alt="SKN"
+                          loading="lazy">
+                        St. Kitts &amp; Nevis
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/vin/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/vc.png.220x220_q95.png"
+                          alt="VIN"
+                          loading="lazy">
+                        St. Vincent &amp; Grenadines
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/sud/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/sd.png.220x220_q95.png"
+                          alt="SUD"
+                          loading="lazy">
+                        Sudan
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/sur/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/sr.png.220x220_q95.png"
+                          alt="SUR"
+                          loading="lazy">
+                        Suriname
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/swz/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/sz.png.220x220_q95.png"
+                          alt="SWZ"
+                          loading="lazy">
+                        Swaziland
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/swe/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/se.png.220x220_q95.png"
+                          alt="SWE"
+                          loading="lazy">
+                        Sweden
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/sui/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ch.png.220x220_q95.png"
+                          alt="SUI"
+                          loading="lazy">
+                        Switzerland
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/syr/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/sy.png.220x220_q95.png"
+                          alt="SYR"
+                          loading="lazy">
+                        Syria
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/tah/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/pf.png.220x220_q95.png"
+                          alt="TAH"
+                          loading="lazy">
+                        Tahiti
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/tjk/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/tj.png.220x220_q95.png"
+                          alt="TJK"
+                          loading="lazy">
+                        Tajikistan
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/tan/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/tz.png.220x220_q95.png"
+                          alt="TAN"
+                          loading="lazy">
+                        Tanzania
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/tha/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/th.png.220x220_q95.png"
+                          alt="THA"
+                          loading="lazy">
+                        Thailand
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/tog/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/tg.png.220x220_q95.png"
+                          alt="TOG"
+                          loading="lazy">
+                        Togo
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/tga/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/to.png.220x220_q95.png"
+                          alt="TGA"
+                          loading="lazy">
+                        Tonga
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/tri/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/tt.png.220x220_q95.png"
+                          alt="TRI"
+                          loading="lazy">
+                        Trinidad &amp; Tobago
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/tun/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/tn.png.220x220_q95.png"
+                          alt="TUN"
+                          loading="lazy">
+                        Tunisia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/tkm/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/tm.png.220x220_q95.png"
+                          alt="TKM"
+                          loading="lazy">
+                        Turkmenistan
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/tca/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/tc.png.220x220_q95.png"
+                          alt="TCA"
+                          loading="lazy">
+                        Turks and Caicos Islands
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/tur/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/tr.png.220x220_q95.png"
+                          alt="TUR"
+                          loading="lazy">
+                        Türkiye (Turkey)
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/uga/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ug.png.220x220_q95.png"
+                          alt="UGA"
+                          loading="lazy">
+                        Uganda
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ukr/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ua.png.220x220_q95.png"
+                          alt="UKR"
+                          loading="lazy">
+                        Ukraine
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/uae/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ae.png.220x220_q95.png"
+                          alt="UAE"
+                          loading="lazy">
+                        United Arab Emirates
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/uru/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/uy.png.220x220_q95.png"
+                          alt="URU"
+                          loading="lazy">
+                        Uruguay
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/uzb/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/uz.png.220x220_q95.png"
+                          alt="UZB"
+                          loading="lazy">
+                        Uzbekistan
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/van/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/vu.png.220x220_q95.png"
+                          alt="VAN"
+                          loading="lazy">
+                        Vanuatu
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/ven/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ve.png.220x220_q95.png"
+                          alt="VEN"
+                          loading="lazy">
+                        Venezuela
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/vie/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/vn.png.220x220_q95.png"
+                          alt="VIE"
+                          loading="lazy">
+                        Vietnam
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/isv/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/vi.png.220x220_q95.png"
+                          alt="ISV"
+                          loading="lazy">
+                        Virgin Islands
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/wal/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/83bd8047-f97b-425e-b7a9-fb711ae4d76e.jpg.220x220_q95.jpg"
+                          alt="WAL"
+                          loading="lazy">
+                        Wales
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/yem/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ye.png.220x220_q95.png"
+                          alt="YEM"
+                          loading="lazy">
+                        Yemen
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/tmd/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/ye.png.220x220_q95.png"
+                          alt="TMD"
+                          loading="lazy">
+                        Yemen, PDR
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/zai/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/cd.png.220x220_q95.png"
+                          alt="ZAI"
+                          loading="lazy">
+                        Zaire
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/zam/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/zm.png.220x220_q95.png"
+                          alt="ZAM"
+                          loading="lazy">
+                        Zambia
+                      </a>
+                    </li>
+                  
+                    <li >
+                      <a href="/country/zim/teams/">
+                        <img
+                          class="dropdown-menu-image"
+                          src="https://s3.amazonaws.com/cstest/country/zw.png.220x220_q95.png"
+                          alt="ZIM"
+                          loading="lazy">
+                        Zimbabwe
+                      </a>
+                    </li>
+                  
+
+                  
+                
+              </ul>
+            </li>
+          
+        
+
+        <li class="dropdown">
+          <button
+            class="btn-link dropdown-toggle"
+            type="button"
+            data-toggle="dropdown">
+            USA Swimming <span class="caret u-color-hint"></span>
+          </button>
+          <ul class="dropdown-menu">
+            
+              <li class="dropdown-subheader">Organization</li>
+              
+                <li class="active" >
+                  <a href="/country/usa/club/teams/">
+                    <img
+                      class="dropdown-menu-image"
+                      src="https://s3.amazonaws.com/cstest/img/logos/76f4d166-1a80-4b18-8e93-d6e3ef18b970.jpg.220x220_q95.jpg"
+                      alt="USAS"
+                      loading="lazy">
+                    USA Swimming
+                  </a>
+                </li>
+              
+                <li >
+                  <a href="/country/usa/college/teams/">
+                    <img
+                      class="dropdown-menu-image"
+                      src="https://s3.amazonaws.com/cstest/img/logos/usacollege.svg"
+                      alt="usacollege"
+                      loading="lazy">
+                    College
+                  </a>
+                </li>
+              
+                <li >
+                  <a href="/country/usa/prep/teams/">
+                    <img
+                      class="dropdown-menu-image"
+                      src="https://s3.amazonaws.com/cstest/img/logos/8aa2d1db-0e32-4889-9a88-773d0ed9be40.jpg.220x220_q95.jpg"
+                      alt="usaprep"
+                      loading="lazy">
+                    High School
+                  </a>
+                </li>
+              
+                <li >
+                  <a href="/country/usa/org/sls/teams/">
+                    <img
+                      class="dropdown-menu-image"
+                      src="https://s3.amazonaws.com/cstest/img/logos/acb63e7a-79d5-4255-ab85-ee6679679000.jpg.220x220_q95.jpg"
+                      alt="Summer League"
+                      loading="lazy">
+                    Summer/Rec Swimming
+                  </a>
+                </li>
+              
+                <li >
+                  <a href="/country/usa/org/mss/teams/">
+                    <img
+                      class="dropdown-menu-image"
+                      src="https://s3.amazonaws.com/cstest/img/logos/bf34955b-7d98-4790-b07f-c0e9cf124c43.jpg.220x220_q95.jpg"
+                      alt="MSS"
+                      loading="lazy">
+                    Middle School
+                  </a>
+                </li>
+              
+
+              
+                <li role="separator" class="divider"></li>
+              
+            
+              <li class="dropdown-subheader">Region</li>
+              
+                <li >
+                  <a href="/country/usa/region/aau/teams/">
+                    <img
+                      class="dropdown-menu-image"
+                      src="https://s3.amazonaws.com/cstest/team_region/AAU-logo_MFCVKMg.jpg.220x220_q95.jpg"
+                      alt="AAU"
+                      loading="lazy">
+                    AAU - Amateur Athletic Union
+                  </a>
+                </li>
+              
+                <li >
+                  <a href="/country/usa/region/ymca/teams/">
+                    <img
+                      class="dropdown-menu-image"
+                      src="https://s3.amazonaws.com/cstest/team_region/YMCA_favicon-blue-green_7DP4Ng5.jpg.220x220_q95.jpg"
+                      alt="YMCA"
+                      loading="lazy">
+                    YMCA
+                  </a>
+                </li>
+              
+                <li >
+                  <a href="/country/usa/region/efsl/teams/">
+                    <img
+                      class="dropdown-menu-image"
+                      src="https://s3.amazonaws.com/cstest/team_region/EFSC.png.68x68_q85.jpg.68x68_q85.jpg.68x68_q85.jpg.68x68_q85.jpg.68x68_q85.jpg.220x220_q95.jpg"
+                      alt="EFSL"
+                      loading="lazy">
+                    EFSL
+                  </a>
+                </li>
+              
+                <li >
+                  <a href="/country/usa/region/ccs/teams/">
+                    <img
+                      class="dropdown-menu-image"
+                      src="https://s3.amazonaws.com/cstest/team_region/e7901f67-76e9-4eb0-804e-b2bf7237abd6.jpg.220x220_q95.jpg"
+                      alt="CCS"
+                      loading="lazy">
+                    Collegiate Club Swimming
+                  </a>
+                </li>
+              
+
+              
+            
+          </ul>
+        </li>
+
+        
+          <li class="dropdown">
+            <button
+              class="btn-link dropdown-toggle"
+              type="button"
+              data-toggle="dropdown">
+              
+                Regions
+              
+               <span class="caret u-color-hint"></span>
+            </button>
+            <ul class="dropdown-menu">
+              
+                <li class="dropdown-subheader">Lsc</li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/AD/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/866e23ee-9e1c-4c55-8bb8-e4b8b552e49a.jpg.55x55_q85.jpg.55x55_q85.jpg.55x55_q85.jpg.220x220_q95.jpg"
+                        alt="AD"
+                        loading="lazy">
+                      Adirondack Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/AK/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/lsc-ak_teycZqs.png.220x220_q95.png"
+                        alt="AK"
+                        loading="lazy">
+                      Alaska Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/AM/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/476faeee-345f-4ca1-8fc4-a31e2d5cad6b.jpg.220x220_q95.jpg"
+                        alt="AM"
+                        loading="lazy">
+                      Allegheny Mountain Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/AZ/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-AZ.PNG.220x220_q95.png"
+                        alt="AZ"
+                        loading="lazy">
+                      Arizona Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/AR/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/bb57e816-a7eb-4de2-a826-8a5515e965d0.jpg.55x55_q85.jpg.220x220_q95.jpg"
+                        alt="AR"
+                        loading="lazy">
+                      Arkansas Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/BD/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-BD.png.220x220_q95.png"
+                        alt="BD"
+                        loading="lazy">
+                      Border Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/CC/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-CC.png.220x220_q95.png"
+                        alt="CC"
+                        loading="lazy">
+                      Central California Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/CO/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-colorado.jpg.220x220_q95.jpg"
+                        alt="CO"
+                        loading="lazy">
+                      Colorado Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/CT/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/7b5d6397-d3ff-43b6-922e-3ed77186ba81.jpg.220x220_q95.jpg"
+                        alt="CT"
+                        loading="lazy">
+                      Connecticut Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/FG/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-FG.png.220x220_q95.png"
+                        alt="FG"
+                        loading="lazy">
+                      Florida Gold Coast Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/FL/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/483faa9a-86d2-4985-b480-7d7604e8443c.jpg.220x220_q95.jpg"
+                        alt="FL"
+                        loading="lazy">
+                      Florida Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/GA/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-GA.png.220x220_q95.png"
+                        alt="GA"
+                        loading="lazy">
+                      Georgia Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/GU/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-GU.PNG.220x220_q95.png"
+                        alt="GU"
+                        loading="lazy">
+                      Gulf Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/HI/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-HI.png.220x220_q95.jpg"
+                        alt="HI"
+                        loading="lazy">
+                      Hawaiian Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/IL/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/b4f01e98-f890-4ab9-94e0-fc7cb2683655.jpg.220x220_q95.jpg"
+                        alt="IL"
+                        loading="lazy">
+                      Illinois Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/IN/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/f7fbd036-e074-4c77-9e3a-cbe17fe0d2ea.jpg.220x220_q95.jpg"
+                        alt="IN"
+                        loading="lazy">
+                      Indiana Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/IE/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-IE.png.220x220_q95.png"
+                        alt="IE"
+                        loading="lazy">
+                      Inland Empire Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/IA/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/0207fd18-d296-49ae-9e37-9555051a1de9.jpg.220x220_q95.jpg"
+                        alt="IA"
+                        loading="lazy">
+                      Iowa Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/KY/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-KY.png.220x220_q95.png"
+                        alt="KY"
+                        loading="lazy">
+                      Kentucky Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/LE/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-LE_y1ghQDe.png.220x220_q95.png"
+                        alt="LE"
+                        loading="lazy">
+                      Lake Erie Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/LA/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-LA.png.220x220_q95.png"
+                        alt="LA"
+                        loading="lazy">
+                      Louisiana Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/ME/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/06641ef0-4e33-48f7-a5dc-3812aeabd960.jpg.220x220_q95.jpg"
+                        alt="ME"
+                        loading="lazy">
+                      Maine Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/MD/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-MD.jpg.220x220_q95.jpg"
+                        alt="MD"
+                        loading="lazy">
+                      Maryland Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/MR/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-MR.png.220x220_q95.png"
+                        alt="MR"
+                        loading="lazy">
+                      Metropolitan Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/MI/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-MI.png.220x220_q95.jpg"
+                        alt="MI"
+                        loading="lazy">
+                      Michigan Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/MA/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/MA.png.220x220_q95.png"
+                        alt="MA"
+                        loading="lazy">
+                      Middle Atlantic Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/MW/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/46c2056f-b20b-4455-9943-b568b235bd4f.jpg.220x220_q95.jpg"
+                        alt="MW"
+                        loading="lazy">
+                      Midwestern Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/MN/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/a269ce20-229d-4f87-b705-2f7c38f53ba1.jpg.220x220_q95.jpg"
+                        alt="MN"
+                        loading="lazy">
+                      Minnesota Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/MS/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-MS.jpg.220x220_q95.jpg"
+                        alt="MS"
+                        loading="lazy">
+                      Mississippi Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/MV/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/4ac0043c-2bdf-4d1c-bc6b-d20503ca2f9f.jpg.220x220_q95.jpg"
+                        alt="MV"
+                        loading="lazy">
+                      Missouri Valley Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/MT/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-MT.jpg.220x220_q95.jpg"
+                        alt="MT"
+                        loading="lazy">
+                      Montana Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/NE/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-NE.jpg.220x220_q95.jpg"
+                        alt="NE"
+                        loading="lazy">
+                      New England Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/NJ/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/a5af1208-4183-4f51-9763-1c31cb1e9ccc.jpg.220x220_q95.jpg"
+                        alt="NJ"
+                        loading="lazy">
+                      New Jersey Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/NM/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-NM.jpg.220x220_q95.jpg"
+                        alt="NM"
+                        loading="lazy">
+                      New Mexico Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/NI/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/92c8f47e-9a9b-4f75-8e30-bdff1d272519.jpg.220x220_q95.jpg"
+                        alt="NI"
+                        loading="lazy">
+                      Niagara Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/NC/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/NC2color.png.55x55_q85.png.55x55_q85.png.220x220_q95.png"
+                        alt="NC"
+                        loading="lazy">
+                      North Carolina Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/ND/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-ND.jpg.220x220_q95.jpg"
+                        alt="ND"
+                        loading="lazy">
+                      North Dakota Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/NT/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/832e6507-21fa-4b8e-9cdd-26a9efdfdae0.jpg.220x220_q95.jpg"
+                        alt="NT"
+                        loading="lazy">
+                      North Texas Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/OH/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-OH.jpg.220x220_q95.jpg"
+                        alt="OH"
+                        loading="lazy">
+                      Ohio Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/OK/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/b6d53c1e-5321-4879-8fa7-984ba107d740.jpg.220x220_q95.jpg"
+                        alt="OK"
+                        loading="lazy">
+                      Oklahoma Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/OR/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-OR.jpeg.220x220_q95.jpg"
+                        alt="OR"
+                        loading="lazy">
+                      Oregon Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/OZ/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/46768bc7-bcba-4ba6-a981-2c32299695a6.jpg.220x220_q95.jpg"
+                        alt="OZ"
+                        loading="lazy">
+                      Ozark Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/PN/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-PN.jpg.220x220_q95.jpg"
+                        alt="PN"
+                        loading="lazy">
+                      Pacific Northwest Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/Pacific/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-PC.PNG.55x55_q85.png.55x55_q85.png.220x220_q95.png"
+                        alt="PC"
+                        loading="lazy">
+                      Pacific Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/PV/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/e3dc3a6a-4f2e-4ecf-9014-34fa56bc5023.jpg.220x220_q95.jpg"
+                        alt="PV"
+                        loading="lazy">
+                      Potomac Valley Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/SI/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/ae5bc4c8-c9e1-4c18-b015-ef3c772839db.jpg.220x220_q95.jpg"
+                        alt="SI"
+                        loading="lazy">
+                      San Diego-Imperial Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/SN/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-SN.jpg.220x220_q95.jpg"
+                        alt="SN"
+                        loading="lazy">
+                      Sierra Nevada Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/SR/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/bdac3dc9-cfe6-4189-89bd-7a2c92ebaa93.jpg.220x220_q95.jpg"
+                        alt="SR"
+                        loading="lazy">
+                      Snake River Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/SC/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/db8a9d4e-6161-4b4b-a649-09e68519e2db.jpg.220x220_q95.jpg"
+                        alt="SC"
+                        loading="lazy">
+                      South Carolina Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/SD/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-SD.png.220x220_q95.png"
+                        alt="SD"
+                        loading="lazy">
+                      South Dakota Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/ST/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-ST.jpeg.220x220_q95.jpg"
+                        alt="ST"
+                        loading="lazy">
+                      South Texas Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/SE/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-SE.jpg.220x220_q95.jpg"
+                        alt="SE"
+                        loading="lazy">
+                      Southeastern Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/CA/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/c168e156-330d-411b-8188-e773b420a614.jpg.220x220_q95.jpg"
+                        alt="CA"
+                        loading="lazy">
+                      Southern California Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/UT/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/3248093b-8ce9-4e75-ab47-988e4cfb36c9.jpg.220x220_q95.jpg"
+                        alt="UT"
+                        loading="lazy">
+                      Utah Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/VA/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/cdd00b4c-b49a-422b-9838-c374634d7d2d.jpg.220x220_q95.jpg"
+                        alt="VA"
+                        loading="lazy">
+                      Virginia Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/WT/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/112637ef-c245-4b9f-9906-09caa4a6db1c.jpg.220x220_q95.jpg"
+                        alt="WT"
+                        loading="lazy">
+                      West Texas Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/WV/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/0ed045dc-8dad-4be1-98d7-3ea71914186d.jpg.55x55_q85.jpg.220x220_q95.jpg"
+                        alt="WV"
+                        loading="lazy">
+                      West Virginia Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/WI/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/943939dc-d85a-4e0a-bd3d-e27682cac490.jpg.220x220_q95.jpg"
+                        alt="WI"
+                        loading="lazy">
+                      Wisconsin Swimming
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/country/usa/club/lsc/WY/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="https://s3.amazonaws.com/cstest/img/logos/LSC-WY_0Dxo7Jq.png.220x220_q95.png"
+                        alt="WY"
+                        loading="lazy">
+                      Wyoming Swimming
+                    </a>
+                  </li>
+                
+
+                
+                  <li role="separator" class="divider"></li>
+                
+              
+                <li class="dropdown-subheader">Region</li>
+                
+                  <li>
+                    <a href="/country/usa/club/region/zones/teams/">
+                      <img
+                        class="dropdown-menu-image"
+                        src="/media/img/icon-fa-institution.png"
+                        alt="Zones"
+                        loading="lazy">
+                      USA Swimming Zone Teams
+                    </a>
+                  </li>
+                
+
+                
+              
+            </ul>
+          </li>
+        
+      </ol>
+
+      <div class="c-toolbar__header">
+        <figure class="c-toolbar__media hidden-print">
+          <img src="https://s3.amazonaws.com/cstest/img/logos/76f4d166-1a80-4b18-8e93-d6e3ef18b970.jpg.220x220_q95.jpg" alt="USAS">
+        </figure>
+
+        <div class="c-toolbar__header-content">
+          <h1 class="c-toolbar__title">USA Swimming</h1>
+          
+            <div class="c-toolbar__meta u-text-default">
+              <button
+                class="btn-link u-p0 hidden-print"
+                id="js-toggle-region"
+                data-region="countryorganisation_USAS">
+                Set default region
+              </button>
+            </div>
+          
+        </div>
+
+        
+        
+
+        
+      </div>
+
+      
+      <div class="c-toolbar__nav js-nav-priority">
+        <nav class="c-nav c-nav--inline u-overflow-hidden">
+          <a
+            class="c-nav__item "
+            href="/country/usa/club/">
+            Home
+          </a>
+          <a
+            class="c-nav__item "
+            href="/country/usa/club/results/">
+            Meets
+          </a>
+          <a
+            class="c-nav__item c-nav__item--active"
+            href="/country/usa/club/teams/">
+            Teams
+          </a>
+          <a
+            class="c-nav__item "
+            href="/country/usa/club/times/">
+            Times
+          </a>
+          
+            <a
+              class="c-nav__item "
+              href="/country/usa/club/records/">
+              Records
+            </a>
+          
+          
+          
+          
+            <a
+              class="c-nav__item "
+              href="/country/usa/club/swimmers/">
+              Swimmers
+            </a>
+          
+        </nav>
+      </div>
+      
+    </div>
+  </div>
+
+          
+<div class="container">
+  <div
+    id="rankings"
+    data-season-id="28"
+    data-default-gender="M"
+    data-default-region="countryorganisation_USAS"
+    data-page-base-region="countryorganisation_USAS"
+    data-is-region="true"
+  >
+    <!--REACT APP-->
+  </div>
+</div>
+
+        </div>
+      </div>
+    
+
+
+    
+
+
+
+
+  
+
+  <script
+    src="https://browser.sentry-cdn.com/7.91.0/bundle.tracing.min.js"
+    integrity="sha384-mLp8eX2NZEYz/yYlB3hz0DAxA9qX7yneHI9PPB9DfnLCo4Z+yC1XQzP9D7b9oqS2"
+    crossorigin="anonymous"
+  ></script>
+
+
+  <script>
+    const WEBPACK_PATH =
+      "https://www.swimcloud.com/media/webpack/";
+
+    Sentry.init({
+      dsn: "https://d5e74d4028ae4a06a155bdeee21e45cc@o375140.ingest.sentry.io/5199088",
+      release: "0032eda1ee682cbdf0edd6a6adc7906fd7eb30b3",
+      environment: "production",
+      ignoreErrors: ["Non-Error exception captured"],
+      beforeSend(event) {
+        if (event.exception)
+          try {
+            const isWebpack = event.exception.values[0].stacktrace.frames.some(
+              (frame) => frame.filename.includes(WEBPACK_PATH)
+            );
+            return isWebpack ? event : null;
+          } catch (error) {
+            return null;
+          }
+        return event;
+      },
+      integrations: [new Sentry.BrowserTracing()],
+      tracesSampleRate: 0.002,
+    });
+
+    Sentry.configureScope((scope) => {
+      const user = {
+        id: Number("") || undefined,
+        email: "" || undefined,
+        username: "" || undefined
+      };
+      if (user.id) scope.setUser(user);
+    });
+  </script>
+
+
+    <script src="/media/js/jquery-3.7.1.min.1707824348.js"></script>
+    <script src="/media/js/bootstrap.min.1707824348.js"></script>
+    <script defer src="/media/js/swimcloud/nav-priority.1707824348.js"></script>
+    <script type="text/javascript" src="/media/js/js.cookie.min.1707824348.js"></script>
+    
+
+
+
+    <script>
+  jQuery(function($) {
+    $(document).ready(function() {
+      var targetElement = $('.js-bs-tooltip');
+      if (targetElement.length) {
+        targetElement.tooltip({
+          placement: 'auto bottom',
+          trigger: 'hover'
+        });
+      }
+    });
+  });
+</script>
+
+
+    <script src="/media/js/swimcloud/drawer.1707824348.js"></script>
+    <script type="text/javascript">
+      //set csrf cookie for jquery ajax post calls
+      window.onload = function (e) {
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = jQuery.trim(cookies[i]);
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        var csrftoken = getCookie('csrftoken');
+        //set up cookie
+        function csrfSafeMethod(method) {
+            // these HTTP methods do not require CSRF protection
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+        $.ajaxSetup({
+            beforeSend: function(xhr, settings) {
+                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                }
+            }
+        });
+      };
+    </script>
+
+    <script type="text/javascript">
+      // resolving: https://github.com/select2/select2/issues/3354
+      $(document).ready(function() {
+        $(':input').on('select2:unselect', function(e) {
+          var $el = $(this);
+
+          if ($el.data('select2').selection.$search) {
+            setTimeout(function () {
+              // console.log($el.data('select2').selection.prototype);
+              $el.data('select2').selection.$search.val("");
+            }, 0);
+          };
+        });
+      });
+    </script>
+
+    
+
+    
+
+    
+  
+  
+
+  <script type="text/javascript">
+    $(document).on('click', '#js-toggle-region', function() {
+      function setCookie(cname, cvalue, exdays) {
+          var d = new Date();
+          d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+          var expires = "expires="+d.toUTCString();
+          document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+
+      if ($(this).data('favorited')) {
+        // $.removeCookie('region_id');
+        setCookie('region_id', null, -1);
+      } else {
+        setCookie('region_id', $(this).data('region'), 365);
+      }
+      location.reload();
+    });
+  </script>
+
+  <script src="/media/webpack/rankings/index.1733839587.js"></script>
+
+
+
+      <script type='text/javascript'>
+          /*
+           * Hacky fix for a bug in select2 with jQuery 3.6.0's new nested-focus "protection"
+           * see: https://github.com/select2/select2/issues/5993
+           * see: https://github.com/jquery/jquery/issues/4382
+           *
+           * TODO: Recheck with the select2 GH issue and remove once this is fixed on their side
+           */
+          $(document).on('select2:open', () => {
+            setTimeout(() => document.querySelector('.select2-search__field').focus(), 100);
+          });
+      </script>
+
+    
+
+
+    
+    
+
+<script type="text/javascript">
+  var csrf_token = "OPypNpFufZEYxklcARV2GMucXYqU1yE4gHXUiDdtSnX8JdEIoXzof4tVMWCmHDMM";
+  var tz_set_endpoint = '/tz_detect/';
+  var csrf_header_name = 'x-csrftoken';
+  (function() {
+    var tz_script = document.createElement('script');
+    tz_script.src = '/media/static/tz_detect/js/tzdetect.min.cbab13600a82.js';
+    tz_script.setAttribute('async', 'true');
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tz_script, s);
+  })();
+</script>
+
+
+  </body>
+</html>
