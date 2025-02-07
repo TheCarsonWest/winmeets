@@ -1,16 +1,15 @@
 from master import *
+from relay import *
 
-urls = ['https://www.swimcloud.com/swimmer/1256363/','https://www.swimcloud.com/swimmer/2731807/','https://www.swimcloud.com/swimmer/2854321/','https://www.swimcloud.com/swimmer/1256361/','https://www.swimcloud.com/swimmer/2603790/','https://www.swimcloud.com/swimmer/2540419/','https://www.swimcloud.com/swimmer/2074030/','https://www.swimcloud.com/swimmer/2540422/','https://www.swimcloud.com/swimmer/1687184/','https://www.swimcloud.com/swimmer/2540430/','https://www.swimcloud.com/swimmer/2540431/','https://www.swimcloud.com/swimmer/1611157/','https://www.swimcloud.com/swimmer/2191589/','https://www.swimcloud.com/swimmer/2540435/','https://www.swimcloud.com/swimmer/2297622/','https://www.swimcloud.com/swimmer/659494/']
-team = Team()
-team.name = "Hough 24-25"
-for x in urls:
-    team.add(Swimmer(x),'m')
+t = Team('https://www.swimcloud.com/team/4338/')
+t.save()
 
-team.save()
 
-"""
-relay_combinations_free = generate_relay_combinations(team.team_m, "free") # Example for men's free relay
-write_relay_combinations_to_csv(relay_combinations_free, 'relay_combinations_free_men.csv')
 
-relay_combinations_medley = generate_relay_combinations(team.team_f, "medley") # Example for women's medley relay
-write_relay_combinations_to_csv(relay_combinations_medley, 'relay_combinations_medley_women.csv')"""
+my_team = t
+optimal_relays, best_time = genetic_algorithm(my_team, gender="m")
+print("Optimal Relay Assignments (Men):", display_chromosome(optimal_relays,my_team.team_m))
+print("Best Total Time:", time_to_string(best_time))
+print("400 FR: "+time_to_string(calculate_relay_time(optimal_relays["400 Free Relay"],my_team.team_m,"400 Free Relay")))
+print("200 FR: "+time_to_string(calculate_relay_time(optimal_relays["200 Free Relay"],my_team.team_m,"200 Free Relay")))
+print("200 IM: "+time_to_string(calculate_relay_time(optimal_relays["200 Medley Relay"],my_team.team_m,"200 Medley Relay")))

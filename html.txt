@@ -1,0 +1,3633 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Swimcloud</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500" rel="stylesheet">
+    <link href="/media/css/main.1734426658.css" rel="stylesheet">
+  </head>
+  <body style="background-color: #fff;">
+    
+  
+    
+
+<div class="c-card u-shadowless">
+  <div class="c-card__item">
+    <div class="u-flex u-flex-align-items-center u-flex-justify-between">
+      <h1 class="c-title c-title--small">Top Times</h1>
+      <a class="u-block" href="https://www.swimcloud.com">
+        <img height="35" src="/media/img/swimcloud/logos/swimcloud.svg" alt="Swimcloud logo">
+      </a>
+    </div>
+  </div>
+
+    <form class="u-ph js-form" method="GET">
+      <input type="hidden" name="page" value="1">
+      
+        <input type="hidden" name="region" value="state_nc" id="id_region">
+      
+        <input type="hidden" name="orgcode" value="9" id="id_orgcode">
+      
+        <input type="hidden" name="course" value="Y" id="id_course">
+      
+        <input type="hidden" name="hide_gender" value="0" id="id_hide_gender">
+      
+        <input type="hidden" name="hide_season" value="0" id="id_hide_season">
+      
+
+      
+      <div class="u-flex">
+        <div class="u-flex-grow1 u-flex">
+          
+            
+              <div class="u-mr">
+               
+
+<div class="form-group">
+    
+        
+            <label class="control-label  " for="id_event">Event</label>
+        
+
+        <div class=" ">
+            <select name="event" class=" form-control" id="id_event">
+  <option value="150" selected>50 Free</option>
+
+  <option value="1100">100 Free</option>
+
+  <option value="1200">200 Free</option>
+
+  <option value="1500">500 Free</option>
+
+  <option value="2100">100 Back</option>
+
+  <option value="3100">100 Breast</option>
+
+  <option value="4100">100 Fly</option>
+
+  <option value="5200">200 IM</option>
+
+  <option value="6200">200 Free Relay</option>
+
+  <option value="6400">400 Free Relay</option>
+
+  <option value="7200">200 Medley Relay</option>
+
+  <option value="H1">1M Diving</option>
+
+  <option value="H3">3M Diving</option>
+
+</select>
+
+            
+
+            
+        </div>
+    
+</div>
+
+              </div>
+            
+          
+            
+          
+            
+              <div class="u-mr">
+               
+
+<div class="form-group">
+    
+        
+            <label class="control-label  " for="id_season">Season</label>
+        
+
+        <div class=" ">
+            <select name="season" class=" form-control" id="id_season">
+  <option value="0">---- ALL ----</option>
+
+  <option value="28" selected>2024-2025</option>
+
+  <option value="27">2023-2024</option>
+
+  <option value="26">2022-2023</option>
+
+  <option value="25">2021-2022</option>
+
+  <option value="24">2020-2021</option>
+
+  <option value="23">2019-2020</option>
+
+  <option value="22">2018-2019</option>
+
+  <option value="21">2017-2018</option>
+
+  <option value="20">2016-2017</option>
+
+  <option value="19">2015-2016</option>
+
+  <option value="18">2014-2015</option>
+
+  <option value="17">2013-2014</option>
+
+  <option value="16">2012-2013</option>
+
+  <option value="15">2011-2012</option>
+
+  <option value="14">2010-2011</option>
+
+  <option value="13">2009-2010</option>
+
+  <option value="12">2008-2009</option>
+
+</select>
+
+            
+
+            
+        </div>
+    
+</div>
+
+              </div>
+            
+          
+        </div>
+        <ul id="id_gender" class="c-tabs c-tabs--fit u-mb++">
+    
+      
+        <li class="c-tabs__item active">
+  <button
+    class="c-tabs__link"
+    type="button"
+    onclick="this.form['gender'].value='M'; this.form.submit();"
+  >
+    Men
+    <input class="hidden" type="radio" name="gender" value="M" checked>
+  </button>
+</li>
+
+      
+    
+      
+        <li class="c-tabs__item ">
+  <button
+    class="c-tabs__link"
+    type="button"
+    onclick="this.form['gender'].value='F'; this.form.submit();"
+  >
+    Women
+    <input class="hidden" type="radio" name="gender" value="F" >
+  </button>
+</li>
+
+      
+    
+  </ul>
+      </div>
+      
+
+      
+    </form>
+
+  <table class="c-table-clean c-table-clean--middle table table-hover">
+    <thead>
+      <tr>
+        <th class="c-table-clean__col-fit u-pr0 u-text-center">Rank</th>
+        <th>Name</th>
+        
+          <th class="u-visible-print-table-cell hidden-xs">Team</th>
+        
+        <th class="hidden-xs u-visible-print-table-cell">Meet</th>
+        <th class="c-table-clean__col-fit u-text-end">Time</th>
+        <th class="c-table-clean__col-fit hidden-xs">
+          <span class="u-is-hidden-visually">Flags</span>
+        </th>
+        <th class="c-table-clean__col-fit hidden-xs">
+          <span class="u-is-hidden-visually">Stamp Link</span>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            1
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/1457385">
+              Carter Lange
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Cardinal Gibbons
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4469"
+                title="Cardinal Gibbons High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/01/968BA56F-9332-4223-8077-E71DF674BAA0.png.220x220_q95.png"
+                    title="Cardinal Gibbons High School"
+                    alt="Cardinal Gibbons High School">
+                Cardinal Gibbons
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/323076">Baylor vs. Tennessee Christian Prep, Boyd Buchanan, Cardinal Gibbons, Signal Mountain, Chattanooga Christian</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/323076/event/8/?id=137654147#time137654147">21.53</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308527">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 4A Eastern Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            2
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2336136">
+              Ian Stutts
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Enloe
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4470"
+                title="Enloe High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/02/Enloe_E_eagle_for_web.png.220x220_q95.png"
+                    title="Enloe High School"
+                    alt="Enloe High School">
+                Enloe
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/324156">Cardinal Gibbons, Enloe, Athens Drive, Millbrook</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/324156/event/8/?id=138194712#time138194712">21.61</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308527">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 4A Eastern Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            3
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2248337">
+              Bence Burton
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Ronald Reagan
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4463"
+                title="Ronald Reagan High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2024/02/logo_20559.png.220x220_q95.png"
+                    title="Ronald Reagan High School"
+                    alt="Ronald Reagan High School">
+                Ronald Reagan
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/321091">Davie County &amp; R.J. Reynolds @ Reagan</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/321091/event/8/?id=136429299#time136429299">21.64</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308526">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 4A Central Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            4
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2585462">
+              John Kroll
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Cannon
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/10004676"
+                title="Cannon School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/01/1DF6FEA1-B156-4134-9AE7-7851844A2F27.jpeg.220x220_q95.jpg"
+                    title="Cannon School"
+                    alt="Cannon School">
+                Cannon
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/321115">Cannon, Charlotte Latin, Providence Day</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/321115/event/8/?id=136292245#time136292245">21.67</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/307400">
+  
+      <span  class="c-label c-label--outline c-label--energized"
+         title="NCISAA Division 1 State Championship"
+      >
+        DIV1
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            5
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2112537">
+              Fryderyk Dabkowski
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Asheville School
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4307"
+                title="Asheville School, The">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2024/11/Asheville_Blues.png.220x220_q95.png"
+                    title="Asheville School, The"
+                    alt="Asheville School, The">
+                Asheville School
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/320840">Asheville School, Fayetteville Christian, Greensboro Day, Providence Day</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/320840/event/8/?id=136145918#time136145918">21.69</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/307393">
+  
+      <span  class="c-label c-label--outline c-label--secondary"
+         title="NCISAA Division 2 State Championship"
+      >
+        DIV2
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            5
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2435457">
+              Maverick Crowell
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Northwest Guilford
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4386"
+                title="Northwest Guilford High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2022/09/7e47b5ea04_p253_QpSynGs.png.220x220_q95.png"
+                    title="Northwest Guilford High School"
+                    alt="Northwest Guilford High School">
+                Northwest Guilford
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/312041">13th Annual Robert R. Sawyer Invitational</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/312041/event/8/?id=140843341#time140843341">21.69</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308526">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 4A Central Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            7
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/1865545">
+              Granger Bartee
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Providence Day School
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4340"
+                title="Providence Day School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/team_region/pds_trademark_charger-horse_cmyk_4C-1.png.220x220_q95.png"
+                    title="Providence Day School"
+                    alt="Providence Day School">
+                Providence Day School
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/320840">Asheville School, Fayetteville Christian, Greensboro Day, Providence Day</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/320840/event/8/?id=136146115#time136146115">21.74</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/307400">
+  
+      <span  class="c-label c-label--outline c-label--energized"
+         title="NCISAA Division 1 State Championship"
+      >
+        DIV1
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            8
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2407810">
+              Nolan Schear
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Myers Park
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4338"
+                title="Myers Park High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/01/1762452F-8338-475A-9C8F-372F25FBD622.png.220x220_q95.png"
+                    title="Myers Park High School"
+                    alt="Myers Park High School">
+                Myers Park
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/321853">Ardrey Kell vs. Myers Park</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/321853/event/8/?id=136843301#time136843301">21.82</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308539">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="2025 NCHSAA 4A Western Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            9
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/641762">
+              J. T. Trowbridge
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Ronald Reagan
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4463"
+                title="Ronald Reagan High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2024/02/logo_20559.png.220x220_q95.png"
+                    title="Ronald Reagan High School"
+                    alt="Ronald Reagan High School">
+                Ronald Reagan
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/312041">13th Annual Robert R. Sawyer Invitational</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/312041/event/8/?id=140843577#time140843577">21.89</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308526">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 4A Central Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            10
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2810082">
+              Thomas Greathouse
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Charlotte Latin
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4333"
+                title="Charlotte Latin High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/10/tKYdZcm9_400x400.png.220x220_q95.png"
+                    title="Charlotte Latin High School"
+                    alt="Charlotte Latin High School">
+                Charlotte Latin
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/321115">Cannon, Charlotte Latin, Providence Day</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/321115/event/8/?id=136292304#time136292304">22.00</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/307400">
+  
+      <span  class="c-label c-label--outline c-label--energized"
+         title="NCISAA Division 1 State Championship"
+      >
+        DIV1
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            11
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2405283">
+              Nathan Arredondo
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Hoggard
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4518"
+                title="Hoggard High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/10/12b5c67e-addf-42c1-acf4-b1cf4a5e6bcc.gif.220x220_q95.png"
+                    title="Hoggard High School"
+                    alt="Hoggard High School">
+                Hoggard
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/324341">Topsail, Hoggard, New Hanover, Laney</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/324341/event/8/?id=138231094#time138231094">22.01</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308527">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 4A Eastern Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            12
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/1607295">
+              Nic Sanchez
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Crest
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/10002431"
+                title="Crest High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/12/Crest-DMID1-5dkmgum79-640x480.jpg.220x220_q95.jpg"
+                    title="Crest High School"
+                    alt="Crest High School">
+                Crest
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/322327">Crest, North Gaston, Kings Mountain, South Point, Ashbrook</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/322327/event/14/?id=137031917#time137031917">22.02</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+      <span  class="c-label c-label--neutral u-cursor-help"
+         title="Extracted"
+      >
+        X
+        
+      </span>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            13
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2606497">
+              Mattaus Rammel
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Ravenscroft
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4476"
+                title="Ravenscroft School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2024/11/Ravenscroft_Ravens_Logo1-v2.png.220x220_q95.png"
+                    title="Ravenscroft School"
+                    alt="Ravenscroft School">
+                Ravenscroft
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/324337">Ravenscroft vs. Cary Acad.</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/324337/event/8/?id=138230510#time138230510">22.04</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/307400">
+  
+      <span  class="c-label c-label--outline c-label--energized"
+         title="NCISAA Division 1 State Championship"
+      >
+        DIV1
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            14
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2163615">
+              Ezra Zapler
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Junius Rose
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4390"
+                title="Junius H Rose High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/02/1595B9DC-304E-4414-8707-9B69627F5A60.png.220x220_q95.png"
+                    title="Junius H Rose High School"
+                    alt="Junius H Rose High School">
+                Junius Rose
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/325893">2024 Rampant Invitational</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/325893/event/8/?id=139314778#time139314778">22.08</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308525">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 3A Eastern Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            15
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/1654226">
+              Norvin Clontz
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Charlotte Latin
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4333"
+                title="Charlotte Latin High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/10/tKYdZcm9_400x400.png.220x220_q95.png"
+                    title="Charlotte Latin High School"
+                    alt="Charlotte Latin High School">
+                Charlotte Latin
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/321115">Cannon, Charlotte Latin, Providence Day</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/321115/event/8/?id=136292283#time136292283">22.12</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/307400">
+  
+      <span  class="c-label c-label--outline c-label--energized"
+         title="NCISAA Division 1 State Championship"
+      >
+        DIV1
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            15
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2838493">
+              Kai Leisten
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Apex
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4300"
+                title="Apex High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2024/11/APEX-A-4C.png.220x220_q95.png"
+                    title="Apex High School"
+                    alt="Apex High School">
+                Apex
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/322015">Apex, Apex Friendship, Green Hope, Middle Creek</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/322015/event/8/?id=136912253#time136912253">22.12</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308526">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 4A Central Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            15
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2440032">
+              Ethan Holloway
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Wake Christian
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/10015060"
+                title="Wake Christian Academy">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/12/C3086C1C-4684-4E4B-A5FE-EB152CD68BA8.gif.220x220_q95.png"
+                    title="Wake Christian Academy"
+                    alt="Wake Christian Academy">
+                Wake Christian
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/325168">Wesleyan Christian, Grace Christian, Wake Christian, Christian Community</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/325168/event/8/?id=139000716#time139000716">22.12</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/307393">
+  
+      <span  class="c-label c-label--outline c-label--secondary"
+         title="NCISAA Division 2 State Championship"
+      >
+        DIV2
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            18
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/1695947">
+              Cohen Singletary
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Apex Friendship
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/10009150"
+                title="Apex Friendship High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2024/02/Apex-Friendship_Patriots.png.220x220_q95.png"
+                    title="Apex Friendship High School"
+                    alt="Apex Friendship High School">
+                Apex Friendship
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/322015">Apex, Apex Friendship, Green Hope, Middle Creek</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/322015/event/8/?id=136912193#time136912193">22.15</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308526">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 4A Central Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            18
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/1828186">
+              Logan Kelly
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Saint Stephens
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4399"
+                title="Saint Stephens High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/12/34738df4-2b01-40c5-810d-18b772fb5737.jpg.220x220_q95.jpg"
+                    title="Saint Stephens High School"
+                    alt="Saint Stephens High School">
+                Saint Stephens
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/325514">St Stephens, East Lincoln, North Iredell</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/325514/event/8/?id=139180515#time139180515">22.15</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308538">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 3A Western Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+  
+      <span  class="c-label c-label--neutral u-cursor-help"
+         title="Converted"
+      >
+        C
+        
+      </span>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            20
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2391432">
+              Baylor Weiler
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Fayetteville Christian
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/10039165"
+                title="Fayetteville Christian School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2023/09/f6c6b360-8c67-40e4-ac93-090030a315a5.jpg.220x220_q95.jpg"
+                    title="Fayetteville Christian School"
+                    alt="Fayetteville Christian School">
+                Fayetteville Christian
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/320840">Asheville School, Fayetteville Christian, Greensboro Day, Providence Day</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/320840/event/8/?id=136146044#time136146044">22.22</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/307393">
+  
+      <span  class="c-label c-label--outline c-label--secondary"
+         title="NCISAA Division 2 State Championship"
+      >
+        DIV2
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            21
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/1780959">
+              Santi Alzate
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Charlotte Country Day
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4332"
+                title="Charlotte Country Day School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/02/20190417040259_67_mascotOrig.png.220x220_q95.png"
+                    title="Charlotte Country Day School"
+                    alt="Charlotte Country Day School">
+                Charlotte Country Day
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/322477">Covenant Day, Charlotte Country Day, Cannon</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/322477/event/16/?id=137104884#time137104884">22.23</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/307400">
+  
+      <span  class="c-label c-label--outline c-label--energized"
+         title="NCISAA Division 1 State Championship"
+      >
+        DIV1
+        
+      </span>
+  
+    </a>
+  
+
+  
+      <span  class="c-label c-label--neutral u-cursor-help"
+         title="Relay Leadoff"
+      >
+        R
+        
+      </span>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            22
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/1485126">
+              Lucas Li
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  East Chapel Hill
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4328"
+                title="East Chapel Hill High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/02/6D2EF019-DBCD-4200-A6DD-770EAE05FFD1.png.220x220_q95.png"
+                    title="East Chapel Hill High School"
+                    alt="East Chapel Hill High School">
+                East Chapel Hill
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/322112">2024 Paws in the Pool - Chapel Hill, East Chapel Hill, Carrboro</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/322112/event/18/?id=136937279#time136937279">22.28</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308526">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 4A Central Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+  
+      <span  class="c-label c-label--neutral u-cursor-help"
+         title="Relay Leadoff"
+      >
+        R
+        
+      </span>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            23
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2406226">
+              Ryan Reiniche
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Hoggard
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4518"
+                title="Hoggard High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/10/12b5c67e-addf-42c1-acf4-b1cf4a5e6bcc.gif.220x220_q95.png"
+                    title="Hoggard High School"
+                    alt="Hoggard High School">
+                Hoggard
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/327261">New Hanover, Laney, Hoggard, Ashley</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/327261/event/8/?id=140392642#time140392642">22.30</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308527">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 4A Eastern Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            24
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/1731863">
+              Nathan Hohnbaum
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Myers Park
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4338"
+                title="Myers Park High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/01/1762452F-8338-475A-9C8F-372F25FBD622.png.220x220_q95.png"
+                    title="Myers Park High School"
+                    alt="Myers Park High School">
+                Myers Park
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/321853">Ardrey Kell vs. Myers Park</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/321853/event/8/?id=136843249#time136843249">22.33</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308539">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="2025 NCHSAA 4A Western Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            25
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2958294">
+              Connor Wickerham
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Charlotte Country Day
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4332"
+                title="Charlotte Country Day School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/02/20190417040259_67_mascotOrig.png.220x220_q95.png"
+                    title="Charlotte Country Day School"
+                    alt="Charlotte Country Day School">
+                Charlotte Country Day
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/321305">Charlotte Christian, Charlotte Country Day, Covenant Day</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/321305/event/8/?id=136428054#time136428054">22.34</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/307400">
+  
+      <span  class="c-label c-label--outline c-label--energized"
+         title="NCISAA Division 1 State Championship"
+      >
+        DIV1
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            26
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2433236">
+              Grant Larsen
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Pinecrest
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4497"
+                title="Pinecrest High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2024/12/flyingPnew.png.220x220_q95.png"
+                    title="Pinecrest High School"
+                    alt="Pinecrest High School">
+                Pinecrest
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/323583">St. Andrews University Meet 1</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/323583/event/8/?id=137877987#time137877987">22.36</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308526">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 4A Central Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            27
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2021110">
+              Kaleb James
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Ravenscroft
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4476"
+                title="Ravenscroft School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2024/11/Ravenscroft_Ravens_Logo1-v2.png.220x220_q95.png"
+                    title="Ravenscroft School"
+                    alt="Ravenscroft School">
+                Ravenscroft
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/324337">Ravenscroft vs. Cary Acad.</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/324337/event/16/?id=138230543#time138230543">22.37</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/307400">
+  
+      <span  class="c-label c-label--outline c-label--energized"
+         title="NCISAA Division 1 State Championship"
+      >
+        DIV1
+        
+      </span>
+  
+    </a>
+  
+
+  
+      <span  class="c-label c-label--neutral u-cursor-help"
+         title="Relay Leadoff"
+      >
+        R
+        
+      </span>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            28
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2633002">
+              Caleb Gyorfi
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Charlotte Christian
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4331"
+                title="Charlotte Christian School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/12/236330508_4367425923315841_1619117219914936757_n.jpg.220x220_q95.jpg"
+                    title="Charlotte Christian School"
+                    alt="Charlotte Christian School">
+                Charlotte Christian
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/321305">Charlotte Christian, Charlotte Country Day, Covenant Day</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/321305/event/8/?id=136427981#time136427981">22.38</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/307400">
+  
+      <span  class="c-label c-label--outline c-label--energized"
+         title="NCISAA Division 1 State Championship"
+      >
+        DIV1
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            28
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2847242">
+              Owen Griffith
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  South Caldwell
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4407"
+                title="South Caldwell High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/10/93B1896E-C379-4999-9443-06B156DE4AFB.png.220x220_q95.png"
+                    title="South Caldwell High School"
+                    alt="South Caldwell High School">
+                South Caldwell
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/322239">Ashe County, Watauga, South Caldwell</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/322239/event/8/?id=136960679#time136960679">22.38</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308539">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="2025 NCHSAA 4A Western Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            30
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/1041096">
+              Alex Nelson
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  East Chapel Hill
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4328"
+                title="East Chapel Hill High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/02/6D2EF019-DBCD-4200-A6DD-770EAE05FFD1.png.220x220_q95.png"
+                    title="East Chapel Hill High School"
+                    alt="East Chapel Hill High School">
+                East Chapel Hill
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/322112">2024 Paws in the Pool - Chapel Hill, East Chapel Hill, Carrboro</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/322112/event/8/?id=136937252#time136937252">22.39</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308526">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 4A Central Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            31
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/779119">
+              Carter Medlin
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Providence
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4341"
+                title="Providence Senior High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2023/11/logo_10171.png.220x220_q95.png"
+                    title="Providence Senior High School"
+                    alt="Providence Senior High School">
+                Providence
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/321772">East Mecklenburg, Independence, Providence</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/321772/event/8/?id=136777060#time136777060">22.40</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308539">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="2025 NCHSAA 4A Western Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            31
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2405328">
+              Broder Swenson
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Needham Broughton
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/7492"
+                title="Needham Broughton High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2024/02/W7Z9ItgI_400x400-removebg-preview.png.220x220_q95.png"
+                    title="Needham Broughton High School"
+                    alt="Needham Broughton High School">
+                Needham Broughton
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/326638">Wakefield vs. Heritage, Middle Creek, Broughton</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/326638/event/8/?id=139754082#time139754082">22.40</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308527">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 4A Eastern Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            33
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2164773">
+              Rak Kelly
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Cuthbertson
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/9437"
+                title="Cuthbertson High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/02/28E20FBC-41D9-46BA-BE8C-B14CE293DA8B.png.220x220_q95.png"
+                    title="Cuthbertson High School"
+                    alt="Cuthbertson High School">
+                Cuthbertson
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/325192">Union County Championship Meet 2024</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/325192/event/8/?id=139035926#time139035926">22.45</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308539">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="2025 NCHSAA 4A Western Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            33
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/643750">
+              Avery Butner
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Eugene Ashley
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4517"
+                title="Eugene Ashley High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2024/11/pngwing.com.png.220x220_q95.png"
+                    title="Eugene Ashley High School"
+                    alt="Eugene Ashley High School">
+                Eugene Ashley
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/327261">New Hanover, Laney, Hoggard, Ashley</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/327261/event/8/?id=140392529#time140392529">22.45</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308527">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 4A Eastern Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            35
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2359216">
+              Alex Townsend
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Enloe
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4470"
+                title="Enloe High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/02/Enloe_E_eagle_for_web.png.220x220_q95.png"
+                    title="Enloe High School"
+                    alt="Enloe High School">
+                Enloe
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/322330">Green Hope, Enloe, Wakefield, Heritage</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/322330/event/14/?id=137031368#time137031368">22.48</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+      <span  class="c-label c-label--neutral u-cursor-help"
+         title="Extracted"
+      >
+        X
+        
+      </span>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            36
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2255922">
+              Logan Schiffbauer
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Pasquotank County
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4368"
+                title="Pasquotank County High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/10/cbd3226e-3966-419b-b75e-b643abee0689.gif.220x220_q95.jpg"
+                    title="Pasquotank County High School"
+                    alt="Pasquotank County High School">
+                Pasquotank County
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/322476">Camden County, Holmes, First Flight, Northeastern, Perquimans, Pasquotank County, Currituck County</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/322476/event/8/?id=137104416#time137104416">22.50</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308482">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 1A/2A Eastern Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+  
+      <span  class="c-label c-label--neutral u-cursor-help"
+         title="Converted"
+      >
+        C
+        
+      </span>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            37
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2377240">
+              Joey Harrison
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Wakefield
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4478"
+                title="Wakefield High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/02/WakefieldHigh.gif.220x220_q95.png"
+                    title="Wakefield High School"
+                    alt="Wakefield High School">
+                Wakefield
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/320839">Heritage, Millbrook, Rolesville, Wakefield</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/320839/event/8/?id=136145509#time136145509">22.52</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308527">
+  
+      <span  class="c-label c-label--outline c-label--primary"
+         title="NCHSAA 4A Eastern Regionals"
+      >
+        RCON
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            38
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2426413">
+              Laith Ausband
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Eugene Ashley
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4517"
+                title="Eugene Ashley High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2024/11/pngwing.com.png.220x220_q95.png"
+                    title="Eugene Ashley High School"
+                    alt="Eugene Ashley High School">
+                Eugene Ashley
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/325519">New Hanover, Laney, Hoggard, Topsail, Ashley</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/325519/event/8/?id=139182510#time139182510">22.54</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308527">
+  
+      <span  class="c-label c-label--outline c-label--primary"
+         title="NCHSAA 4A Eastern Regionals"
+      >
+        RCON
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            39
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2331687">
+              Ryan Chiu
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Ardrey Kell
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4329"
+                title="Ardrey Kell High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/01/707BD13F-DA4D-4E5D-B2AF-EA9209525153.png.220x220_q95.png"
+                    title="Ardrey Kell High School"
+                    alt="Ardrey Kell High School">
+                Ardrey Kell
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/324219">Olympic, Ardrey Kell, Berry Academy</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/324219/event/8/?id=138211322#time138211322">22.55</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308539">
+  
+      <span  class="c-label c-label--outline c-label--primary"
+         title="2025 NCHSAA 4A Western Regionals"
+      >
+        RCON
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            40
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2919062">
+              Bryce Keaton
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Jordan
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/7495"
+                title="Charles E Jordan High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2024/02/jordan_J_logo.png.220x220_q95.png"
+                    title="Charles E Jordan High School"
+                    alt="Charles E Jordan High School">
+                Jordan
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/326831">Chapel Hill, Northern Durham, Jordan</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/326831/event/8/?id=140006557#time140006557">22.57</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308526">
+  
+      <span  class="c-label c-label--outline c-label--primary"
+         title="NCHSAA 4A Central Regionals"
+      >
+        RCON
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            41
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/1485716">
+              Caleb Ferguson
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Asheville School
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4307"
+                title="Asheville School, The">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2024/11/Asheville_Blues.png.220x220_q95.png"
+                    title="Asheville School, The"
+                    alt="Asheville School, The">
+                Asheville School
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/320840">Asheville School, Fayetteville Christian, Greensboro Day, Providence Day</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/320840/event/12/?id=136145927#time136145927">22.60</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/307393">
+  
+      <span  class="c-label c-label--outline c-label--secondary"
+         title="NCISAA Division 2 State Championship"
+      >
+        DIV2
+        
+      </span>
+  
+    </a>
+  
+
+  
+      <span  class="c-label c-label--neutral u-cursor-help"
+         title="Extracted"
+      >
+        X
+        
+      </span>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            41
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2320546">
+              Will House
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Emsley Laney
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4516"
+                title="Emsley A Laney High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/10/71fccbdd-2c49-4c3a-82e9-101ed692d651.gif.220x220_q95.jpg"
+                    title="Emsley A Laney High School"
+                    alt="Emsley A Laney High School">
+                Emsley Laney
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/324341">Topsail, Hoggard, New Hanover, Laney</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/324341/event/18/?id=138231249#time138231249">22.60</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308527">
+  
+      <span  class="c-label c-label--outline c-label--primary"
+         title="NCHSAA 4A Eastern Regionals"
+      >
+        RCON
+        
+      </span>
+  
+    </a>
+  
+
+  
+      <span  class="c-label c-label--neutral u-cursor-help"
+         title="Relay Leadoff"
+      >
+        R
+        
+      </span>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            41
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/870769">
+              Andrew Cook
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Franklin Acad.
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/10009160"
+                title="Franklin Academy">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2024/11/4cbc1cc6-55b6-409f-ace6-1e0dc5b194d7.jpg.220x220_q95.jpg"
+                    title="Franklin Academy"
+                    alt="Franklin Academy">
+                Franklin Acad.
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/327173">North Raleigh Christian vs. Franklin Acad.</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/327173/event/8/?id=140359148#time140359148">22.60</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308482">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 1A/2A Eastern Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            44
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/1627902">
+              Paul Padgett
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Croatan
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4457"
+                title="Croatan High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/02/241-2410363_croatan-high-school-logo.png.jpeg.220x220_q95.jpg"
+                    title="Croatan High School"
+                    alt="Croatan High School">
+                Croatan
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/324467">DH Conley, North Pitt, White Oak, JH Rose, South Central, Croatan, Jacksonville</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/324467/event/8/?id=138272481#time138272481">22.62</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308525">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 3A Eastern Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            45
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/1666778">
+              Maxon Brienza
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Marvin Ridge
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4512"
+                title="Marvin Ridge High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/01/393_medium.png.220x220_q95.png"
+                    title="Marvin Ridge High School"
+                    alt="Marvin Ridge High School">
+                Marvin Ridge
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/321964">Marvin Ridge, Sun Valley, TC Roberson, Weddington</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/321964/event/8/?id=136860426#time136860426">22.63</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308539">
+  
+      <span  class="c-label c-label--outline c-label--primary"
+         title="2025 NCHSAA 4A Western Regionals"
+      >
+        RCON
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            45
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2843100">
+              Teddy Peterson
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Cannon
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/10004676"
+                title="Cannon School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/01/1DF6FEA1-B156-4134-9AE7-7851844A2F27.jpeg.220x220_q95.jpg"
+                    title="Cannon School"
+                    alt="Cannon School">
+                Cannon
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/322477">Covenant Day, Charlotte Country Day, Cannon</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/322477/event/16/?id=137104816#time137104816">22.63</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/307400">
+  
+      <span  class="c-label c-label--outline c-label--energized"
+         title="NCISAA Division 1 State Championship"
+      >
+        DIV1
+        
+      </span>
+  
+    </a>
+  
+
+  
+      <span  class="c-label c-label--neutral u-cursor-help"
+         title="Relay Leadoff"
+      >
+        R
+        
+      </span>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            45
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/643762">
+              Maxwell Hawthorne
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Hoggard
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4518"
+                title="Hoggard High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/10/12b5c67e-addf-42c1-acf4-b1cf4a5e6bcc.gif.220x220_q95.png"
+                    title="Hoggard High School"
+                    alt="Hoggard High School">
+                Hoggard
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/324341">Topsail, Hoggard, New Hanover, Laney</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/324341/event/18/?id=138231181#time138231181">22.63</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308527">
+  
+      <span  class="c-label c-label--outline c-label--primary"
+         title="NCHSAA 4A Eastern Regionals"
+      >
+        RCON
+        
+      </span>
+  
+    </a>
+  
+
+  
+      <span  class="c-label c-label--neutral u-cursor-help"
+         title="Relay Leadoff"
+      >
+        R
+        
+      </span>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            48
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2066884">
+              gavin woolet
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Charles Aycock
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4464"
+                title="Charles B Aycock High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2024/12/083bdcf4-b379-4a4a-95ff-7617b4c7e142.jpg.220x220_q95.jpg"
+                    title="Charles B Aycock High School"
+                    alt="Charles B Aycock High School">
+                Charles Aycock
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/326627">Goldsboro vs. Aycock, Beddington, Rosewood, Eastern Wayne</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/326627/event/8/?id=139752698#time139752698">22.65</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308525">
+  
+      <span  class="c-label c-label--outline c-label--success"
+         title="NCHSAA 3A Eastern Regionals"
+      >
+        RQAL
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            49
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/2335750">
+              Jake Zhou
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Ardrey Kell
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4329"
+                title="Ardrey Kell High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2021/01/707BD13F-DA4D-4E5D-B2AF-EA9209525153.png.220x220_q95.png"
+                    title="Ardrey Kell High School"
+                    alt="Ardrey Kell High School">
+                Ardrey Kell
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/326519">Ballantyne Ridge vs. Ardrey Kell</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/326519/event/8/?id=139690350#time139690350">22.68</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308539">
+  
+      <span  class="c-label c-label--outline c-label--primary"
+         title="2025 NCHSAA 4A Western Regionals"
+      >
+        RCON
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="c-table-clean__col-fit u-pr0 u-text-center">
+            49
+          </td>
+
+          <td>
+            <a class="u-text-semi" href="/swimmer/1573805">
+              Lawson Brewer
+              
+                <div class="u-color-mute u-text-xsmall visible-xs-block hidden-print">
+                  Hickory Ridge
+                </div>
+              
+            </a>
+          </td>
+
+          
+            <td class="u-visible-print-table-cell hidden-xs">
+              <a class="u-inline-block"
+                href="/team/4391"
+                title="Hickory Ridge High School">
+                <img class="c-table-clean__img"
+                    src="https://s3.amazonaws.com/cstest/mb/2023/10/185fcd88-56dd-49a5-acae-c640ffcd32f6.png.220x220_q95.png"
+                    title="Hickory Ridge High School"
+                    alt="Hickory Ridge High School">
+                Hickory Ridge
+              </a>
+            </td>
+          
+
+          <td class="u-visible-print-table-cell hidden-xs">
+            <a href="/results/312041">13th Annual Robert R. Sawyer Invitational</a>
+          </td>
+
+          <td class="u-text-semi u-text-end">
+            <a href="/results/312041/event/8/?id=140843117#time140843117">22.68</a>
+          </td>
+
+          <td class="u-pl0 hidden-xs u-nowrap">
+            
+  
+  
+    <a href="/results/308539">
+  
+      <span  class="c-label c-label--outline c-label--primary"
+         title="2025 NCHSAA 4A Western Regionals"
+      >
+        RCON
+        
+      </span>
+  
+    </a>
+  
+
+
+
+
+          </td>
+
+          <td class="u-pl0 hidden-xs">
+            
+
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+    <ul class="c-pagination"><li class="c-pagination__item"><button
+            class="c-pagination__action c-pagination__action--active"
+            type="button">
+            1
+          </button></li><li class="c-pagination__item"><a class="c-pagination__action"
+             href="?page=2&amp;region=state_nc&amp;orgcode=9&amp;course=Y&amp;hide_gender=0&amp;hide_season=0&amp;event=150&amp;season=28&amp;gender=M">
+            2
+          </a></li><li class="c-pagination__item"><a class="c-pagination__action"
+             href="?page=3&amp;region=state_nc&amp;orgcode=9&amp;course=Y&amp;hide_gender=0&amp;hide_season=0&amp;event=150&amp;season=28&amp;gender=M">
+            3
+          </a></li><li class="c-pagination__item"><a class="c-pagination__action"
+             href="?page=4&amp;region=state_nc&amp;orgcode=9&amp;course=Y&amp;hide_gender=0&amp;hide_season=0&amp;event=150&amp;season=28&amp;gender=M">
+            4
+          </a></li><li class="c-pagination__item"><a class="c-pagination__action"
+             href="?page=5&amp;region=state_nc&amp;orgcode=9&amp;course=Y&amp;hide_gender=0&amp;hide_season=0&amp;event=150&amp;season=28&amp;gender=M">
+            5
+          </a></li><li class="c-pagination__item"><a class="c-pagination__action"
+             href="?page=6&amp;region=state_nc&amp;orgcode=9&amp;course=Y&amp;hide_gender=0&amp;hide_season=0&amp;event=150&amp;season=28&amp;gender=M">
+            6
+          </a></li><li class="c-pagination__item"><a class="c-pagination__action"
+             href="?page=7&amp;region=state_nc&amp;orgcode=9&amp;course=Y&amp;hide_gender=0&amp;hide_season=0&amp;event=150&amp;season=28&amp;gender=M">
+            7
+          </a></li><li class="c-pagination__item"><a class="c-pagination__action"
+             href="?page=8&amp;region=state_nc&amp;orgcode=9&amp;course=Y&amp;hide_gender=0&amp;hide_season=0&amp;event=150&amp;season=28&amp;gender=M">
+            8
+          </a></li><li class="c-pagination__item"><a class="c-pagination__action"
+             href="?page=9&amp;region=state_nc&amp;orgcode=9&amp;course=Y&amp;hide_gender=0&amp;hide_season=0&amp;event=150&amp;season=28&amp;gender=M">
+            9
+          </a></li><li class="c-pagination__item"><a class="c-pagination__action"
+             href="?page=10&amp;region=state_nc&amp;orgcode=9&amp;course=Y&amp;hide_gender=0&amp;hide_season=0&amp;event=150&amp;season=28&amp;gender=M">
+            10
+          </a></li><li class="c-pagination__item c-pagination__control"><a
+          class="c-pagination__action"
+          href="?page=2&amp;region=state_nc&amp;orgcode=9&amp;course=Y&amp;hide_gender=0&amp;hide_season=0&amp;event=150&amp;season=28&amp;gender=M"><span class="visible-xs-inline u-mr-">Next</span><i class="far fa-angle-right"></i></a></li><li class="c-pagination__item c-pagination__control"><a
+          class="c-pagination__action"
+          href="?page=30&amp;region=state_nc&amp;orgcode=9&amp;course=Y&amp;hide_gender=0&amp;hide_season=0&amp;event=150&amp;season=28&amp;gender=M"><span class="visible-xs-inline u-mr-">Last &raquo;</span><i class="far fa-angles-right"></i></a></li></ul>
+
+  
+
+
+    
+  
+    <script src="/media/js/yui3/build/yui/yui-min.js"></script>
+    <script type="text/javascript">
+      YUI().use('node', 'event' , function (Y) {
+        Y.all('a').set('target','_blank');
+        Y.all('.c-pagination__action').removeAttribute('target');
+
+        Y.after('change', function (e) {
+          this.ancestor('.js-form').submit();
+        }, '.form-control');
+      });
+    </script>
+  
+
+    	<script type="text/javascript">
+    	   var _gaq = _gaq || [];
+           _gaq.push(['_setAccount', "UA-310705-5"]);
+           _gaq.push(['_trackPageview']);
+
+           (function() {
+           var ga = document.createElement('script');
+           ga.src = ('https:' == document.location.protocol ?
+               'https://ssl' : 'http://www') +
+               '.google-analytics.com/ga.js';
+           ga.setAttribute('async', 'async');
+           document.documentElement.firstChild.appendChild(ga);
+           })();
+    	</script>
+      <script type="text/javascript">
+        var _sf_async_config={uid:14677,domain:"swimcloud.com"};
+        (function(){
+          function loadChartbeat() {
+            window._sf_endpt=(new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src',
+               (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+               "static.chartbeat.com/js/chartbeat.js");
+            document.body.appendChild(e);
+          }
+          var oldonload = window.onload;
+          window.onload = (typeof window.onload != 'function') ?
+             loadChartbeat : function() { oldonload(); loadChartbeat(); };
+        })();
+      </script>
+  </body>
+</html>

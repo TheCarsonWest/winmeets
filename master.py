@@ -3,9 +3,14 @@
 import json
 import requests
 import random
-from relay import *
+
 from openpyxl import load_workbook
 import csv
+
+
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
+}
 
 
 def string_to_time(str): # mm:ss.ss -> Float point in fractions of a day
@@ -64,8 +69,8 @@ class Team:
             for x in t[1]:
                 self.team_m.append(Swimmer(x,"l"))
 
-            for x in t[2]:
-                self.team_f.append(Swimmer(x,"l"))
+            """for x in t[2]:
+                self.team_f.append(Swimmer(x,"l"))"""
 
         elif url == "b": # Blank team loader
             self.team_m = []
@@ -76,31 +81,30 @@ class Team:
             print('Url detected, finding data')
             self.url = url # for safekeeping the future
             
-            html_m = requests.get(url+"roster/?page=1&gender=M&season_id=27&sort=perf").text.split("<tbody>")[1].split("</tbody>")[0].split("<tr \n          >\n") # Cuts down the HTML page to just the roster
-            html_f = requests.get(url+"roster/?page=1&gender=F&season_id=27&sort=perf").text.split("<tbody>")[1].split("</tbody>")[0].split("<tr \n          >\n")
+            html_m = requests.get(url+"roster/?page=1&gender=M&season_id=28&sort=perf", headers=headers).text.split("<tbody>")[1].split("</tbody>")[0].split("<tr \n          >\n") # Cuts down the HTML page to just the roster
+            html_f = requests.get(url+"roster/?page=1&gender=F&season_id=28&sort=perf", headers=headers).text.split("<tbody>")[1].split("</tbody>")[0].split("<tr \n          >\n")
             
             html_m.pop(0)
             html_f.pop(0)
             
-            self.name = requests.get(url+"roster/?page=1&gender=M&season_id=27&sort=perf").text.split('<meta property="og:title" content="')[1].split('"')[0]
+            self.name = requests.get(url+"roster/?page=1&gender=M&season_id=28&sort=perf", headers=headers).text.split('<meta property="og:title" content="')[1].split('"')[0]
             
             self.team_m = []
             self.team_f = []
             for x in html_m:
-                for x in html_m:
-                    if 'href' not in x.split('            <td class="u-text-end">')[1]:
-                        break
-                    self.team_m.append(Swimmer("https://www.swimcloud.com" + x.split("</td>")[1].split("href=\"")[1].split("\">")[0]))
-                    print(f"Added {self.team_m[-1].name}")
-                    if s:
-                        self.save()
-                for x in html_f:
-                    if 'href' not in x.split('            <td class="u-text-end">')[1]: ###
-                        break
-                    self.team_f.append(Swimmer("https://www.swimcloud.com" + x.split("</td>")[1].split("href=\"")[1].split("\">")[0]))
-                    print(f"Added {self.team_f[-1].name}")
-                    if s:
-                        self.save()
+                if 'href' not in x.split('            <td class="u-text-end">')[1]:
+                    break
+                self.team_m.append(Swimmer("https://www.swimcloud.com" + x.split("</td>")[1].split("href=\"")[1].split("\">")[0]))
+                print(f"Added {self.team_m[-1].name}")
+                if s:
+                    self.save()
+            for x in html_f:
+                if 'href' not in x.split('            <td class="u-text-end">')[1]: ###
+                    break
+                self.team_f.append(Swimmer("https://www.swimcloud.com" + x.split("</td>")[1].split("href=\"")[1].split("\">")[0]))
+                print(f"Added {self.team_f[-1].name}")
+                if s:
+                    self.save()
 
     def __str__(self): # to string(very long)
         f = ''
@@ -203,7 +207,7 @@ class Swimmer:
 
         else: # otherwise loads from url
             self.url = url
-            html = requests.get(url).text.split("<body")[1].split('<span class="u-mr-">')[1]
+            html = requests.get(url, headers=headers).text.split("<body")[1].split('<span class="u-mr-">')[1]
             self.name = html.split('</span>')[0] # Scraping name from top of page
             self.times = {}
             table = html.split("<tbody>")[2].split("</tbody>")[0].split("</tr>")

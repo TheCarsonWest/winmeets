@@ -1,177 +1,182 @@
-from data import *
 import random
+import numpy as np
+from master import *
 
+# Parameters
+POPULATION_SIZE = 1000
+NUM_GENERATIONS = 100
+MUTATION_RATE = 0.2
+NUM_RELAY_SLOTS = 12  # 4 swimmers per relay * 3 relays
 
-
-backstroke_list = []
-breaststroke_list = []
-butterfly_list = []
-freestyle_list = []
-
-# Algorithm Variables
-pop_size = 500 # how many individuals are in each generation. More = longer
-gens = 50 # how many reproduction cycles the algorithm goes through
-
-# Mutation Variables
-mut_rate = 0 # how often mutation occurs
-replace_num = [1,1] # when mutation occurs, how many people will be changed? random range. Hypothetically larger numbers will make more variation
-
-
-def check_two_times(m, r1, r2, r3): # crimes against computer science here
-    f1, f2, f3 = r1, r2, r3
-    n_seen = []
-    for x in m:
-        for i in x:
-            if i in n_seen:
-                if i in f1:
-                    f1.remove(i)
-                if i in f2:
-                    f2.remove(i)
-                for k in f3:
-                    if i in k:
-                        k.remove(i)
-            else:
-                n_seen.append(i)
-    return f1, f2, f3
+# Helper functions
+def create_chromosome(swimmers):
+    """Generate a chromosome with constraints:
+       - Each swimmer appears at most once in a single relay.
+       - Each swimmer appears at most twice in total.
+    """
+    swimmer_ids = list(range(len(swimmers)))  # Swimmer indices as IDs
+    chromosome = [-1] * NUM_RELAY_SLOTS  # Placeholder chromosome
     
+    used_counts = {sw: 0 for sw in swimmer_ids}  # Track swimmer usage
 
-def create_individual(): # Funamental flaw: the first generation has no repeats across the free relays. Enough generations will smooth this out.
-    fr = freestyle_list.copy()
-    random.shuffle(fr)
-    fr_4 = fr[0:4]
-    fr_2 = fr[4:8]
-    medley = [ # currently lets duplicates through
+    def assign_relay(start, end):
+        """Assign unique swimmers to a relay slot range."""
+        available_swimmers = [sw for sw in swimmer_ids if used_counts[sw] < 2]
+        relay_swimmers = random.sample(available_swimmers, end - start + 1)
+        for i, sw in enumerate(relay_swimmers):
+            chromosome[start + i] = sw
+            used_counts[sw] += 1
+
+    assign_relay(0, 3)  # 400 Free Relay
+    assign_relay(4, 7)  # 200 Free Relay
+    assign_relay(8, 11)  # 200 Medley Relay
+
+    return chromosome
+
+
+def decode_chromosome(chromosome):
+    """Decode the chromosome into relay assignments."""
+    return {
+        "400 Free Relay": chromosome[:4],
+        "200 Free Relay": chromosome[4:8],
+        "200 Medley Relay": chromosome[8:12]
+    }
+
+def calculate_relay_time(relay, swimmers, relay_type):
+    """Calculate the total time for a relay based on swimmer assignments."""
+    if relay_type == "400 Free Relay":
+        times = [swimmers[sw].times.get("100 Y Free", [float('inf')])[0] for sw in relay]
+    elif relay_type == "200 Free Relay":
+        times = [swimmers[sw].times.get("50 Y Free", [float('inf')])[0] for sw in relay]
+    elif relay_type == "200 Medley Relay":
+        strokes = ["100 Y Back", "100 Y Breast", "100 Y Fly", "100 Y Free"]
+        times = [swimmers[sw].times.get(stroke, [float('inf')])[0] for sw, stroke in zip(relay, strokes)]
+    
+    if float('inf') in times:
+        return float('inf')
+    
+    return sum(times) if relay_type != "200 Medley Relay" else sum(times) / 2
+
+def fitness_function(chromosome, swimmers):
+    """Calculate fitness (lower is better) with strict penalties for illegal relays."""
+    relays = decode_chromosome(chromosome)
+    total_time = 0
+    used_swimmers = {}
+
+    for relay_type, relay in relays.items():
+        relay_time = calculate_relay_time(relay, swimmers, relay_type)
         
-        random.choice(backstroke_list),
-        random.choice(breaststroke_list),
-        random.choice(butterfly_list),
-        fr[7]
-    ]
-    while len(set(item[0] for item in medley)) < len(medley):
+        if relay_time == float('inf'):  # Handle missing times
+            return float('inf')  
 
-        medley = [
-            random.choice(backstroke_list),
-            random.choice(breaststroke_list),
-            random.choice(butterfly_list),
-            fr[7]
-        ]
+        total_time += relay_time
+        for swimmer in relay:
+            used_swimmers[swimmer] = used_swimmers.get(swimmer, 0) + 1
+
+    # **Strict Constraint Handling**
+    # If any swimmer appears more than twice in total → DISQUALIFY relay
+    if any(count > 2 for count in used_swimmers.values()):
+        return float('inf')
+
+    # If a swimmer appears multiple times in the same relay → DISQUALIFY relay
+    for relay in relays.values():
+        if len(relay) != len(set(relay)):  # Duplicate swimmers in the same relay
+            return float('inf')
+
+    return total_time  # No penalties needed if constraints are met
 
 
-    return [medley,fr_2,fr_4]
-
-def fitness(r):
-    relay_times = []
-    for x in r:
-        for i in x:
-            relay_times.append(i[1])
-    return sum(relay_times)
-
-def crossover(p1, p2):
-    child = []
-    for relay_index in range(len(p1)):
-        child_relay = []
-        used_swimmers = set()  # Keep track of swimmers already added to the relay
-        for swimmer_index in range(len(p1[relay_index])):
-            # Randomly select a parent's swimmer for the current position
-            selected_parent = random.choice([p1, p2])
-            attempts = 0
-            while attempts < 10:
-                selected_swimmer = selected_parent[relay_index][swimmer_index]
-                if selected_swimmer[0] not in used_swimmers:
-                    # Check if the selected swimmer is not already in the other two relays
-                    in_other_relays = any(selected_swimmer in other_relay for other_relay in (p1[i] if i != relay_index else p2[i] for i in range(len(p1))))
-                    if not in_other_relays:
-                        child_relay.append(selected_swimmer)
-                        used_swimmers.add(selected_swimmer[0])
-                        break
-                # Retry with a different parent if conditions are not met
-                selected_parent = p2 if selected_parent == p1 else p1
-                attempts += 1
-            else:
-                # If unable to find a valid swimmer after multiple attempts, force mutate
-                child_relay.append(random.choice(freestyle_list))  # Select a random swimmer from the list
-        child.append(child_relay)
-    return child
+def select_parents(population, fitnesses):
+    """Select two parents using tournament selection."""
+    tournament = random.sample(list(zip(population, fitnesses)), k=5)
+    tournament.sort(key=lambda x: x[1])  # Sort by fitness
+    return tournament[0][0], tournament[1][0]
 
 
 
 
 
-def mutate(relay, r): # Lets duplicates through right now
-    m = relay
-    if random.random() < r:
-        for i in range(random.randint(replace_num[0], replace_num[1])):
-            r_1 = random.randint(0, 2)
-            r_2 = random.randint(0, 3)
-            m[r_1][r_2] = True
+def crossover(parent1, parent2):
+    """Perform single-point crossover."""
+    point = random.randint(1, NUM_RELAY_SLOTS - 1)
+    child1 = parent1[:point] + parent2[point:]
+    child2 = parent2[:point] + parent1[point:]
+    return child1, child2
 
-        available_f_2 = [entry for entry in freestyle_list if entry not in relay[1]]
-        available_f_4 = [entry for entry in freestyle_list if entry not in relay[2]]
-        available_medley = []
-        for x in [backstroke_list, breaststroke_list, butterfly_list, freestyle_list]:
-            available_medley.append([entry for entry in x if entry not in relay[0]])
+def mutate(chromosome):
+    """Mutate a chromosome by swapping two random genes."""
+    if random.random() < MUTATION_RATE:
+        i, j = random.sample(range(NUM_RELAY_SLOTS), 2)
+        chromosome[i], chromosome[j] = chromosome[j], chromosome[i]
 
-        available_f_2, available_f_4, available_medley = check_two_times(m, available_f_2, available_f_4, available_medley)
+def genetic_algorithm(team, gender="m"):
 
-        for i in range(len(m[1])):
-            if m[1][i] == True:
-                s = random.choice(available_f_2)
-                m[1][i] = s
-                available_f_2.remove(s)
+    """Run the genetic algorithm for a specified team and gender."""
+    # Select the appropriate team (male or female)
+    swimmers = team.team_m if gender == "m" else team.team_f
+    # Create initial population
+    population = [create_chromosome(swimmers) for _ in range(POPULATION_SIZE)]
 
-        available_f_2, available_f_4, available_medley = check_two_times(m, available_f_2, available_f_4, available_medley)
+    best_solution = None
+    best_fitness = float("inf")
 
-        for i in range(len(m[2])):
-            if m[2][i] == True:
-                s = random.choice(available_f_4)
-                m[2][i] = s
-                available_f_4.remove(s)
+    for generation in range(NUM_GENERATIONS):
+        print(best_fitness)
+        # Calculate fitness for each chromosome
+        fitnesses = [fitness_function(chromosome, swimmers) for chromosome in population]
 
-        available_f_2, available_f_4, available_medley = check_two_times(m, available_f_2, available_f_4, available_medley)
+        # Track best solution
+        min_fitness_idx = np.argmin(fitnesses)
+        if fitnesses[min_fitness_idx] < best_fitness:
+            best_fitness = fitnesses[min_fitness_idx]
+            best_solution = population[min_fitness_idx]
 
-        for i, x in enumerate([[available_medley[0], m[0][0]], [available_medley[1], m[0][1]], [available_medley[2], m[0][2]], [available_medley[3], m[0][3]]]):
-            if x[1] == True:
-                s = random.choice(x[0])
-                m[0][i] = s
+        # Selection and breeding
+        next_generation = []
+        for _ in range(POPULATION_SIZE // 2):
+            parent1, parent2 = select_parents(population, fitnesses)
+            child1, child2 = crossover(parent1, parent2)
+            mutate(child1)
+            mutate(child2)
+            next_generation.extend([child1, child2])
 
-    return m
+        population = next_generation
 
+        if generation % 50 == 0:
+            print(f"Generation {generation}: Best Fitness = {time_to_string(best_fitness)}")
 
-def print_results(l):
-        f = ''
-        i = 0
-        for x in ['200 Medley Relay','200 Free Relay','400 Free Relay']:
-            f += f'{x}:\n'
-            t = 0
-            for y in l[i]:
-                t += y[1]
-                f += f"{y[0]}: {time_to_string(y[1])}\n"
-            f += f'Time: {time_to_string(t)}\n'
-            f +='\n'
-            i +=1
+    return decode_chromosome(best_solution), best_fitness
 
-        return f
-        
+def display_chromosome(chromosome, swimmers):
+    """Display the chromosome with swimmer names and their times."""
+    if chromosome is None:
+        return "No valid solution found."
 
-def genetic_algorithm(t, population_size, generations, mutation_rate, g = True):
-    global backstroke_list, breaststroke_list, butterfly_list, freestyle_list
-    backstroke_list = get_ranks(t, '100 Y Back', 5, g)
-    breaststroke_list = get_ranks(t, '100 Y Breast', 5, g)
-    butterfly_list = get_ranks(t, '100 Y Fly', 5, g)
-    freestyle_list = get_ranks(t, '100 Y Free', 8, g)
-    population = [create_individual() for _ in range(population_size)] # inidividuals are a 3d list with 3 relays, 4 people on each relay, and a name and time with that person
-    for i in range(generations):
-        parents = sorted(population, key=fitness)[:len(population)//2] 
-        offspring = []
-        for x in parents:
-            parent_1, parent_2 = random.sample(parents, 2)
-            child = crossover(parent_1, parent_2)
-            child = mutate(child, mutation_rate)
+    relays = chromosome
+    display = {}
 
-            offspring.append(child)
-            
-        population = parents + offspring
-    return sorted(population, key=fitness)[0]
+    for relay_type, relay in relays.items():
+        display[relay_type] = []
+        for sw in relay:
+            swimmer = swimmers[sw]
+            if relay_type == "400 Free Relay":
+                event = "100 Y Free"
+            elif relay_type == "200 Free Relay":
+                event = "50 Y Free"
+            elif relay_type == "200 Medley Relay":
+                strokes = ["100 Y Back", "100 Y Breast", "100 Y Fly", "100 Y Free"]
+                event = strokes[relay.index(sw)]
+            time = swimmer.times[event][0] if event in swimmer.times else 1
+            display[relay_type].append([swimmer.name, time_to_string(time)])
 
-
-
+    return display
+# Example usage
+# Assuming you have a Team object named `my_team` already loaded
+# You can call the genetic algorithm for the men's or women's team like this:
+my_team = Team('William_Amos_Hough_High_School.json','j')
+optimal_relays, best_time = genetic_algorithm(my_team, gender="m")
+print("Optimal Relay Assignments (Men):", display_chromosome(optimal_relays,my_team.team_m))
+print("Best Total Time:", time_to_string(best_time))
+print("400 FR: "+time_to_string(calculate_relay_time(optimal_relays["400 Free Relay"],my_team.team_m,"400 Free Relay")))
+print("200 FR: "+time_to_string(calculate_relay_time(optimal_relays["200 Free Relay"],my_team.team_m,"200 Free Relay")))
+print("200 IM: "+time_to_string(calculate_relay_time(optimal_relays["200 Medley Relay"],my_team.team_m,"200 Medley Relay")))
