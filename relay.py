@@ -2,6 +2,7 @@ import random
 import numpy as np
 from master import *
 
+
 # Parameters
 POPULATION_SIZE = 1000
 NUM_GENERATIONS = 100
@@ -170,13 +171,3 @@ def display_chromosome(chromosome, swimmers):
             display[relay_type].append([swimmer.name, time_to_string(time)])
 
     return display
-# Example usage
-# Assuming you have a Team object named `my_team` already loaded
-# You can call the genetic algorithm for the men's or women's team like this:
-my_team = Team('William_Amos_Hough_High_School.json','j')
-optimal_relays, best_time = genetic_algorithm(my_team, gender="m")
-print("Optimal Relay Assignments (Men):", display_chromosome(optimal_relays,my_team.team_m))
-print("Best Total Time:", time_to_string(best_time))
-print("400 FR: "+time_to_string(calculate_relay_time(optimal_relays["400 Free Relay"],my_team.team_m,"400 Free Relay")))
-print("200 FR: "+time_to_string(calculate_relay_time(optimal_relays["200 Free Relay"],my_team.team_m,"200 Free Relay")))
-print("200 IM: "+time_to_string(calculate_relay_time(optimal_relays["200 Medley Relay"],my_team.team_m,"200 Medley Relay")))
