@@ -54,7 +54,7 @@ The optimal way to solve our problem is through a **Genetic Algorithm**, which i
 
 # master.py
 This is where all the important class structures and such are. 
-I defenitly need to clean up the code if were to release this as a package
+I definitely need to clean up the code if were to release this as a package
 
 ### `Team` Class
 A class representing a swim team. It can be initialized with a URL to fetch team data or with data from a JSON file.
