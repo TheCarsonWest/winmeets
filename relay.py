@@ -111,26 +111,37 @@ def mutate(chromosome):
         chromosome[i], chromosome[j] = chromosome[j], chromosome[i]
 
 def genetic_algorithm(team, gender="m"):
-
+    import logging
+    logging.basicConfig(
+        filename="relay_genetic_algorithm.log",
+        filemode="w",
+        level=logging.INFO,
+        format="%(asctime)s - %(levelname)s - %(message)s"
+    )
     """Run the genetic algorithm for a specified team and gender."""
     # Select the appropriate team (male or female)
     swimmers = team.team_m if gender == "m" else team.team_f
+    for swimmer in swimmers:
+        logging.info(f"Swimmer: {swimmer.name}, Times: {swimmer.times}")
     # Create initial population
     population = [create_chromosome(swimmers) for _ in range(POPULATION_SIZE)]
+
 
     best_solution = None
     best_fitness = float("inf")
 
     for generation in range(NUM_GENERATIONS):
-        print(best_fitness)
         # Calculate fitness for each chromosome
         fitnesses = [fitness_function(chromosome, swimmers) for chromosome in population]
 
-        # Track best solution
+        avg_fitness = np.mean([f for f in fitnesses if f != float('inf')]) if any(f != float('inf') for f in fitnesses) else float('inf')
         min_fitness_idx = np.argmin(fitnesses)
         if fitnesses[min_fitness_idx] < best_fitness:
             best_fitness = fitnesses[min_fitness_idx]
             best_solution = population[min_fitness_idx]
+
+        best_combo = decode_chromosome(population[min_fitness_idx])
+        logging.info(f"Generation {generation}: Avg Fitness = {avg_fitness if avg_fitness != float('inf') else 'DISQUALIFIED'}; Best Fitness = {time_to_string(best_fitness) if best_fitness != float('inf') else 'DISQUALIFIED'}; Best Combination = {best_combo}")
 
         # Selection and breeding
         next_generation = []
@@ -143,9 +154,9 @@ def genetic_algorithm(team, gender="m"):
 
         population = next_generation
 
-        if generation % 50 == 0:
-            print(f"Generation {generation}: Best Fitness = {time_to_string(best_fitness)}")
 
+
+    logging.info(f"Final Best Solution: {decode_chromosome(best_solution)}, Fitness: {time_to_string(best_fitness) if best_fitness != float('inf') else 'DISQUALIFIED'}")
     return decode_chromosome(best_solution), best_fitness
 
 def display_chromosome(chromosome, swimmers):

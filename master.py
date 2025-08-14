@@ -1,11 +1,16 @@
-
-
 import json
 import requests
 import random
 
 from openpyxl import load_workbook
 import csv
+
+# Add selenium imports
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+import time
+from bs4 import BeautifulSoup
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
@@ -68,8 +73,8 @@ class Team:
             for x in t[1]:
                 self.team_m.append(Swimmer(x,"l"))
 
-            """for x in t[2]:
-                self.team_f.append(Swimmer(x,"l"))"""
+            for x in t[2]:
+                self.team_f.append(Swimmer(x,"l"))
 
         elif url == "b": # Blank team loader
             self.team_m = []
@@ -139,7 +144,7 @@ class Team:
         for t in [self.team_m,self.team_f]:
             for p in range(len(t)):
                 if t[p].name == player:
-                    print("removed "+ t.pop(p))
+                    print("removed "+ str(t.pop(p)))
     def refresh(self,person = -1):  
         if person == -1:
             self = Team(self.url)
@@ -198,7 +203,8 @@ class Team:
     
 class Swimmer:
     def __init__(self, url, u = "u"):
-        if u == "l": # Loads from list(what a json load will do)
+        if u == "l":
+            # Loads from list(what a json load will do)
             
             self.name = url[0]
             self.url = url[1]
@@ -206,15 +212,39 @@ class Swimmer:
 
         else: # otherwise loads from url
             self.url = url
-            html = requests.get(url, headers=headers).text.split("<body")[1].split('<span class="u-mr-">')[1]
-            self.name = html.split('</span>')[0] # Scraping name from top of page
+            print(f"Loading {url}/iframe/?splashes_type=fastest")
+            chrome_options = Options()
+            chrome_options.add_argument("--disable-gpu")
+            chrome_options.add_argument("--no-sandbox")
+            driver = webdriver.Chrome(options=chrome_options)
+            driver.get(url + "/iframe/?splashes_type=fastest")
+            time.sleep(1)
+            html = driver.page_source
+            driver.quit()
+
+            soup = BeautifulSoup(html, "html.parser")
+
+            # Extract swimmer name
+            name_tag = soup.find("h1", class_="c-title")
+            if name_tag and name_tag.a:
+                self.name = name_tag.a.text.strip()
+            else:
+                self.name = "Unknown"
+
             self.times = {}
-            table = html.split("<tbody>")[2].split("</tbody>")[0].split("</tr>")
-            table.pop(-1)
-            for x in table:
-                
-                td = x.split("</td>") # Scraping the times table
-                self.times[td[0].split('<td class="u-text-truncate">')[1].split('class="js-event-link">')[1].split("</")[0]] = [string_to_time(td[1].split("</a>")[0].split('">')[2]),td[1].split("</a>")[0].split('">')[2]]
+            # Find the fastest times table
+            table = soup.find("table", class_="c-table-clean")
+            if table:
+                tbody = table.find("tbody")
+                if tbody:
+                    for row in tbody.find_all("tr"):
+                        event_td = row.find("td", class_="u-text-truncate")
+                        time_td = row.find("td", class_="u-text-end u-text-semi")
+                        if event_td and time_td:
+                            event_name = event_td.text.strip()
+                            time_str = time_td.a.text.strip() if time_td.a else time_td.text.strip()
+                            self.times[event_name] = [string_to_time(time_str), time_str]
+
     def __str__(self):
         f = '' # Prints name an times
         f += f'{self.name}\n{self.url}\n'
@@ -295,129 +325,3 @@ def get_rank_obj(team, event, num, s=True):
 
   return swimmers[:num]
 
-
-
-
-"""
-Things to do add some point
-make exportable to .hy3
-
-"""
-
-#events_order = ['200 Y Medley Relay Women','200 Y Medley Relay Men','200 Y Free Women','200 Y Free Men','200 Y IM Women','200 Y IM Men','50 Y Free Women','50 Y Free Men','100 Y Fly Women','100 Y Fly Men','100 Y Free Women','100 Y Free Men','500 Y Free Women','500 Y Free Men','200 Y Free Relay Women','200 Y Free Relay Men','100 Y Back Women','100 Y Back Men','100 Y Breast Women','100 Y Breast Men','400 Y Free Relay Women','400 Y Free Relay Men']
-events_order = ['200 Y Free Women','200 Y Free Men','200 Y IM Women','200 Y IM Men','50 Y Free Women','50 Y Free Men','100 Y Fly Women','100 Y Fly Men','100 Y Free Women','100 Y Free Men','500 Y Free Women','500 Y Free Men','100 Y Back Women','100 Y Back Men','100 Y Breast Women','100 Y Breast Men']
-
-"""
-t : [Entry class, ...]
-Point Scale: Default is the standard high school point scale
-Point Swimmers: Most high school meets only allow 4 swimmers to compete for points
-
-Divergence: [Lower, upper] The Random variability in times, how much percent can be added and dropped(scaled to wr) WIP
-Fatigue: [Enabled, Decrease, Wear-off] WIP
- - Whether or not this feature is enabled
- - If fatigue is enabled, how much will it slow a swimmer down while doing consecutive events?
- - How many events will it take for fatigue to wear off(or how much time?)
-"""
-
-
-def hs_meet(t, point_swimmers = 4 ,divergence = [0,0], fatigue = [False,0,0],point_scale = [20,17,16,15,14,13,12,11,9,7,6,5,4,3,2,1]):
-    s = [0] * len(t) # Scores for each team
-    for event in events_order:
-        psych_sheet = []
-        for team in range(len(t)): # For every team in teams
-            for swimmer in t[team].entries[event]: # For every swimmer in the team
-                psych_sheet.append([swimmer,s[team]]) # Append [swimmer, score reference]
-        psych_sheet.sort(key=lambda x: min(x[0].times[event]))
-        
-
-  
-
-
-
-
-
-def best_entries(team, count): # Cheats and simply assigns the <count> best swimmers to each event, genetic algorithms relays
-    # Made for testing purposes
-    # Not legal event entries
-    events = {}
-    for x in events_order:
-        if x not in ["200 Y Medley Relay Men","200 Y Free Relay Men","400 Y Free Relay Men","200 Y Medley Relay Women","200 Y Free Relay Women","400 Y Free Relay Women"]:
-            events[x] = get_rank_obj(team,remove_last_word(x),count,"Men" in x)
-    """
-    best_relays = genetic_algorithm(team,10000,0,0)
-    events["200 Y Medley Relay Men"] = best_relays[0]
-    events["200 Y Free Relay Men"] = best_relays[1]
-    events["400 Y Free Relay Men"] = best_relays[2]
-
-    best_relays = genetic_algorithm(team,10000,0,0,False)
-    events["200 Y Medley Relay Women"] = best_relays[0]
-    events["200 Y Free Relay Women"] = best_relays[1]
-    events["400 Y Free Relay Women"] = best_relays[2]
-
-    """
-
-    return Entry(events,team.name)
-
-def genetic_entries(team): # Genetic algorithms entries WIP
-    pass
-
-
-
-
-
-
-
-
-
-def generate_relay_combinations(data, relay_type):
-    """Generates relay combinations based on relay type."""
-    combinations = []
-    n = len(data)
-    for x in range(n):
-        for y in range(n):
-            for z in range(n):
-                for a in range(n):
-                    if len({x, y, z, a}) == 4:
-                        if relay_type == "medley":
-                            combination = [
-                                (data[x].name, data[x].times.get('100 Y Back', [float('inf'), ''])[0] / 2),  # Use get with default for missing events
-                                (data[y].name, data[y].times.get('100 Y Breast', [float('inf'), ''])[0] / 2),
-                                (data[z].name, data[z].times.get('100 Y Fly', [float('inf'), ''])[0] / 2),
-                                (data[a].name, data[a].times.get('100 Y Free', [float('inf'), ''])[0] / 2)
-                            ]
-                        elif relay_type == "free":
-                            combination = [
-                                (data[x].name, data[x].times.get('100 Y Free', [float('inf'), ''])[0] / 2),
-                                (data[y].name, data[y].times.get('100 Y Free', [float('inf'), ''])[0] / 2),
-                                (data[z].name, data[z].times.get('100 Y Free', [float('inf'), ''])[0] / 2),
-                                (data[a].name, data[a].times.get('100 Y Free', [float('inf'), ''])[0] / 2)
-                            ]
-                        else:
-                            raise ValueError("Invalid relay_type. Must be 'medley' or 'free'.")
-
-
-                        if any(time == float('inf') for _, time in combination):
-                            continue  # Skip combinations with missing times
-
-                        total_time = sum(time for _, time in combination)
-                        combinations.append((combination, total_time))
-
-    combinations.sort(key=lambda x: x[1])
-    return combinations
-
-
-def write_relay_combinations_to_csv(combinations, csv_filename):
-    """Writes relay combinations to a CSV file."""
-    with open(csv_filename, 'w', newline='') as csvfile:
-        csv_writer = csv.writer(csvfile)
-        csv_writer.writerow(['Total Time', 'Position 1 Name', 'Position 2 Name', 'Position 3 Name', 'Position 4 Name',
-                             'Position 1 Time', 'Position 2 Time', 'Position 3 Time', 'Position 4 Time'])
-        for index, (combination, total_time) in enumerate(combinations, start=1):
-            row = [
-                total_time,
-                combination[0][0], combination[1][0], combination[2][0], combination[3][0],
-                combination[0][1], combination[1][1], combination[2][1], combination[3][1]
-            ]
-            csv_writer.writerow(row)
-
-    print(f"Successfully written relay combinations to {csv_filename}")
